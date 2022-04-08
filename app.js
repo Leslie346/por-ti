@@ -1,6 +1,10 @@
 const express = require('express');
 const path = require('path');
+
 const app = express();
+
+const publicFolderPath = path.resolve(__dirname, './public');
+app.use(express.static(publicFolderPath));
 
 app.listen(3000, () => {
     console.log('Servidor corriendo')
@@ -15,7 +19,11 @@ app.get('/login', function(req, res){
 });
 
 app.get('/registro', function(req, res){
-    res.sendFile(path.join(__dirname, './views/register.html'));
+    res.sendFile(path.join(__dirname, './views/registro.html'));
+});
+
+app.get('/misobjetivos', function(req, res){
+    res.sendFile(path.join(__dirname, './views/objetivos.html'));
 });
 
 app.get('/404', (req, res) => {
