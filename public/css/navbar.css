@@ -1,4 +1,13 @@
 
+.nav-gradient{
+	background: linear-gradient(rgb(17, 20, 37), rgba(17, 20, 37, 0));
+	top: 0;
+	z-index: 15;
+	height: 150px;
+	position: fixed;
+	width: 100%;
+}
+
 #logo-menu{
    height: 50px;
    position: absolute;

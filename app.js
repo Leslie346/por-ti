@@ -26,6 +26,10 @@ app.get('/misobjetivos', function(req, res){
     res.sendFile(path.join(__dirname, './views/objetivos.html'));
 });
 
+app.get('/home', function(req, res){
+    res.sendFile(path.join(__dirname, './views/index copy.html'));
+});
+
 app.get('/404', (req, res) => {
     res.send('Error página no encontrada');
     });

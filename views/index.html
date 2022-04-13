@@ -4,31 +4,138 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="home.css" rel="stylesheet">
+    <title>Inicio
+    </title>
+      <!--CSS--> 
+      <link rel="stylesheet" href="/css/home.css" type="text/css">
+      <link rel="stylesheet" href="/css/navbar.css" type="text/css">
+      <link rel="stylesheet" href="/css/fondo.css" type="text/css">
+  
+      <!--Tipografías--> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <!--Poppins--> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <!--Nunito--> 
+     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
+
+        <!--Menu-->
+        <div class="nav-gradient">
+        <a href="/"><img src="/img/Logo_Horizontal.png" id="logo-menu"></img></a>
+        <nav id="primary_nav_wrap">
+            <ul>
+              <li class="current-menu-item"><a href="/misobjetivos">Contacto</a></li>
+              <li><a href="/login">Iniciar sesión</a>
+                      <li><a href="/registro">Registrate</a></li>
+                    </ul>
+                  </li>
+              </li>
+            </ul>
+            </nav>
+        </div>
+
 <body>
-    <div class="flexbox">
-        <section class="list">
-          <h1>Contents</h1>
-          <ul>
-            <li>Story</li>
-            <li>About</li>
-            <li>Contact</li>
-          </ul>
-        </section>
-        <article class="main">
-          <h1>The Little Prince</h1>
-          <p>
-          And 
-          </p>
-        </article>
-        <section class="side">
-          <h1>About</h1>
-          <p>
-            The 
-          </p>
-        </section>
-      </div>
+    <div class="banner">
+        <img src="/img/Fondo registro.png" class="img-home">
+          <div class="banner-text">
+            <div class="bigTitle">
+          <h1>Mejora tu salud</h1>
+          </div>
+          <div class="smallTitle">
+              <h2 style="text-align:left; font-weight: 300;">Contenido personalizado para tu bienestar y mejorar el área de salud que desees.</h2>
+              <button class="bannerButton">Comenzar</button> 
+            </div>
+        </div>
+          </div>
+          </div>
+      
+    <div class="scene">
+        <script type="text/javascript">
+            function stars(){
+                let count = 500;
+                let scene = document.querySelector('.scene');
+                let i = 0;
+                while(i < count){
+                    let star  = document.createElement("i");
+                    let x = Math.floor(Math.random() * window.innerWidth);
+                    let y = Math.floor(Math.random() * window.innerHeight);
+                    let duration = Math.random() * 10;
+                    let size = Math.random() * 2;
+
+                    star.style.left = x+'px'; 
+                    star.style.top = y+'px'; 
+                    star.style.width = 1+size+'px'; 
+                    star.style.height = 1+size+'px'; 
+
+                    star.style.animationDuration = 5+duration+'s';
+                    star.style.animationDelay = duration+'s';
+
+                    scene.appendChild(star);
+                    i++
+                }
+            }
+            stars()
+        </script>
+
+    <div class="content">
+        <main>
+            <h2 class="h2-Index">Beneficios</h2>
+            <h3 class="h3-Index">Una forma accesible de mejorar tu salud</h3>
+            <div class="flexbox">
+        <div class="img-beneficios">
+            <img src="/img/ventaja1.png" class="beneficios">
+            <h3 style="padding: 15px; margin-bottom: 15px;">Elige el área de salud que desees</h3>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        
+        <div class="img-beneficios">
+            <img src="/img/ventaja2.png" class="beneficios">
+            <h3 style="padding: 15px; margin-bottom: 15px;">Accede a contenido para sentirte mejor</h3>
+            <br>
+            <br>
+            <br>
+        </div>
+        
+        <div class="img-beneficios">
+            <img src="/img/ventaja3.png" class="beneficios">
+            <h3 style="padding: 15px; margin-bottom: 15px;">Consulta y lleva un registro de tus avances</h3>
+        </div>
+              
+              </div>
+             
+              <h2 class="h2-Index">Reseñas</h2>
+              <div class="flexbox">
+                <div class="img-beneficios">
+                    
+                </div>
+                
+                <div class="img-beneficios">
+                   
+                </div>
+        
+                <div class="img-beneficios">
+                    
+                </div>
+                </div>
+
+              <h2 class="h2-Index">¿Quiénes somos?</h2>
+              <div class="quienes-somos-cont">
+                <img src="/img/img-quienes-somos.png" class="quienes-somos">
+                <img src="/img/img-quienes-somos.png" class="quienes-somos">
+            </div>
+            <p style="margin-bottom: 100px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mollis odio odio sed eu nec. Gravida pellentesque auctor mattis eget.</p>
+        </main>
+        <img src="/img/Hojas1.png" class="hoja1">
+        <img src="/img/Hojas3.png" class="hoja2">
+       </div>
 </body>
 </html>
