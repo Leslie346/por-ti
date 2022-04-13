@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio
+    </title>
+      <!--CSS--> 
+      <link rel="stylesheet" href="/css/navbar.css" type="text/css">
+      <link rel="stylesheet" href="/css/ejercicios.css" type="text/css">
+  
+      <!--Tipografías--> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <!--Poppins--> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <!--Nunito--> 
+     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <!--Kit FontAwesome--> 
+     <script src="https://kit.fontawesome.com/60756a3678.js" crossorigin="anonymous"></script>
+    </head>
+
+        <!--Menu-->
+        <div class="nav-gradient">
+        <a href="/"><img src="/img/Logo_Horizontal.png" id="logo-menu"></img></a>
+        <nav id="primary_nav_wrap">
+            <ul>
+              <li class="current-menu-item"><a href="/misobjetivos">Contacto</a></li>
+              <li><a href="/login">Iniciar sesión</a>
+                      <li><a href="/registro">Registrate</a></li>
+                    </ul>
+                  </li>
+              </li>
+            </ul>
+            </nav>
+        </div>
+
+<body>
+        <!--Frase--> 
+    <div class="frase-fondo">
+        <div class="frase-fondo-texto">
+          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, voluptatum aliquid eligendi neque exercitationem impedit.</h2>
+          <div class="smallTitle">
+              <h2 style="text-align:left; font-weight: 300;">14 de Marzo</h2>
+              </div>
+            </div>
+        </div>
+
+        <!--Top containers-->
+        <div class="ejercicios-top-contenedor">
+
+            <div class="ejercicios-top-contenedor-hijo" style="display:flex; justify-content:baseline; background-color: rgb(51, 72, 134); color: white; padding:20px">
+                <img src="/img/ventaja3.png" style="padding-right: 15px;">
+                <h2 style="font-weight:300; font-size: 26px; margin-top: 15px;">Organizador de tareas</h2>
+            </div>
+
+            <div class="ejercicios-top-contenedor-hijo" style="display:flex; justify-content:baseline; background-color: rgb(51, 72, 134); color: white; padding:20px">
+                <img src="/img/ventaja3.png" style="padding-right: 15px;">
+                <h2 style="font-weight:300; font-size: 26px; margin-top: 15px;">Organizador de tareas</h2>
+            </div>
+            
+            <div class="ejercicios-top-contenedor-hijo" style="display:flex; justify-content:baseline; background-color: rgb(51, 72, 134); color: white; padding:20px">
+                <img src="/img/ventaja3.png" style="padding-right: 15px;">
+                <h2 style="font-weight:300; font-size: 26px; margin-top: 15px;">Organizador de tareas</h2>
+            </div>
+
+        </div>
+
+         <!--Estrellas--> 
+<main>
+    <div class="scene">
+        <script type="text/javascript">
+            function stars(){
+                let count = 500;
+                let scene = document.querySelector('.scene');
+                let i = 0;
+                while(i < count){
+                    let star  = document.createElement("i");
+                    let x = Math.floor(Math.random() * window.innerWidth);
+                    let y = Math.floor(Math.random() * window.innerHeight);
+                    let duration = Math.random() * 10;
+                    let size = Math.random() * 2;
+
+                    star.style.left = x+'px'; 
+                    star.style.top = y+'px'; 
+                    star.style.width = 1+size+'px'; 
+                    star.style.height = 1+size+'px'; 
+
+                    star.style.animationDuration = 5+duration+'s';
+                    star.style.animationDelay = duration+'s';
+
+                    scene.appendChild(star);
+                    i++
+                }
+            }
+            stars()
+        </script>
+
+
+        <h2 style="margin-top: 100px;">Mis ejercicios</h2>
+
+        <div class="mis-ejercicios-contenedor">
+        <img src="/img/Vector.png">
+        <img src="/img/Vector.png">
+        <img src="/img/Vector.png">
+    </div>
+
+        <h2 style="margin-top: 50px;">Actividades cortas</h2>
+
+        <div class="mis-ejercicios-contenedor">
+        <img src="/img/vector_largo.png" style="margin-right: -51px;">
+        <img src="/img/vector_largo.png">
+    </div>
+
+    <div class="chips">
+    
+    <div class="chip-hija" style="margin-right: 51px;">
+        <a href="/misejercicios"><button><span class="fa-solid fa-heart"></span>Favoritos</button></a>
+    </div>
+    <div class="chip-hija">
+        <a href="/misejercicios"><button><span class="fa-solid fa-calendar"></span>Recientes</button></a>
+    </div>
+
+    </div>
+
+        <h2 style="margin-top: 50px;  margin-bottom: 50px;">Contacta a un especialista</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi facere dolorum autem aliquam atque praesentium vitae, consequatur quam ipsam possimus!</p>
+
+        <div class="contenedor-especialista">
+        <button style="margin-top: 50px; margin-bottom: 50px;">Ver listado</button>
+    </div>
+        </div>
+    </main>

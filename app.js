@@ -30,6 +30,14 @@ app.get('/home', function(req, res){
     res.sendFile(path.join(__dirname, './views/index copy.html'));
 });
 
+app.get('/misejercicios', function(req, res){
+    res.sendFile(path.join(__dirname, './views/ejercicios.html'));
+});
+
+app.get('/miperfil', function(req, res){
+    res.sendFile(path.join(__dirname, './views/perfil.html'));
+});
+
 app.get('/404', (req, res) => {
     res.send('Error página no encontrada');
     });

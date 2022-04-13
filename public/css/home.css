@@ -20,6 +20,22 @@ h3{
     text-align: center;
 }
 
+h4{
+    font-family: 'Nunito', sans-serif;
+    font-size: 26;
+    font-weight: 400;
+    color: white;
+    text-align: center; 
+}
+
+h6{
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: rgb(203, 203, 243);
+    text-align: left; 
+}
+
 p{
     font-family: 'Nunito', sans-serif;
     font-size: 32;
@@ -32,7 +48,7 @@ p{
     top: -10px;
     position: relative;
     height: 90%;
-    z-index: -1;
+    z-index: -10;
     background-image: linear-gradient(180deg,rgba(21,48,142,0) 0,#1d2d82 50%,#13212d 100%),url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1648519753/Por%20Ti/fondo_registro_s5hqja.png) no-repeat center center;
     padding: 0;
     margin: 0;
@@ -42,14 +58,14 @@ main{
     padding-top: 50px;
     margin: 0;
     height: 100%;
-    z-index: -1;
     background-size: 100% 40%,cover;
     background-position: 50% 100%,center;
     min-height: 95vh;
 }
 
 .h2-Index{
-    margin: 50px, 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .h3-Index{
@@ -94,6 +110,9 @@ margin-top: 20px;
 }
 
 .bannerButton{
+    z-index: 50;
+    position: relative;
+    top: 25px;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: medium;
@@ -121,6 +140,10 @@ margin-top: 20px;
       align-items: center;
       }
 
+      .flexbox:hover{
+        cursor: pointer; 
+      }
+
       .img-beneficios{
     background-color: rgba(0, 0, 0, 0.28);
     border-radius: 50px;
@@ -132,8 +155,7 @@ margin-top: 20px;
     padding: 0, 30px, 20px, 20px;
       }
 
-      .img-beneficios:hover,
-      .img-beneficios:focus
+      .img-beneficios:hover
 {
     background-color: rgba(117, 117, 117, 0.20);
     cursor: pointer;
@@ -144,3 +166,18 @@ margin-top: 20px;
    margin-bottom: 20px;
       }
     }
+
+#review{
+text-align: left;
+padding-left:  40px;
+margin-bottom:  25px;
+}
+
+.checked{
+    margin-top: 35px;
+    margin-right: 10px;
+    color: orange;
+    width: 25px;
+    align-self: left;
+}
+

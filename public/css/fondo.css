@@ -7,7 +7,6 @@
 .scene
 {
     position: relative;
-    padding-top: 30px;;
     margin: 0;
     top: -15px;
     width: 100%;
@@ -15,7 +14,7 @@
     background: linear-gradient(#111425, #3751e0);
     background-attachment: fixed;
     overflow: hidden;
-    z-index: -1;
+    z-index: -100;
 }
 
 .scene i
@@ -64,7 +63,7 @@ button{
 
 h1{
     position: absolute;
-    z-index: 1;
+    z-index: 20;
     top:0;
 }
 
