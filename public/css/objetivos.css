@@ -22,17 +22,15 @@ html, body{
 h4{
 font-family: 'Poppins';
 font-weight: 300;
-position:absolute;
-top: 85px;
-left: 43.5%;
+top: 300px;
+margin: 0 auto;
 }
 
 h1{
 font-family: 'Poppins';
 font-weight: 600;
-position:absolute;
-top: 115px;
-left: 35%;
+margin-top: 350px;
+margin: 0 auto;
 }
 
 h5{
@@ -43,13 +41,13 @@ h5{
 
 .contenedor-objetivos{
     margin: 50px;
-    margin-top: 120px;
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.sub-contenedor-objetivos{
+#sub-contenedor-objetivos{
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.28);
     border-radius: 50px;
@@ -60,15 +58,20 @@ h5{
     backdrop-filter: blur(2px);
 }
 
-.sub-contenedor-objetivos:hover,
-.sub-contenedor-objetivos:focus
+#sub-contenedor-objetivos:hover,
+#sub-contenedor-objetivos:focus
 {
     background-color: rgba(117, 117, 117, 0.20);
     cursor: pointer;
     transition:background-color 0.3s ease-in-out;
 }
 
-.sub-contenedor-objetivos img{  
+#sub-contenedor-objetivos--selected
+{
+    background-color: rgba(117, 117, 117, 0.20);
+}
+
+#sub-contenedor-objetivos img{  
     margin-top: 30px;
    height: 200px;
 }
@@ -80,6 +83,7 @@ font-size: medium;
 border-radius: 50px;
 text-decoration: none;
 border: none;
+margin: 0 auto;
 padding: 15px;
 width:  16em;
 background-color: rgb(254, 223, 200);

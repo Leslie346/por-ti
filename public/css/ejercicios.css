@@ -6,49 +6,24 @@
 
 main{
     position: relative;
-    top: -140px;
+    background: linear-gradient(rgba(40, 37, 89), #111425);
+    box-shadow: inset 1px 1px 40px 0 rgba(0, 0, 0, 0.45);
 }
 
-/*Estrellas*/
-
-.scene
-{
-    padding-top: 50px;
+.ejercicios-top-contenedor-texto{
     position: relative;
-    margin: 0;
-    top: -15px;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(#111425, #3751e0);
-    background-attachment: fixed;
-    overflow: hidden;
-    z-index: -100;
+    display: flex;
+    flex-direction: row;
+    top: 100px;
+    justify-content: space-between;
+    padding: 50px;
 }
 
-.scene i
-{
-    position: absolute;
-    background: #fff;
-    border-radius: 50%;
-    animation: animate linear infinite;
+.ejercicios-top-contenedor-texto .h3-Index{
+    padding: 50px, 0;
+    top: 50px;
 }
 
-@keyframes animate
-{
-    0%
-    {
-        opacity: 0;
-        transform: translateY(0);
-    }
-    10%,90%{
-    opacity: 1;
-    }
-    100%
-    {
-        opacity: 0;
-        transform: translateY(-100px);
-    }
-}
 
 /*Tipografías*/
 
@@ -100,27 +75,36 @@ p{
 
 
 .frase-fondo{
-    width: 100%;
+    background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1650501547/Por%20Ti/frase-ejercicios_ow8ynv.png);
+    width: 102%;
     height: 385px;
     margin: 0;
     padding: 0;
-    background: linear-gradient(200.35deg, #FDBBB4 13.53%, rgba(196, 196, 196, 0) 184.29%);
+    text-align: center;
+    position: relative;
+    left: -5px;
 }
 
 .frase-fondo-texto{
     position: relative;
-    top: 50%;
-    left: 20%;
+    top: 35%;
+    left: 30%;
     text-align: center;
-    width: 60%
+    width: 40%
 }
 
 .frase-fondo-texto h2{
   font-family: 'Nunito', sans-serif;
   font-weight: 300;
+  font-size: 24px;
 }
 
 /*Contenedores arrriba*/
+
+.contenedor-ejercicios{
+    position: relative;
+    top: 100px;
+}
 
 .ejercicios-top-contenedor{
     display: flex;
@@ -128,14 +112,19 @@ p{
     align-items: center;
     justify-content: space-around;
     position: relative;
-    top: -75px;
+    top: 50px;
 }
 
 .ejercicios-top-contenedor-hijo{
-    height: 150px;
     width: 370px;
     border-radius: 30px;
-    background-color: #3751e0;
+    background-color: rgba(59, 55, 131, 0.8);
+}
+
+.ejercicios-top-contenedor-hijo img:hover,
+.ejercicios-top-contenedor-hijo img:focus{
+   opacity: 50%;
+   cursor: pointer;
 }
 
 /*Contenedores medios*/
@@ -143,9 +132,8 @@ p{
 .mis-ejercicios-contenedor{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    justify-content: center;
+    padding: 50px;
 }
 
 .mis-ejercicios-contenedor img{
@@ -199,4 +187,10 @@ button{
         z-index: 100;
     }
 
+/*Prueba hover*/
 
+  
+  .ejercicios-cont{
+      position: relative;
+      z-index: 13030;
+  }

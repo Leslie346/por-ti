@@ -44,6 +44,10 @@ p{
     text-align: center; 
 }
 
+.img-home{
+width: 100%;
+}
+
 .banner{
     top: -10px;
     position: relative;
@@ -52,6 +56,13 @@ p{
     background-image: linear-gradient(180deg,rgba(21,48,142,0) 0,#1d2d82 50%,#13212d 100%),url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1648519753/Por%20Ti/fondo_registro_s5hqja.png) no-repeat center center;
     padding: 0;
     margin: 0;
+}
+
+.buttonBanner{
+    position: absolute;
+    z-index: 1000;
+    top: 480px;
+    left: 200px;
 }
 
 main{
@@ -109,8 +120,27 @@ padding: 15px;
 margin-top: 20px;
 }
 
+button{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: medium;
+    border-radius: 50px;
+    text-decoration: none;
+    border: none;
+    padding: 15px;
+    width:  16em;
+    background-color: rgb(254, 223, 200);
+    color: rgb(65, 64, 105);
+    }
+    
+    button:hover{
+        background-color: rgba(254, 223, 200, 0.8);
+        transition:background-color 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
 .bannerButton{
-    z-index: 50;
+    z-index: 200;
     position: relative;
     top: 25px;
     font-family: 'Poppins', sans-serif;
@@ -126,7 +156,8 @@ margin-top: 20px;
     color: rgb(65, 64, 105);
     }
 
-    .bannerButton:hover{
+    .bannerButton:hover,
+    .bannerButton:focus{
         background-color: rgba(254, 223, 200, 0.5);
         transition: background-color 0.3s ease-in-out;
         cursor: pointer;
@@ -155,9 +186,10 @@ margin-top: 20px;
     padding: 0, 30px, 20px, 20px;
       }
 
-      .img-beneficios:hover
+      .img-beneficios:hover,
+      .img-beneficios:focus
 {
-    background-color: rgba(117, 117, 117, 0.20);
+    background-color:white;
     cursor: pointer;
     transition:background-color 0.3s ease-in-out;
 }
@@ -171,6 +203,13 @@ margin-top: 20px;
 text-align: left;
 padding-left:  40px;
 margin-bottom:  25px;
+}
+
+#review:hover,
+#review:focus{
+    background-color: rgba(63, 63, 63, 0.28);
+    cursor: pointer;
+    transition:background-color 0.3s ease-in-out;
 }
 
 .checked{

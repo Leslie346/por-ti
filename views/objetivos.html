@@ -45,21 +45,38 @@
 
     <div class="contenedor-objetivos">
         
-        <div class="sub-contenedor-objetivos">
+        <div id="sub-contenedor-objetivos"><div id="sub-contenedor-objetivos--selected">
            <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1648833262/Por%20Ti/Salud_social_icono_am6vep.png" alt="salud social">
        <h5>Salud social</h5>
+    </div>
         </div>
 
           
-        <div class="sub-contenedor-objetivos">
+        <div id="sub-contenedor-objetivos">
             <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1648833263/Por%20Ti/Salud_mental_icono_ukchh4.png" alt="salud mental">
             <h5>Salud mental</h5> 
         </div>
 
-         <div class="sub-contenedor-objetivos">
+        <div id="sub-contenedor-objetivos">
             <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1648833262/Por%20Ti/Salud_fi%CC%81sica_icono_gsvons.png" alt="salud física">
             <h5>Salud física</h5> 
         </div>
+        <script>
+           const btnsTip = document.querySelectorAll("[sub-contenedor-objetivos]");
+           let activeBtn = null;
+
+            btnsTip.forEach((btnTip) => {
+            btnTip.addEventListener("click", (e) => {
+             e.currentTarget.style.backgroundColor = "yellow";
+
+            if ((activeBtn = null && activeBtn != e.currentTarget)) {
+             activeBtn.remove.style.backgroundColor = "yellow";
+             }
+
+             activeBtn = e.currentTarget;
+            });
+});
+            </script>
 <br>
     </div>
     <a href="/misejercicios"><button>Continuar</button></a>

@@ -38,6 +38,20 @@ app.get('/miperfil', function(req, res){
     res.sendFile(path.join(__dirname, './views/perfil.html'));
 });
 
+app.get('/listado', function(req, res){
+    res.sendFile(path.join(__dirname, './views/listado.html'));
+});
+
+app.get('/ejerciciosfavoritos404', function(req, res){
+    res.sendFile(path.join(__dirname, './views/ejerciciosfavoritos404.html'));
+});
+
+app.get('/ejerciciosrecientes404', function(req, res){
+    res.sendFile(path.join(__dirname, './views/ejerciciosrecientes404.html'));
+});
+
+
+
 app.get('/404', (req, res) => {
     res.send('Error página no encontrada');
     });

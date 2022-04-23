@@ -1,17 +1,16 @@
 html, body{
   margin: 0; 
-  padding: '0';
+  padding: 0;
 }
 
 .main{
 background: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1648519753/Por%20Ti/fondo_registro_s5hqja.png) no-repeat center center;
 background-size: cover;
-height: 100vh;
 }
 
 .fondo-login{
-width: 40%;
-height: 70%;
+width: 50%;
+height: 100%;
 position: absolute;
 z-index: 1;
 top: 20;
@@ -54,16 +53,13 @@ border-bottom: 2px solid white;
 background-color: none;
 }
 
-
-html {
-height: 100%;
-}
 body {
 margin:0;
 padding:0;
 font-family: sans-serif;
 background: linear-gradient(#141e30, #243b55);
 background: #141e30;
+height: 100vh;
 }
 
 .login-box {
@@ -80,10 +76,6 @@ box-shadow: 0 15px 25px rgba(0,0,0,.6);
 border-radius: 10px;
 backdrop-filter: blur(2px);
 
-}
-
-#register-box{
-margin-top: 120px;
 }
 
 .login-box h2 {
@@ -139,6 +131,7 @@ width:  16em;
 background-color: rgb(254, 223, 200);
 color: rgb(65, 64, 105);
 text-align: center;
+margin: 0 auto;
 }
 
 button:hover{
@@ -171,7 +164,6 @@ font-size:15px;
 line-height:24px;
 color:#737373;
 position: relative;
-top: 200px;
 }
 .site-footer hr
 {
