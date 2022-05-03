@@ -7,6 +7,8 @@
 
 main{
     padding-bottom: 150px;
+    position: relative;
+    z-index: -5;
 }
 
 h1{
@@ -17,7 +19,7 @@ h1{
 
 h2{
     font-family: 'Nunito', sans-serif;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 800;
     color: white;
     text-align: center;
@@ -38,6 +40,7 @@ h4{
     font-weight: 400;
     color: white;
     text-align: center; 
+    padding-left: 15px;
 }
 
 h6{
@@ -89,8 +92,38 @@ main{
 
 .cont-listado-hijo img{
     border-radius: 30px;
+    opacity: 1;
 }
 
 .cont-listado-hijo-text{
 margin-top: 10px;
+}
+
+.fa-solid{
+    width: 15px;
+    color: white;
+}
+
+.icon-flex{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.hoja1{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    height: 300px;
+    z-index: -1;
+}
+
+.hoja2{
+    position: absolute;
+    bottom: 0px;
+    right:0;
+    height: 300px;
+    z-index: -1;
 }

@@ -5,17 +5,14 @@
 }
 
 main{
-    position: relative;
+    width: 100%;
     background: linear-gradient(rgba(40, 37, 89), #111425);
     box-shadow: inset 1px 1px 40px 0 rgba(0, 0, 0, 0.45);
 }
 
 .ejercicios-top-contenedor-texto{
     position: relative;
-    display: flex;
-    flex-direction: row;
     top: 100px;
-    justify-content: space-between;
     padding: 50px;
 }
 
@@ -90,7 +87,7 @@ p{
     top: 35%;
     left: 30%;
     text-align: center;
-    width: 40%
+    width: 40%;
 }
 
 .frase-fondo-texto h2{
@@ -113,6 +110,10 @@ p{
     justify-content: space-around;
     position: relative;
     top: 50px;
+    width: auto;
+    height: 200px;
+    padding: 10px;
+    white-space: nowrap;
 }
 
 .ejercicios-top-contenedor-hijo{
@@ -128,6 +129,19 @@ p{
 }
 
 /*Contenedores medios*/
+
+.ejercicios-box-cont{
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.ejercicios-box-cont .box{
+    display: inline-block;
+    text-align: center;
+    width:373px;
+    margin-right: 25px;
+}
+
 
 .mis-ejercicios-contenedor{
     display: flex;

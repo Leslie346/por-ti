@@ -23,7 +23,10 @@ main{
     justify-content: center;
     height: 400px;
     background: rgb(20,0,36);
-    background: linear-gradient(36deg, rgba(20,0,36,1) 0%, rgba(40, 37, 89, 1) 38%, rgba(177,146,225,1) 100%);
+    background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651189738/Por%20Ti/Banner-saludmental_f3y8wr.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
     text-align: center;
 }
 

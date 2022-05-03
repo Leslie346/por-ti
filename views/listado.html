@@ -8,6 +8,9 @@
      <!--CSS--> 
      <link rel="stylesheet" href="/css/navbar.css" type="text/css">
      <link rel="stylesheet" href="/css/listado.css" type="text/css">
+     <link rel="stylesheet" href="/css/fondo.css" type="text/css">
+      <!--Kit FontAwesome--> 
+      <script src="https://kit.fontawesome.com/60756a3678.js" crossorigin="anonymous"></script>
 </head>
 
     <!--Menu-->
@@ -24,7 +27,34 @@
             </ul>
             </nav>
         </div>
+ <!--Estrellas--> 
 
+ <div class="scene">
+  <script type="text/javascript">
+      function stars(){
+          let count = 500;
+          let scene = document.querySelector('.scene');
+          let i = 0;
+          while(i < count){
+              let star  = document.createElement("i");
+              let x = Math.floor(Math.random() * window.innerWidth);
+              let y = Math.floor(Math.random() * window.innerHeight);
+              let duration = Math.random() * 10;
+              let size = Math.random() * 2;
+
+              star.style.left = x+'px'; 
+              star.style.top = y+'px'; 
+              star.style.width = 1+size+'px'; 
+              star.style.height = 1+size+'px'; 
+
+              star.style.animationDuration = 5+duration+'s';
+              star.style.animationDelay = duration+'s';
+              scene.appendChild(star);
+              i++
+          }
+      }
+      stars()
+  </script>
     <!--Aquí comienza el listado-->
 <main>
     <h1>¿Necesitas ayuda más personalizada?</h1>
@@ -36,8 +66,13 @@
     <img src="/img/26.jpeg">
 <div class="cont-listado-hijo-text">
     <h2>Julia Rodríguez</h2>
-    <h4 style="padding-top: 15px;">55 6163 8899</h4>
-    <h4 style="padding-bottom: 15px;"s>uncorreo@gmail.com</h4>
+    <div class="icon-flex">
+    <span class="fa-solid fa-phone"></span><h4 style="padding-top: 15px;">55 6163 8899</h4>
+  </div>
+  <div class="icon-flex">
+    <span class="fa-solid fa-envelope"></span><h4 style="padding-bottom: 15px;"s>uncorreo@gmail.com</h4>
+  </div>
+  <h4 style="padding-bottom: 15px;">Psicólogo gestalt, especialista en autoestima, estrés y relaciones personales.</h4>
   </div>
   </div>
 
@@ -45,8 +80,13 @@
     <img src="/img/29.jpeg">
     <div class="cont-listado-hijo-text">
     <h2>Roberto Sánchez</h2>
-    <h4 style="padding-top: 15px;">55 6163 8899</h4>
-    <h4 style="padding-bottom: 15px;">uncorreo@gmail.com</h4>
+    <div class="icon-flex">
+    <span class="fa-solid fa-phone"></span><h4 style="padding-top: 15px;">55 6163 8899</h4>
+  </div>
+  <div class="icon-flex">
+    <span class="fa-solid fa-envelope"></span><h4 style="padding-bottom: 15px;">uncorreo@gmail.com</h4>
+  </div>
+  <h4 style="padding-bottom: 15px;">Psicólogo gestalt, especialista en autoestima, estrés y relaciones personales.</h4>
   </div>
   </div>
 
@@ -54,8 +94,13 @@
     <img src="/img/27.jpeg">
     <div class="cont-listado-hijo-text">
     <h2>Emilio Flores</h2>
-    <h4 style="padding-top: 15px;">55 6163 8899</h4>
-    <h4 style="padding-bottom: 15px;">uncorreo@gmail.com</h4>
+    <div class="icon-flex">
+    <span class="fa-solid fa-phone"></span><h4 style="padding-top: 15px;">55 6163 8899</h4>
+  </div>
+  <div class="icon-flex">
+    <span class="fa-solid fa-envelope"></span><h4 style="padding-bottom: 15px;">uncorreo@gmail.com</h4>
+  </div>
+  <h4 style="padding-bottom: 15px;">Psicólogo gestalt, especialista en autoestima, estrés y relaciones personales.</h4>
   </div>
   </div>
 
@@ -63,13 +108,20 @@
     <img src="/img/28.jpeg">
     <div class="cont-listado-hijo-text">
     <h2>Ana Cruz</h2>
-    <h4 style="padding-top: 15px;">55 6163 8899</h4>
-    <h4 style="padding-bottom: 15px;">uncorreo@gmail.com</h4>
+    <div class="icon-flex">
+    <span class="fa-solid fa-phone"></span><h4 style="padding-top: 15px;">55 6163 8899</h4>
+  </div>
+  <div class="icon-flex">
+    <span class="fa-solid fa-envelope"></span><h4 style="padding-bottom: 15px;">uncorreo@gmail.com</h4>
+  </div>
+  <h4 style="padding-bottom: 15px;">Psicóloga cognitivo conductual, especialista en ansiedad.</h4>
   </div>
   </div>
 
 </div>
-
+<div style="margin-top: 200px;"></div>
+<img src="/img/Hojas1.png" class="hoja1">
+<img src="/img/Hojas3.png" class="hoja2">
   </main>
 </body>
 </html>

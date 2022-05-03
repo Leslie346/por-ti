@@ -62,12 +62,6 @@ button{
     }
 }
 
-h1{
-    position: absolute;
-    z-index: 20;
-    top:0;
-}
-
 .hoja1{
     position: absolute;
     bottom: 0;

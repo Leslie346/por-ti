@@ -50,6 +50,14 @@ app.get('/ejerciciosrecientes404', function(req, res){
     res.sendFile(path.join(__dirname, './views/ejerciciosrecientes404.html'));
 });
 
+app.get('/scroll', function(req, res){
+    res.sendFile(path.join(__dirname, './views/scroll.html'));
+});
+
+app.get('/lol', function(req, res){
+    res.sendFile(path.join(__dirname, './views/lol.html'));
+});
+
 
 
 app.get('/404', (req, res) => {

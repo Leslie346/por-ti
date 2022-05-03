@@ -1,7 +1,9 @@
 .box{
 	width:30%;
 	height:300px;
-	margin:0 auto;
+	margin: 0 10px 0 0;
+	padding: 0;
+	display: inline-block;
 	background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1650503366/Por%20Ti/ejercicios-card5_bwlfd4.svg);
 	background-size: auto 100%;
 	background-position:center;
@@ -22,6 +24,8 @@
   .card-ejercicio-text{
 	  padding: 20px;
 	  margin-left: 20px;
+	  position: relative;
+	  width: 100px;
   }
 
   .card-ejercicio-text h2{
@@ -41,6 +45,7 @@
 	font-size: medium;
 	transition:1s ease;
 	position: relative;
+	width: 40%;
 	top: 170px;
 	left: -15px;
 	text-align: left;
@@ -69,6 +74,7 @@
 	transition: 1s ease;
 	opacity: 1;
 	cursor: pointer;
+	width: 40%;
   }
 
   .box:hover h6{
