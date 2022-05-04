@@ -1,10 +1,14 @@
 const express = require('express');
+let rutasEjercicios = require('./routes/ejercicios.js');
 const path = require('path');
 
 const app = express();
 
 const publicFolderPath = path.resolve(__dirname, './public');
 app.use(express.static(publicFolderPath));
+
+
+
 
 app.listen(3000, () => {
     console.log('Servidor corriendo')
@@ -63,5 +67,7 @@ app.get('/lol', function(req, res){
 app.get('/404', (req, res) => {
     res.send('Error página no encontrada');
     });
+
+app.use('/ejercicios', rutasEjercicios);
 
 // En function va la consecuencia que sucede cuando el usuario ingresa a la url
