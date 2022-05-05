@@ -1,0 +1,18 @@
+[
+  {
+    "id": 18,
+    "name": "Al",
+    "last_name": "La",
+    "email": "lac@correo.com",
+    "password": "lala123lala123",
+    "confirm_password": "lala123lala123"
+  },
+  {
+    "id": 19,
+    "name": "Ana",
+    "last_name": "Salazar",
+    "email": "ana@correo.com",
+    "password": "lala123456",
+    "confirm_password": "lala123456"
+  }
+]

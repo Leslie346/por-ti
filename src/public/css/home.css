@@ -1,0 +1,222 @@
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 52px;
+    color: white;
+    text-align: left;
+}
+
+h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    color: white;
+    text-align: center;
+}
+
+h3{
+    font-family: 'Nunito', sans-serif;
+    font-size: 32;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+}
+
+h4{
+    font-family: 'Nunito', sans-serif;
+    font-size: 26;
+    font-weight: 400;
+    color: white;
+    text-align: center; 
+}
+
+h6{
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: rgb(203, 203, 243);
+    text-align: left; 
+}
+
+p{
+    font-family: 'Nunito', sans-serif;
+    font-size: 32;
+    font-weight: 400;
+    color: white;
+    text-align: center; 
+}
+
+.img-home{
+width: 100%;
+}
+
+.banner{
+    top: -10px;
+    position: relative;
+    height: 90%;
+    z-index: -10;
+    background-image: linear-gradient(180deg,rgba(21,48,142,0) 0,#1d2d82 50%,#13212d 100%),url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1648519753/Por%20Ti/fondo_registro_s5hqja.png) no-repeat center center;
+    padding: 0;
+    margin: 0;
+}
+
+.buttonBanner{
+    position: absolute;
+    z-index: 1000;
+    top: 480px;
+    left: 200px;
+}
+
+main{
+    padding-top: 50px;
+    margin: 0;
+    height: 100%;
+    background-size: 100% 40%,cover;
+    background-position: 50% 100%,center;
+    min-height: 95vh;
+}
+
+.h2-Index{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.h3-Index{
+    margin-bottom:50px;
+}
+
+.banner-text{
+ color: white;
+}
+
+.bigTitle{
+    z-index: 2;
+    position: absolute;
+    top:250px;
+    left: 200px;
+    width: 100%;
+   }
+
+   .smallTitle{
+    z-index: 3;
+    position: absolute;
+    top: 350px;
+    left: 200px;
+    width: 50%;
+   }
+
+.quienes-somos-cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.quienes-somos{
+margin: 30px;
+}
+
+.beneficios {
+height: 200px;
+text-align: center;
+padding: 15px;
+margin-top: 20px;
+}
+
+button{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: medium;
+    border-radius: 50px;
+    text-decoration: none;
+    border: none;
+    padding: 15px;
+    width:  16em;
+    background-color: rgb(254, 223, 200);
+    color: rgb(65, 64, 105);
+    }
+    
+    button:hover{
+        background-color: rgba(254, 223, 200, 0.8);
+        transition:background-color 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+.bannerButton{
+    z-index: 200;
+    position: relative;
+    top: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: medium;
+    border-radius: 50px;
+    text-decoration: none;
+    border: none;
+    margin-top: 25px;
+    padding: 15px;
+    width:  16em;
+    background-color: rgb(254, 223, 200);
+    color: rgb(65, 64, 105);
+    }
+
+    .bannerButton:hover,
+    .bannerButton:focus{
+        background-color: rgba(254, 223, 200, 0.5);
+        transition: background-color 0.3s ease-in-out;
+        cursor: pointer;
+    }
+  
+  @media ( min-width : 600px ){
+      .flexbox {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      align-items: center;
+      }
+
+      .flexbox:hover{
+        cursor: pointer; 
+      }
+
+      .img-beneficios{
+    background-color: rgba(0, 0, 0, 0.28);
+    border-radius: 50px;
+    margin: 1em;
+    width: 320px;
+    height: 320px;
+    backdrop-filter: blur(2px);
+    text-align: center;
+    padding: 0, 30px, 20px, 20px;
+      }
+
+      .img-beneficios:hover,
+      .img-beneficios:focus
+{
+    background-color:white;
+    cursor: pointer;
+    transition:background-color 0.3s ease-in-out;
+}
+
+.img-beneficios h3{
+   margin-bottom: 20px;
+      }
+    }
+
+#review{
+text-align: left;
+padding-left:  40px;
+margin-bottom:  25px;
+}
+
+#review:hover,
+#review:focus{
+    background-color: rgba(63, 63, 63, 0.28);
+    cursor: pointer;
+    transition:background-color 0.3s ease-in-out;
+}
+
+.checked{
+    margin-top: 35px;
+    margin-right: 10px;
+    color: orange;
+    width: 25px;
+    align-self: left;
+}
+
