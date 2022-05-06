@@ -65,6 +65,9 @@ processLogin: (req, res) => {
     if(userToLogin) {
         let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
         if (isOkThePassword){
+        delete userToLogin.password;
+        delete userToLogin.confirm_password;
+        req.session.userLogged = userToLogin;
         return res.redirect('/users/miperfil')
         }
         return res.render('login', {
@@ -93,8 +96,16 @@ create: function(req, res, next){
 },
 
 profile: function(req, res){
-    return res.render('perfil');
+    return res.render('perfil', {
+        user: req.session.userLogged
+    });
+},
+
+logout: function(req, res){
+    req.session.destroy();
+    return res.redirect('/');
 }
+
 }
 
 module.exports = usersController;

@@ -14,6 +14,8 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 let bcrypt = require('bcryptjs');
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware.js');
+
 
 app.use(cookieParser());
 
@@ -22,6 +24,8 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }));
+
+app.use(userLoggedMiddleware);
 
 // Sesión solo es vive mientras este abierto el navegador
 

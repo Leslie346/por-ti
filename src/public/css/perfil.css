@@ -81,3 +81,11 @@ h2{font-family: 'Poppins', sans-serif;
 .timeline-description p:first-child{margin-top: 0;}
 
 
+.a-session{
+    color: lavender;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 21px;
+    margin: 0 auto;
+    text-decoration: underline;
+}
