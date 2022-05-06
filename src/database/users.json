@@ -1,18 +1,34 @@
 [
   {
-    "id": 18,
-    "name": "Al",
-    "last_name": "La",
-    "email": "lac@correo.com",
-    "password": "lala123lala123",
-    "confirm_password": "lala123lala123"
+    "id": 5,
+    "name": "Les",
+    "last_name": "Cruz",
+    "email": "les@correo.com",
+    "password": "$2a$10$lOCAXL.EA.tmCUZsNUH04OgQGK.wcv74xg7tZsALglp94iIZo3yIO",
+    "confirm_password": "leel123"
   },
   {
-    "id": 19,
-    "name": "Ana",
-    "last_name": "Salazar",
-    "email": "ana@correo.com",
-    "password": "lala123456",
-    "confirm_password": "lala123456"
+    "id": 6,
+    "name": "Alan",
+    "last_name": "García",
+    "email": "alan@correo.com",
+    "password": "$2a$10$4inKWqCBRCnwxKcnCNDuW.pZ4k6AFtxfi.dxXhO1xdL70ozTACMLW",
+    "confirm_password": "aalan123"
+  },
+  {
+    "id": 7,
+    "name": "Alan",
+    "last_name": "García",
+    "email": "alan@correo.net",
+    "password": "$2a$10$Mc.tGsEalJ43zB0/8j4x1O053dVmloji8pvpfacpXmqkVYNSNJkZC",
+    "confirm_password": "lala123"
+  },
+  {
+    "id": 8,
+    "name": "Paco",
+    "last_name": "Torres",
+    "email": "pacoto@gmail.com",
+    "password": "$2a$10$corNUuOY6FKNphqogBzm.ux8yTE6AvKtl3LjyumG2BKOXQ1yX0qYW",
+    "confirm_password": "paco123"
   }
 ]

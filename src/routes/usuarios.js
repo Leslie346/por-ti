@@ -16,9 +16,10 @@ router.post('/registro', validations, usersController.processRegister);
 // Formulario de login
 router.get('/login', usersController.login);
 
-router.post('/miperfil/:userId', validations, usersController.create);
+// Procesar el login
+router.post('/login', validations, usersController.processLogin);
 
 // Perfil
-router.get('/perfil/:userId', usersController.profile);
+router.get('/miperfil', usersController.profile);
 
 module.exports = router;

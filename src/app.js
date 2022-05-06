@@ -17,7 +17,11 @@ let bcrypt = require('bcryptjs');
 
 app.use(cookieParser());
 
-app.use(session({secret: "Mensaje secreto"}))
+app.use(session({
+    secret: "Mensaje secreto",
+    resave: false,
+    saveUninitialized: false
+}));
 
 // Sesión solo es vive mientras este abierto el navegador
 
