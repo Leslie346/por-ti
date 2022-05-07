@@ -30,5 +30,15 @@
     "email": "pacoto@gmail.com",
     "password": "$2a$10$corNUuOY6FKNphqogBzm.ux8yTE6AvKtl3LjyumG2BKOXQ1yX0qYW",
     "confirm_password": "paco123"
+  },
+  {
+    "id": 5,
+    "name": "Clau",
+    "last_name": "Correa",
+    "email": "clau@correo.com",
+    "password": [
+      "lala123",
+      "lala123"
+    ]
   }
 ]

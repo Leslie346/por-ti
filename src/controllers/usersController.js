@@ -31,13 +31,13 @@ processRegister: (req, res) => {
             oldData: req.body
         });
     }
+
     else {
 
     users.push({
         id: users.length + 1,
         ...userInfo,
-        password: bcryptjs.hashSync(userInfo.password, 10)
-    });
+    })
 
 
    // let userToCreate = {

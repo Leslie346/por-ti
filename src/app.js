@@ -13,7 +13,7 @@ const app = express();
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-let bcrypt = require('bcryptjs');
+const bcrypt = require('bcryptjs');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware.js');
 
 
@@ -40,11 +40,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const publicFolderPath = path.resolve(__dirname, './public');
 app.use(express.static(publicFolderPath));
 
+let port = process.env.PORT || 3000;
 
-
-
-app.listen(3000, () => {
-    console.log('Servidor corriendo')
+app.listen(port, ()=>{
+    console.log(`App is running at the port ${port}`);
 });
 
 app.get('/', function(req, res){
