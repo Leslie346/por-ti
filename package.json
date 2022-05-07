@@ -4,12 +4,13 @@
   "description": "",
   "main": "app.js",
   "engines": {
-    "node": "12.11.1"
+    "node": "12.14.2",
+    "npm": "8.5.0"
   },
   "scripts": {
     "dev": "react-scripts start",
     "test": "react-scripts test --env=jsdom",
-    "start": "serve -s build",
+    "start": "node src/app.js",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "heroku-postbuild": "npm run build"
@@ -29,6 +30,7 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.0",
     "cookie-parser": "^1.4.6",
+    "debug": "^4.3.4",
     "ejs": "^3.1.7",
     "express": "^4.18.1",
     "express-session": "^1.17.2",
