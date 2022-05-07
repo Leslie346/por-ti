@@ -36,8 +36,5 @@
     "express-validator": "^6.14.0",
     "react-scripts": "^5.0.1",
     "serve": "^13.0.2"
-  },
-  "devDependencies": {
-    "sequelize-cli": "^6.2.0"
   }
 }
