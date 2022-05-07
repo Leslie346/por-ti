@@ -47,7 +47,7 @@ app.listen(port, ()=>{
 });
 
 app.get('/', function(req, res){
-    res.render('index');
+    res.sendFile(path.join(__dirname, '../src/views', 'index.html'));
 });
 
 //app.get('/login', function(req, res){
