@@ -21,6 +21,12 @@
 </head>
 <div class="main">
 
+    <script>
+        function myFunction(element, color) {
+          element.style.backgroundColor = color;
+        }
+        </script>
+
     <body>
 
         <%- include('./partials/nav') %>
@@ -32,19 +38,18 @@
 
     <div class="contenedor-objetivos">
         
-        <div id="sub-contenedor-objetivos"><div id="sub-contenedor-objetivos--selected">
+        <div id="sub-contenedor-objetivos" onclick="myFunction(this, 'rgba(117, 117, 117, 0.20)')">
            <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1648833262/Por%20Ti/Salud_social_icono_am6vep.png" alt="salud social">
        <h5>Salud social</h5>
-    </div>
         </div>
 
           
-        <div id="sub-contenedor-objetivos">
+        <div id="sub-contenedor-objetivos" onclick="myFunction(this, 'rgba(117, 117, 117, 0.20)')">
             <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1648833263/Por%20Ti/Salud_mental_icono_ukchh4.png" alt="salud mental">
             <h5>Salud mental</h5> 
         </div>
 
-        <div id="sub-contenedor-objetivos">
+        <div id="sub-contenedor-objetivos" onclick="myFunction(this, 'rgba(117, 117, 117, 0.20)')">
             <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1648833262/Por%20Ti/Salud_fi%CC%81sica_icono_gsvons.png" alt="salud física">
             <h5>Salud física</h5> 
         </div>

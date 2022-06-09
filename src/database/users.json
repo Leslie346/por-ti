@@ -40,5 +40,15 @@
       "lala123",
       "lala123"
     ]
+  },
+  {
+    "id": 6,
+    "name": "Karla",
+    "last_name": "Torres",
+    "email": "karla23@correo.com",
+    "password": [
+      "lala123",
+      "lala123"
+    ]
   }
 ]

@@ -1,4 +1,4 @@
-const { check, validationResult, body } = require('express-validator');
+const { body } = require('express-validator');
 
 // Validaciones
 

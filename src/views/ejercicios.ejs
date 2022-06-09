@@ -31,12 +31,41 @@
 
 <body>
 
+  <!--Corazón-->
+  <script>
+   let i =document.getElementByClass("card-ejercicio-heart");
+   i.innerHTML += "<i class="fa-solid fa-heart"></i>";
+    </script>
+
         <!--Frase--> 
     <div class="frase-fondo">
-        <div class="frase-fondo-texto">
-            <h2>La vida es como montar en bicicleta. Para mantener el equilibrio tienes que avanzar</h2>
+        <div class="frase-fondo-texto"> 
+          <script>
+            var frases = new Array ("La vida es como montar en bicicleta. Para mantener el equilibrio tienes que avanzar", "Las dudas no se superan, convives siempre con ellas. Lo que sí que puede hacer uno es dar lo máximo cada día", "Importa mucho más lo que tú piensas de ti mismo que lo que los otros opinen de ti");
+            var x = 0;
+            function frase()
+            {
+              if(x > 2)
+              {
+                x = 0;
+              }
+              document.getElementById("frase").textContent = frases[x];
+              x++;
+            }
+            temporizador = setInterval("frase()", 5000);
+            if(res.locals.isLogged == false){
+              temporizador = clearInterval("frase()");
+            }
+          </script>
+          <h2 id="frase">
+            La vida es como montar en bicicleta. Para mantener el equilibrio tienes que avanzar
+</h2>
           <div class="smallTitle">
-              <h2 style="text-align:center; font-weight: 800; margin-top: 25px;">14 de Marzo</h2>
+              <h2 style="text-align:center; font-weight: 800; margin-top: 25px;"><script>
+                var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+                var f=new Date();
+                document.write(f.getDate() + " de " + meses[f.getMonth()]);
+                </script></h2>
               </div>
             </div>
         </div>
@@ -71,7 +100,11 @@
       <h2>Tapping</h2><h6>12 min</h6>
         <h4>Lorem ipsum dolor sit amet consectetur</h4></div></div>
       
-        <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1650503368/Por%20Ti/ejercicios-card6_tslgtr.svg);"><div class="card-ejercicio-text">
+        <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1650503368/Por%20Ti/ejercicios-card6_tslgtr.svg);">
+          <div class="card-ejercicio-heart">
+            <i class="fa-light fa-heart"></i>
+          </div>
+          <div class="card-ejercicio-text">
           <h2>Arteterapia</h2><h6>12 min</h6>
         <h4>Lorem ipsum dolor sit amet consectetur</h4></div></div>
       

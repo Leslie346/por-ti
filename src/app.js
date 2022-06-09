@@ -47,7 +47,7 @@ app.listen(port, ()=>{
 });
 
 app.get('/', function(req, res){
-    res.render('index');
+    res.render('../views/index.ejs');
 });
 
 //app.get('/login', function(req, res){

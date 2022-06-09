@@ -63,13 +63,10 @@ processLogin: (req, res) => {
     let userToLogin = User.findByField('email', req.body.email);
     
     if(userToLogin) {
-        let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-        if (isOkThePassword){
         delete userToLogin.password;
         delete userToLogin.confirm_password;
         req.session.userLogged = userToLogin;
-        return res.redirect('/users/miperfil')
-        }
+        return res.redirect('/users/miperfil');
         return res.render('login', {
             errors: {
                 password: {
