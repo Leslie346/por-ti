@@ -10,6 +10,9 @@ const path = require('path');
 
 const app = express();
 
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
+
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
@@ -47,7 +50,7 @@ app.listen(port, ()=>{
 });
 
 app.get('/', function(req, res){
-    res.render('../views/index.ejs');
+    res.render('index.ejs'); 
 });
 
 //app.get('/login', function(req, res){
