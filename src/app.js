@@ -36,7 +36,7 @@ app.use(userLoggedMiddleware);
 
 app.set('view engine', 'ejs');
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -50,7 +50,7 @@ app.listen(port, ()=>{
 });
 
 app.get('/', function(req, res){
-    res.render('index.html'); 
+    res.render('index'); 
 });
 
 //app.get('/login', function(req, res){
