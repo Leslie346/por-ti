@@ -1,4 +1,24 @@
 const express = require('express');
+const mysql = require('mysql2');
+
+let conexion = mysql.createConnection({
+    host: 'localhost',
+    database: 'por_ti_database',
+    user: 'root',
+    password: ''
+});
+
+
+conexion.connect(function(error){
+if(error){
+    throw error
+}
+else{
+    console.log('CONEXION EXITOSA')
+}
+});
+
+conexion.end();
 
 // Rutas
 let rutasEjercicios = require('./routes/ejercicios.js');
