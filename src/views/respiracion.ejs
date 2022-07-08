@@ -1,0 +1,51 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>Técnicas de respiración</title>
+     
+    <!--FAVICON--> 
+      <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+
+    <!--CSS--> 
+    <link rel="stylesheet" href="/css/respiracion.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="/css/navbar.css" type="text/css">
+    <link rel="stylesheet" href="/css/fondo.css" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<%- include('./partials/nav') %>
+
+  <!--Estrellas--> 
+<body>
+    <h1 style="color:white">Respira. </h1>
+    <br>
+    <br>
+    <main>
+        <div class="circle"></div>
+    </main>
+    <br>
+    <br>
+    <section>
+        <p>Toma una respiración profunda mientras el círculo se expande. <br>Exhala mientras reduce su tamaño.<br><br></p> 
+        <label for="number">Ajustar tiempo: </label>
+        <input style="color: #111425" type="number" id="number" value="10" min="5">
+    </section>
+
+    <div class="back">
+        <a href="/misejercicios"><button>Volver</button></a>
+    </div>
+<br>
+<br>
+<br>
+<br>
+</body>
+
+<script>
+
+const input = document.querySelector("input[type='number']")
+
+document.querySelector("input[type='number']").addEventListener('change', (event) => {
+    document.documentElement.style.setProperty('--timing', input.value + "s");
+})
+
+</script>

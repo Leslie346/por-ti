@@ -8,10 +8,10 @@
     </title>
 
       <!--FAVICON--> 
-      <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+      <link rel="shortcut icon" type="image/png" href="//img/favicon.png">
       
       <!--CSS--> 
-      <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+      <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
       <link rel="stylesheet" href="/css/home.css" type="text/css">
       <link rel="stylesheet" href="/css/navbar.css" type="text/css">
       <link rel="stylesheet" href="/css/fondo.css" type="text/css">
@@ -39,7 +39,7 @@
   <nav id="primary_nav_wrap">
       <ul>
         <% if(locals.isLogged) { %>
-          <li><a href="/listado">Contacto</a></li>
+          <li><a href="/listado">Ejercicios</a></li>
           <li class="current-menu-item"><a href="/misejercicios">Mis ejercicios</a></li>
           <li><a href="/users/miperfil">¡Hola <b><%= locals.userLogged.name %>!</b></a>
                 </ul>
@@ -47,7 +47,7 @@
           </li>
         </ul>
           <% } else { %>
-            <li class="current-menu-item"><a href="/misobjetivos">Contacto</a></li>
+            <li class="current-menu-item"><a href="/misobjetivos">Ejercicios</a></li>
             <li><a href="/users/login">Iniciar sesión</a>
                     <li><a href="/users/registro">Registrate</a></li>
                   </ul>

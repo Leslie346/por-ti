@@ -9,8 +9,12 @@ router.get('/organizador-de-tareas', function (req, res) {
     res.render('organizador1');
 });
 
-router.get('/organizador-de-tareas2', function (req, res) {
-    res.render('organizador2');
+router.get('/5sentidos', function (req, res) {
+    res.render('5sentidos');
+});
+
+router.get('/respiracion', function (req, res) {
+    res.render('respiracion');
 });
 
 module.exports = router;

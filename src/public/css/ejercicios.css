@@ -213,3 +213,8 @@ button{
       position: relative;
       width: 60%;
   }
+
+  *a{
+text-decoration: none;
+
+  }
