@@ -30,22 +30,37 @@ app.use(userLoggedMiddleware);
 
 // Cookies expiran en un determinado tiempo
 
-app.set('views', path.join(__dirname, './views'));
+
+// AQUI PRUEBA
+//app.set('views', path.join(__dirname, './views'));
+
+//app.set('view engine', 'ejs');
+
+//app.use(express.static(path.join(__dirname, './public')));
+
+//app.use(bodyParser.urlencoded({ extended: false }));
+
+//const publicFolderPath = path.resolve(__dirname, './public');
+//app.use(express.static(publicFolderPath));
+
+//let port = process.env.PORT || 3000;
+
+//app.listen(port, ()=>{
+   // console.log(`App is running at the port ${port}`);
+//});
+
 
 app.set('view engine', 'ejs');
 
-app.use(express.static(path.join(__dirname, './public')));
+app.use(express.static('./public'));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(methodOverride('_method'));
 
-app.use(bodyParser.urlencoded({ extended: false }));
+const port = process.env.PORT || 3000
 
-const publicFolderPath = path.resolve(__dirname, './public');
-app.use(express.static(publicFolderPath));
+app.listen(port, () => { console.log(`App listening at http://localhost:${port}`) });
 
-let port = process.env.PORT || 3000;
-
-app.listen(port, ()=>{
-    console.log(`App is running at the port ${port}`);
-});
 
 app.get('/', function(req, res){
     res.render('index'); 
