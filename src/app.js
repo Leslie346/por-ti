@@ -41,7 +41,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const publicFolderPath = path.resolve(__dirname, '/public');
+const publicFolderPath = path.resolve(__dirname, 'public');
 app.use(express.static(publicFolderPath));
 
 let port = process.env.PORT || 3000;
