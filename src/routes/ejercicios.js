@@ -10,11 +10,15 @@ router.get('/organizador-de-tareas', function (req, res) {
 });
 
 router.get('/5sentidos', function (req, res) {
-    res.render('5sentidos');
+    res.render('5sentidos2');
 });
 
 router.get('/respiracion', function (req, res) {
     res.render('respiracion');
+});
+
+router.get('/registro-de-ansiedad', function (req, res) {
+    res.render('ansiedad_');
 });
 
 module.exports = router;

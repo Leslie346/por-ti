@@ -101,9 +101,6 @@ profile: function(req, res){
 logout: function(req, res){
     req.session.destroy();
     return res.redirect('/');
-},
-organizador:(req, res) => {
-    res.render('to-do')
 }
 
 }

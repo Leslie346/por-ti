@@ -14,6 +14,7 @@ body{
   background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1655491397/Por%20Ti/fondo_login_gk172y.png);
   background-size: cover;
 }
+
 ::selection{
   color: #fff;
   background: #693cff;
@@ -259,4 +260,8 @@ body{
     .bars{
         width:25px;
         height:30px;
+    }
+
+    .pdf{
+      text-align: center;
     }

@@ -113,6 +113,10 @@ app.get('/404', (req, res) => {
     res.send('Error página no encontrada');
     });
 
+    app.get('/loader', (req, res) => {
+    res.render('loader');
+        });
+
 app.use('/ejercicios', rutasEjercicios);
 
 app.use('/alimentos', rutasAlimentos);
