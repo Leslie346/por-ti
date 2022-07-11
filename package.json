@@ -2,7 +2,7 @@
   "name": "por-ti",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "src/app.js",
   "engines": {
     "node": "16.14.2"
   },
