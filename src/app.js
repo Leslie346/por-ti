@@ -9,9 +9,6 @@ const path = require('path');
 
 const app = express();
 
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
-
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
@@ -33,13 +30,13 @@ app.use(userLoggedMiddleware);
 
 // Cookies expiran en un determinado tiempo
 
-app.set('view engine', 'ejs');
-
 app.set('views', path.join(__dirname, './views'));
+
+app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, './public')));
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 const publicFolderPath = path.resolve(__dirname, './public');
 app.use(express.static(publicFolderPath));
@@ -54,14 +51,6 @@ app.get('/', function(req, res){
     res.render('index'); 
 });
 
-//app.get('/login', function(req, res){
-  //  res.render('login');
-//});
-
-//app.get('/registro', function(req, res){
-  // res.render('registro');
-//});
-
 app.get('/misobjetivos', function(req, res){
     res.render('objetivos');
 });
@@ -69,10 +58,6 @@ app.get('/misobjetivos', function(req, res){
 app.get('/misejercicios', function(req, res){
     res.render('ejercicios');
 });
-
-//app.get('/miperfil', function(req, res){
-  //  res.render('perfil');
-//});
 
 app.get('/listado', function(req, res){
     res.render('listado');
