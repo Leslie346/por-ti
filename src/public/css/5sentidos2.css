@@ -6,12 +6,12 @@
     font-family: "Poppins", sans-serif;
 }
 :root {
-    --primary: #333;
-    --secondary: #333;
+    --primary:rgb(65, 64, 105);
+    --secondary: rgb(65, 64, 105);
     --errorColor: red;
     --stepNumber: 6;
     --containerWidth: 600px;
-    --bgColor: #333;
+    --bgColor: rgb(65, 64, 105);
     --inputBorderColor: lightgray;
 }
 
@@ -130,13 +130,13 @@ form .page .btns button.next {
 .container .progress-bar .step p {
     font-weight: 500;
     font-size: 18px;
-    color: #000;
+    color: rgb(65, 64, 105);
     margin-bottom: 8px;
 }
 .progress-bar .step .bullet {
     height: 25px;
     width: 25px;
-    border: 2px solid #000;
+    border: 2px solid rgb(65, 64, 105);
     display: inline-block;
     border-radius: 50%;
     position: relative;
@@ -246,7 +246,7 @@ margin-top: 40px;
     padding: 15px;
     width:  16em;
     background-color: rgb(254, 223, 200);
-    color: rgb(65, 64, 105);
+    color: rgb(149, 148, 199);
     text-align: center;
  }
 

@@ -126,6 +126,7 @@ p{
 .ejercicios-top-contenedor-hijo img:focus{
    opacity: 50%;
    cursor: pointer;
+   background-color:linear-gradient(180deg,rgba(21,48,142,0) 0,#1d2d82 50%,#13212d 100%);
 }
 
 /*Contenedores medios*/

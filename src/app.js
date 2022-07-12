@@ -1,13 +1,11 @@
+const express = require('express');
+const app = express();
+const path = require('path');
 
 // Rutas
 let rutasEjercicios = require('./routes/ejercicios.js');
 let rutasAlimentos = require('./routes/alimentos.js');
 let rutasUsuarios = require('./routes/usuarios.js');
-
-
-const path = require('path');
-
-const app = express();
 
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -32,34 +30,22 @@ app.use(userLoggedMiddleware);
 
 
 // AQUI PRUEBA
-//app.set('views', path.join(__dirname, './views'));
-
-//app.set('view engine', 'ejs');
-
-//app.use(express.static(path.join(__dirname, './public')));
-
-//app.use(bodyParser.urlencoded({ extended: false }));
-
-//const publicFolderPath = path.resolve(__dirname, './public');
-//app.use(express.static(publicFolderPath));
-
-//let port = process.env.PORT || 3000;
-
-//app.listen(port, ()=>{
-   // console.log(`App is running at the port ${port}`);
-//});
-
+app.set('views', path.join(__dirname, './views'));
 
 app.set('view engine', 'ejs');
 
-app.use(express.static('./public'));
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-app.use(methodOverride('_method'));
+app.use(express.static(path.join(__dirname, './public')));
 
-const port = process.env.PORT || 3000
+app.use(bodyParser.urlencoded({ extended: false }));
 
-app.listen(port, () => { console.log(`App listening at http://localhost:${port}`) });
+const publicFolderPath = path.resolve(__dirname, './public');
+app.use(express.static(publicFolderPath));
+
+let port = process.env.PORT || 3000;
+
+app.listen(port, ()=>{
+    console.log(`App is running at the port ${port}`);
+});
 
 
 app.get('/', function(req, res){

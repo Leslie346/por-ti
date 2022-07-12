@@ -21,4 +21,12 @@ router.get('/registro-de-ansiedad', function (req, res) {
     res.render('ansiedad_');
 });
 
+router.get('/arteterapia', function (req, res) {
+    res.render('arteterapia');
+});
+
+router.get('/registro-de-sueno', function (req, res) {
+    res.render('registro-de-sueno');
+});
+
 module.exports = router;
