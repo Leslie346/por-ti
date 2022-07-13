@@ -29,4 +29,9 @@ router.get('/registro-de-sueno', function (req, res) {
     res.render('registro-de-sueno');
 });
 
+router.get('/imaginacion-guiada', function (req, res) {
+    res.render('imaginacion');
+});
+
+
 module.exports = router;
