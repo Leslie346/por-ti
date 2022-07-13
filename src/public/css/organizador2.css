@@ -256,6 +256,7 @@ body{
             background-color: rgb(254, 223, 200);
             color: rgb(65, 64, 105);
             text-align: center;
+            cursor: pointer;
          }
     .bars{
         width:25px;

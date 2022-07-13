@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Multistep form</title>
+  <title>5 sentidos</title>
   <%- include('./partials/favicon') %>  
   <!--JQUERY-->
   <script src="js/script.js"></script>
@@ -19,11 +19,17 @@
   <script src="https://kit.fontawesome.com/60756a3678.js" crossorigin="anonymous"></script>
  
   <%- include('./partials/nav') %>  
+<main>
+   <!-- Tittle -->
+  <div class="titles">
+    <h2 style="margin-top: 100px;">5-4-3-2-1 sentidos</h2>
+    <p>Es una técnica auto-calmante para aliviar la ansiedad, </p>
+    <p>consiste en utilizar los cinco sentidos para tomar conciencia del cuerpo.aaaaa</p>
+  </div>
+  
   <body>
+ 
         <div class="container">
-            <header>5-4-3-2-1 sentidos</header>
-                  <p>Es una técnica auto-calmante para aliviar la ansiedad, </p>
-      <p>consiste en utilizar los cinco sentidos para tomar conciencia del cuerpo.</p>
             <div class="progress-bar">
                 <div class="step">
                     <p>Vista</p>
@@ -143,14 +149,9 @@
                         <div class="field">
                             <input type="text" placeholder="1."/>
                         </div>
-                        <div class="field btns">
-                            <button class="prev-3 prev">Anterior</button>
-                        </div>
+                        <div class="title">¡Felicidades! Concluiste el ejercicio.</div>
                     </div>
                 </form>
-            </div>
-            <div class="back">
-                <a href="/misejercicios"><button>Volver</button></a>
             </div>
         </div>
 
@@ -244,5 +245,9 @@ function initMultiStepForm() {
         </script>
           
     </body>
+    <div class="back">
+        <a href="/misejercicios"><button>Volver</button></a>
+    </div>
+</main>
     <br>
 </html>

@@ -136,6 +136,10 @@ p{
     white-space: nowrap;
 }
 
+::-webkit-scrollbar {
+    display: none;
+    }
+
 .ejercicios-box-cont .box{
     display: inline-block;
     text-align: center;
