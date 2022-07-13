@@ -5,8 +5,12 @@ text-align: center;
 
 * {
     color: white;
-    background-color: #111425;
     text-align: center;
+}
+
+html{
+    background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1657751868/Por%20Ti/fondo-imaginaciob_n_k0srll.svg);
+    box-shadow: inset 1px 1px 40px 0 rgba(0, 0, 0, 0.45); 
 }
 
 .titles{
@@ -22,12 +26,6 @@ h2{
 p{
     font-family: 'Nunito', sans-serif;
     font-size: 18px;
-}
-
-
-body{
-    background: linear-gradient(#282559, #383480);
-    box-shadow: inset 1px 1px 40px 0 rgba(0, 0, 0, 0.45); 
 }
 
 .back{
