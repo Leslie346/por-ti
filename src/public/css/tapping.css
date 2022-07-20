@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    color: white;
+}
+
+main{
+    margin-left: 150px;
+}
+
+body{
+    margin-top: -150px;
+}
+
+.instruccion{
+    border-radius: 40px;
+    text-align: left;
+    background-color: rgba(203, 177, 227, 0.769);
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+aside {
+    margin-left: 200px;
+}
+
+h2{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500px;
+    text-align: left;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    text-align: left;
+}
+
+ul{
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    list-style: none;
+    text-align: left;
+    font-size: 21px;
+}
+
+.cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cont-1{
+width: 40%;
+height: 700px;
+display: block;
+overflow-y: scroll;
+scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    }
+
+.cont-2{
+    width: 60%;
+    margin-left: 50px;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .scene
+    {
+        position: relative;
+        margin: 0;
+        top: -15px;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#111425, rgba(40, 37, 89));
+        box-shadow: inset 1px 1px 40px 0 rgba(0, 0, 0, 0.45);
+        background-attachment: fixed;
+        overflow: hidden;
+        z-index: -100000;
+    }
+    
+    .scene i
+    {
+        position: absolute;
+        background: #fff;
+        border-radius: 50%;
+        animation: animate linear infinite;
+    }
+    
+    button{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: medium;
+        border-radius: 50px;
+        text-decoration: none;
+        border: none;
+        padding: 15px;
+        width:  16em;
+        background-color: rgb(254, 223, 200);
+        color: rgb(65, 64, 105);
+        }
+        
+        button:hover{
+            background-color: rgba(254, 223, 200, 0.8);
+            transition:background-color 0.3s ease-in-out;
+            cursor: pointer;
+        }
+    
+    @keyframes animate
+    {
+        0%
+        {
+            opacity: 0;
+            transform: translateY(0);
+        }
+        10%,90%{
+        opacity: 1;
+        }
+        100%
+        {
+            opacity: 0;
+            transform: translateY(-100px);
+        }
+    }
+    
+    .hoja1{
+        position: absolute;
+        bottom: 0;
+        left:0;
+        height: 300px;
+    }
+    
+    .hoja2{
+        position: absolute;
+        bottom: 0px;
+        right:0;
+        height: 300px;
+    }
+    
+    /* 
+    COLOR PARA DEGRADADO
+    rgba(40, 37, 89) */

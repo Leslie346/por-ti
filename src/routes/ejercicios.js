@@ -33,5 +33,8 @@ router.get('/imaginacion-guiada', function (req, res) {
     res.render('imaginacion');
 });
 
+router.get('/tapping', function (req, res) {
+    res.render('tapping');
+});
 
 module.exports = router;

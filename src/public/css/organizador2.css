@@ -17,14 +17,14 @@ body{
 
 ::selection{
   color: #fff;
-  background: #693cff;
+  background: rgb(105, 60, 255);
 }
 .wrapper{
   font-family: 'Nunito', sans-serif;
   max-width: 600px;
   padding: 28px 0 30px;
   margin: 100px auto;
-  background: #fff;
+  background: rgba(240, 236, 255, 0.841);
   border-radius: 7px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
@@ -67,7 +67,7 @@ body{
 .filters span{
   margin: 0 8px;
   font-size: 17px;
-  color: #444444;
+  color: #3f3246;
   cursor: pointer;
 }
 .filters span:first-child{

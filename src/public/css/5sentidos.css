@@ -13,7 +13,7 @@
   min-height: 820px;
   max-width: 810px;
   margin: 0 auto;
-  background: #ffffff;
+  background: rgba(240, 236, 255, 0.841);
   z-index: 1;
 }
 .multi_step_form #msform .tittle {
