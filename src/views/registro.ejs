@@ -32,7 +32,7 @@
       
     <%- include('./partials/nav') %>
 
-          <form action="/users/registro" method="POST" class="main" style="padding-bottom: 400px">
+          <form action="insert.php" method="POST" class="main" style="padding-bottom: 400px">
             <!--Prueba-->
             <div class="login-box" id="register-box">
                 <h2>¿Listo para hacer algo por ti hoy?<h6 class="body-text">Crea una cuenta</h6></h2>
@@ -81,7 +81,10 @@
                     <input type="password" name="password" required="" id="confirm_password"/>
                     <label for="password">Confirmar contraseña</label>
                   </div>
-         <button type="submit" style="text-align:center; left: 30%; right: 30%; position: absolute">Registrarme</button> 
+                  <input type="radio" name="objetivo" value="saludfisica">Salud Física
+                  <input type="radio" name="objetivo" value="saludmental">Salud Mental
+                  <input type="radio" name="objetivo" value="saludsocial">Salud Social
+                  <button type="submit" style="text-align:center; left: 30%; right: 30%; position: absolute">Registrarme</button> 
                 <br>
                 <br>
                 <br>
