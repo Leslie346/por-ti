@@ -8,6 +8,8 @@ main{
     margin-left: 150px;
 }
 
+p{ font-size: 1.2em; font-family: 'Nunito', sans-serif; }
+
 body{
     margin-top: -150px;
 }

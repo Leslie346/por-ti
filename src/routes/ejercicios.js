@@ -1,9 +1,11 @@
 const express = require('express');
 let ejerciciosController = require('../controllers/ejerciciosController');
+const objetivoMiddleware = require('../middlewares/objetivoMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 let router = express.Router();
 
-router.get('/', ejerciciosController.listado);
 
 router.get('/organizador-de-tareas', function (req, res) {
     res.render('organizador1');

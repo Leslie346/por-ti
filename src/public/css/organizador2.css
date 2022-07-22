@@ -225,19 +225,20 @@ body{
     display: flex;
     flex-direction: column;
     color: white;
-    font-family: 'Poppins';
     text-align: center;
+    font-family: 'Poppins', 'Nunito', sans-serif;
 }
 
 .titles h1{
     margin-top: 120px;
+    font-family: 'Poppins', sans-serif;
     }
-    
-    .titles h3{
-        margin-top:10px;
-        }
-        
 
+    .titles h3{
+     font-weight: 300;
+      }
+
+  
         .back{
             text-align: center;
         }

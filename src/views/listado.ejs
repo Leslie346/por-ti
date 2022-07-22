@@ -19,94 +19,70 @@
 
 <%- include('./partials/nav') %>
 
- <!--Estrellas--> 
-
- <div class="scene">
-  <script type="text/javascript">
-      function stars(){
-          let count = 500;
-          let scene = document.querySelector('.scene');
-          let i = 0;
-          while(i < count){
-              let star  = document.createElement("i");
-              let x = Math.floor(Math.random() * window.innerWidth);
-              let y = Math.floor(Math.random() * window.innerHeight);
-              let duration = Math.random() * 10;
-              let size = Math.random() * 2;
-
-              star.style.left = x+'px'; 
-              star.style.top = y+'px'; 
-              star.style.width = 1+size+'px'; 
-              star.style.height = 1+size+'px'; 
-
-              star.style.animationDuration = 5+duration+'s';
-              star.style.animationDelay = duration+'s';
-              scene.appendChild(star);
-              i++
-          }
-      }
-      stars()
-  </script>
     <!--Aquí comienza el listado-->
 <main>
     <h1>¿Necesitas ayuda más personalizada?</h1>
-    <h3 class="h3-Index">Encuentra a un psicólogo para ti</h3>
+    <h3 class="h3-Index">Te compartimos los siguientes números a los que podrás acudir si necesitas atención urgente.</h3>
 
 <div class="cont-listado">
 
   <div class="cont-listado-hijo">
-    <img src="/img/26.jpeg">
+    <img src="/img/lineadelavida.jpeg" style="width: 265px">
 <div class="cont-listado-hijo-text">
-    <h2>Julia Rodríguez</h2>
+    <h2>La línea de la vida</h2>
     <div class="icon-flex">
-    <span class="fa-solid fa-phone"></span><h4 style="padding-top: 15px;">55 6163 8899</h4>
+    <span class="fa-solid fa-phone"></span><h4 style="padding-top: 15px;">800 911 2000</h4>
   </div>
   <div class="icon-flex">
-    <span class="fa-solid fa-envelope"></span><h4 style="padding-bottom: 15px;"s>uncorreo@gmail.com</h4>
+    <span class="fa-solid fa-envelope"></span><h4 style="padding-bottom: 15px;">lalineadelavida@salud.gob.mx</h4>
   </div>
-  <h4 style="padding-bottom: 15px;">Psicólogo gestalt, especialista en autoestima, estrés y relaciones personales.</h4>
+  <h4 style="padding-bottom: 15px;">Especialistas en atención a la salud mental, ofrecen servicios de atención a problemas como ansiedad, depresión o riesgo suicida, los 365 días del año.</h4>
   </div>
   </div>
 
   <div class="cont-listado-hijo">
-    <img src="/img/29.jpeg">
+    <img src="/img/origen.jpeg" style="width: 265px">
     <div class="cont-listado-hijo-text">
-    <h2>Roberto Sánchez</h2>
+    <h2>Fundación Origen</h2>
     <div class="icon-flex">
-    <span class="fa-solid fa-phone"></span><h4 style="padding-top: 15px;">55 6163 8899</h4>
+    <span class="fa-solid fa-phone"></span><h4 style="padding-top: 15px;">800 015 1617</h4>
   </div>
   <div class="icon-flex">
-    <span class="fa-solid fa-envelope"></span><h4 style="padding-bottom: 15px;">uncorreo@gmail.com</h4>
+    <span class="fa-solid fa-envelope"></span><h4 style="padding-bottom: 15px;">lineadeayudaorigen@origenac.org</h4>
   </div>
-  <h4 style="padding-bottom: 15px;">Psicólogo gestalt, especialista en autoestima, estrés y relaciones personales.</h4>
+  <h4 style="padding-bottom: 15px;">Organización social experta en el tema de salud emocional. Ofrecen orientación psicológica, legal, médica y nutricional gratuita.</h4>
   </div>
   </div>
 
   <div class="cont-listado-hijo">
-    <img src="/img/27.jpeg">
+    <img src="/img/lineauam.png" style="width: 265px">
     <div class="cont-listado-hijo-text">
-    <h2>Emilio Flores</h2>
+    <h2>Línea UAM</h2>
     <div class="icon-flex">
-    <span class="fa-solid fa-phone"></span><h4 style="padding-top: 15px;">55 6163 8899</h4>
+    <span class="fa-solid fa-phone"></span><h4 style="padding-top: 15px;">55 2555 8092</h4>
   </div>
   <div class="icon-flex">
-    <span class="fa-solid fa-envelope"></span><h4 style="padding-bottom: 15px;">uncorreo@gmail.com</h4>
+    <span class="fa-solid fa-phone"></span><h4 style="padding-top: 15px;">55 5804 4879</h4>
   </div>
-  <h4 style="padding-bottom: 15px;">Psicólogo gestalt, especialista en autoestima, estrés y relaciones personales.</h4>
+  <div class="icon-flex">
+    <span class="fa-solid fa-phone"></span><h4 style="padding-top: 15px;">55 5804 5444</h4>
+  </div>
+<br>
+  <h4 style="padding-bottom: 15px;">Servicio gratuito de la UAM Azcapotzalco para atender la salud mental.<br>Horario: Lunes a viernes <br> 9:00 a 17:00 hrs</h4>
   </div>
   </div>
 
   <div class="cont-listado-hijo">
-    <img src="/img/28.jpeg">
+    <img src="/img/consejo.png" style="width: 265px;" >
     <div class="cont-listado-hijo-text">
-    <h2>Ana Cruz</h2>
+    <h2>Consejo Ciudadano para la Seguridad y Justicia de la CDMX</h2>
     <div class="icon-flex">
-    <span class="fa-solid fa-phone"></span><h4 style="padding-top: 15px;">55 6163 8899</h4>
+    <span class="fa-solid fa-phone"></span><h4 style="padding-top: 15px;">55 5533 5533</h4>
   </div>
   <div class="icon-flex">
     <span class="fa-solid fa-envelope"></span><h4 style="padding-bottom: 15px;">uncorreo@gmail.com</h4>
   </div>
-  <h4 style="padding-bottom: 15px;">Psicóloga cognitivo conductual, especialista en ansiedad.</h4>
+  <h4 style="padding-bottom: 15px;">Apoyo psicológico inmediato y 24/7 en línea, ofrecen de 9 a 12 sesiones de terapia psicológica sin ningún costo.</h4>
   </div>
   </div>
 
@@ -116,6 +92,49 @@
 <img src="/img/Hojas3.png" class="hoja2">
   </main>
 </body>
+<head>
+  <link rel="stylesheet" href="/css/footer.css" type="text/css">
+</head>
+
+<footer style="padding:40px 40px">
+  <!--Logo Fun N Skate-->
+           <div style="display:flex; flex-direction:column; text-align: left; padding-left: 30px">
+              <img class="logo-footer" style="margin:20px 0 30px 0" src = '/img/Logo_Horizontal.png' alt='Logo'>
+             <!-- <p style="padding-left: 40px; font-size: 13px; opacity: 0.6">En Por Ti buscamos fomentar el autocuidado de la salud integral.</p>-->
+          </div>
+          
+          <!--Logotipos de redes sociales-->
+          <div class="caja-redes">
+              <h3 class="titulo-redes" style="padding-top: 50px; margin: -40px;">¡Síguenos!</h3>
+              <a href="facebook">
+                  <img class="redes" src = '/img/icon-fb.png' alt='facebook'>
+              </a>
+              <a href="instagram">
+                  <img class="redes" src = '/img/icon-inst.svg' alt='instagram'>
+              </a> 
+      
+          </div>
+          <!--Area de suscripción -->
+        
+  
+          <div class="cont-list">
+      
+              <ul>
+                  <li>
+                      <a href="#sucursal1">Podcast</a>
+                  </li>
+                  <li>
+                      <a href="#sucursal2">Blog</a>
+                  </li>
+                  <li>
+                      <a href="#sucursal3">YouTube</a>
+                  </li>
+              </ul>
+          </div>
+        
+      
+</footer>
+
 </html>
    
      

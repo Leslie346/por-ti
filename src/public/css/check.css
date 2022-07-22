@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.radio-image {
+  background-color: rgba(0, 0, 0, 0.28);
+  padding: 50px, 15px;
+  margin: 1em;
+  width: 200px;
+  height: 200px;
+  backdrop-filter: blur(2px);
+  -webkit-box-shadow: 0px 15px 30px 0px rgba(16,146,147,0.12);
+  -moz-box-shadow: 0px 15px 30px 0px rgba(16,146,147,0.12);
+  box-shadow: 0px 15px 30px 0px rgba(16,146,147,0.12);
+  border-radius: 5px;
+  -webkit-transition-duration: .2s;
+  -moz-transition-duration: .2s;
+  -o-transition-duration: .2s;
+  transition-duration: .2s;
+  cursor: pointer;
+}
+body {
+  background-color: rgba(166,196,223,0.2);
+  margin: 50px;
+}
+
+.radio-hidden:checked ~ .radio-image {
+  opacity: 0.6;
+  transform: scale(1.1);
+  background-color: rgba(117, 117, 117, 0.20);
+}
+.radio-hidden {
+  position: absolute;
+  visibility: hidden;
+}
+.radio-container {
+  margin: 10px;
+}
+
+.radio-image{
+  border-radius: 40px;
+  padding: 40px;
+}
+
+.radio-image:hover {
+  transform: scale(1.03);
+}
+
+h3{
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+}

@@ -4,12 +4,8 @@
 //  4. Editar user
 //  5. Eliminar user
 const fs = require('fs');
-const User = {
-    fileName: './database/users.json',
 
-    getData: function(){
-        return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
-    },
+const User = {
 
     generateId: function(){
         let allUsers = this.findAll();

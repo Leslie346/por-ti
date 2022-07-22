@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Estilo del Pie de página*/
+footer{
+    background-color: rgb(25, 23, 59);
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    padding-bottom: 100px;
+}
+
+footer a{
+    text-decoration: none;
+}
+    
+
+.barra-correo{
+    border-radius: 8px;
+    font-family: "lato", sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: 160px;
+}
+.redes{
+    width: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.logo-footer{
+    width: 200px;
+    margin-top: 25px;
+}
+footer h3{
+    font-family: 'Poppins', sans-serif;
+}
+footer .cont-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+}
+footer .cont-list > ul{
+    width: 40vw;
+    list-style: none;
+    padding: 0;
+    margin-left: 25px;
+    font-family: 'Nunito', sans-serif;
+    line-height: 20pt;
+}
+
+footer .cont-list > ul a{
+    width: 40vw;
+    padding: 0;
+    color: #fff;
+    font-size: 13px;
+}
+
+.caja4{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:initial ;
+    justify-content: space-around ;
+    width: 100vw;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.caja4 > h2 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.caja-redes{
+    width: 252px;
+    align-items: center;
+}
+
+.titulo-redes{
+    width: 252px;
+    text-align: center;
+}
+
+.copyright-area{
+    background: rgb(18, 16, 42);
+  }
+  .copyright-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #cbcbcb;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  .copyright-text p a{
+    color: lavender;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+@media(min-width:560px){
+
+    footer{
+        flex-direction: row;
+        align-items: flex-start ;
+        justify-content: center;
+
+    }
+    .cont-list >ul{
+        padding: 0;
+        margin:10px 10px 0 0;
+        width:fit-content;
+        opacity: 0.6;
+    }
+
+    .caja-redes{
+        width: 252px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        order: 1;
+        padding-right: 30px;
+    }
+    .logo-footer{
+        padding-left: 30px;
+    }
+    .redes{
+        width: 30px;
+    }
+
+  }

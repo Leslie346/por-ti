@@ -8,9 +8,12 @@
 
       <!--FAVICON--> 
       <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
-      
+
+      <!--SCSS--> 
+    <link rel="stylesheet" href="/css/check.css">
+    <link rel="stylesheet" href="/css/objetivos.css">
+
     <!--CSS--> 
-    <link rel="stylesheet" href="/css/objetivos.css" type="text/css">
     <link rel="stylesheet" href="/css/navbar.css" type="text/css">
 
   <!--Tipografías--> 
@@ -24,60 +27,45 @@
 </head>
 <div class="main">
 
-    <script>
-        function myFunction(element, color) {
-          element.style.backgroundColor = color;
-        }
-        </script>
-
     <body>
 
         <%- include('./partials/nav') %>
 
         <div class="titles">
-        <h4>Elije tus objetivos</h1>
+        <h4>Elije un objetivo</h1>
             <h1>¿Qué deseas mejorar?</h1>
         </div>
 
-    <div class="contenedor-objetivos">
-        
-        <div id="sub-contenedor-objetivos" onclick="myFunction(this, 'rgba(117, 117, 117, 0.20)')">
-           <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1648833262/Por%20Ti/Salud_social_icono_am6vep.png" alt="salud social">
-       <h5>Salud social</h5>
-        </div>
+        <br>
+        <br>
+        <form action="/users/misobjetivos" method="POST" class="main">
 
+        <label class="radio-container">
+          <input name="objetivo" value="saludfisica" type="radio" class="radio-hidden" checked>
+          <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1658344697/Por%20Ti/fisica_t75jjc.svg" class="radio-image">
+        </label>
+
+        <label class="radio-container">
+          <input name="objetivo" value="saludmental" type="radio" class="radio-hidden">
+          <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1658344692/Por%20Ti/mental_kbj7zw.svg" class="radio-image">
+        </label>
+
+        <label class="radio-container">
+          <input name="objetivo" value="saludsocial" type="radio" class="radio-hidden">
+          <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1658344686/Por%20Ti/social_myuji4.svg" class="radio-image">
+        </label>
+        <label class="radio-container">
+          <input name="method" type="radio" class="radio-hidden">
           
-        <div id="sub-contenedor-objetivos" onclick="myFunction(this, 'rgba(117, 117, 117, 0.20)')">
-            <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1648833263/Por%20Ti/Salud_mental_icono_ukchh4.png" alt="salud mental">
-            <h5>Salud mental</h5> 
-        </div>
-
-        <div id="sub-contenedor-objetivos" onclick="myFunction(this, 'rgba(117, 117, 117, 0.20)')">
-            <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1648833262/Por%20Ti/Salud_fi%CC%81sica_icono_gsvons.png" alt="salud física">
-            <h5>Salud física</h5> 
-        </div>
-        <script>
-           const btnsTip = document.querySelectorAll("[sub-contenedor-objetivos]");
-           let activeBtn = null;
-
-            btnsTip.forEach((btnTip) => {
-            btnTip.addEventListener("click", (e) => {
-             e.currentTarget.style.backgroundColor = "yellow";
-
-            if ((activeBtn = null && activeBtn != e.currentTarget)) {
-             activeBtn.remove.style.backgroundColor = "yellow";
-             }
-
-             activeBtn = e.currentTarget;
-            });
-});
-            </script>
+        </label>
+        <a href="/users/misejercicios" style= "top: 20px; margin-top:150px"><button type="submit">Continuar</button></a>
+        <br>
+        <br>
 <br>
-    </div>
-    <a href="/misejercicios"><button>Continuar</button></a>
+<br>
+<br>
+</form>
 </div> <!--Termina main-->
     </body>
-
-</div>
-
+    <%- include('./partials/footer') %>
 </html>

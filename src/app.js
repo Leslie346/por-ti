@@ -12,7 +12,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcryptjs');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware.js');
-
+const objetivoMiddleware = require('./middlewares/objetivoMiddleware.js');
 
 app.use(cookieParser());
 
@@ -42,6 +42,14 @@ const publicFolderPath = path.resolve(__dirname, './public');
 app.use(express.static(publicFolderPath));
 
 let port = process.env.PORT || 3000;
+
+//MySQL
+const connection = mysql.createConnection({
+    host: 'us-cdbr-east-06.cleardb.net',
+    user: 'b979717129b0b4',
+    password: 'ff0d14cb',
+    database: 'heroku_4bf108387003295'
+});
 
 app.listen(port, ()=>{
     console.log(`App is running at the port ${port}`);
@@ -89,5 +97,7 @@ app.use('/ejercicios', rutasEjercicios);
 app.use('/alimentos', rutasAlimentos);
 
 app.use('/users', rutasUsuarios);
+
+app.use(objetivoMiddleware);
 
 // En function va la consecuencia que sucede cuando el usuario ingresa a la url

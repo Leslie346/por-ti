@@ -8,6 +8,14 @@
 
     <!--FAVICON--> 
     <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+      <link rel="stylesheet" href="/css/check.css">
+
+
+      <!--SCSS--> 
+    <link rel="stylesheet" href="/css/objetivos.css">
 
     <!--CSS--> 
     <link rel="stylesheet" type="text/css" href="/css/login.css">
@@ -32,14 +40,17 @@
       
     <%- include('./partials/nav') %>
 
-          <form action="insert.php" method="POST" class="main" style="padding-bottom: 400px">
-            <!--Prueba-->
+                <!--PARTE 1-->
+
+    <div class="registro1" style="margin-top: -200px">
+
+          <form action="/users/registro" method="POST" class="main" style="padding-bottom: 400px">
             <div class="login-box" id="register-box">
-                <h2>¿Listo para hacer algo por ti hoy?<h6 class="body-text">Crea una cuenta</h6></h2>
+                <h2>¿Listo para hacer algo por ti hoy?</h2>
 
                     <div class="user-box">
-                        <input type="text" name="name" required="" id="name"/>
-                        <label for="name">Nombre</label>
+                        <input type="text" name="first_name" required="" id="first_name"/>
+                        <label for="first_name">Nombre</label>
                       </div>
                       <% if(locals.errors && errors.name){ %>
                         <div class="alert">
@@ -81,53 +92,72 @@
                     <input type="password" name="password" required="" id="confirm_password"/>
                     <label for="password">Confirmar contraseña</label>
                   </div>
-                  <input type="radio" name="objetivo" value="saludfisica">Salud Física
-                  <input type="radio" name="objetivo" value="saludmental">Salud Mental
-                  <input type="radio" name="objetivo" value="saludsocial">Salud Social
-                  <button type="submit" style="text-align:center; left: 30%; right: 30%; position: absolute">Registrarme</button> 
-                <br>
-                <br>
-                <br>
-                <br>
-                <p class="p">¿Ya tienes una cuenta?  </p>
-                  <a href="/users/login" style="text-align:center; left: 40%; right: 40%; position: absolute">Inicia sesión</a>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-              </div>
+
+                  <!--Boton-->
+                  <a href="#objetivos"><button type="button" class="registerbutton" style="text-align:center; left: 30%; right: 30%;">Registrarme</button></a>
+                  <p class="p">¿Ya tienes una cuenta? </p>
+                    <a href="/users/login" style="margin-top: -20px; text-align:center; left: 40%; right: 40%; position: absolute">Inicia sesión</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+                </div>
+                </div>
+
+                <div id="objetivos" style="height:100vh">
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                <div class="titles" style="margin-top:40px">
+                  <h4>Elije un objetivo</h1>
+                      <h1>¿Qué deseas mejorar?</h1>
+                  </div>
+          
+                  <br>
+                  <br>
+                 
+                    <div class="contenedor-objetivos" style="margin-top: -10px;">
+
+                      <div>
+                  <label class="radio-container">
+                    <input name="objetivo" value="saludfisica" type="radio" class="radio-hidden"> 
+                    <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1658344697/Por%20Ti/fisica_t75jjc.svg" class="radio-image">
+                  </label>
+                <h3>Salud física</h3>
+                </div>
+          
+                <div>
+                  <label class="radio-container">
+                    <input name="objetivo" value="saludmental" type="radio" class="radio-hidden">
+                    <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1658344692/Por%20Ti/mental_kbj7zw.svg" class="radio-image">
+                  </label>
+                  <h3>Salud mental</h3>
+                </div>
+             
+          
+                <div>
+                  <label class="radio-container">
+                    <input name="objetivo" value="saludsocial" type="radio" class="radio-hidden">
+                    <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1658344686/Por%20Ti/social_myuji4.svg" class="radio-image">
+                  </label>
+                  <h3>Salud social</h3>
+                  </div>
+                </div>
+
+                 <div style= "margin-top: -30px">
+                  <a href="/users/misejercicios"><button type="submit">Continuar</button></a>
+                </div>
+                  <br>
+                  <br>
           </form>
-          <!--Prueba-->
-
-          </div>
-          <!--Finaliza prueba-->
-      </div>
+          <div style="position: relative; bottom: 0; margin-top: 50px;">
+            <%- include('./partials/footer') %>
+            </div>
+        </div>
+         
 </body>
-  <!-- Site footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <h6>About</h6>
-      <hr>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-sm-6 col-xs-12">
-          <p class="copyright-text">Copyright &copy; 2022 
-       <a href="#">Por Ti</a>.
-          </p>
-        </div>
+ </html>
 
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <ul class="social-icons">
-            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li> 
-          </ul>
-        </div>
-      </div>
-    </div>
-</footer>
-</html>

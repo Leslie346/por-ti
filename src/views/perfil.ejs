@@ -30,15 +30,44 @@
 
 <body>
     <main>
-<div class="datos-perfil">
+        <% if(user.objetivo !== 'saludsocial' && user.objetivo !== 'saludfisica') { %>
+<div class="datos-perfil" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1658509260/Por%20Ti/salud_banner_lbbqj9.png);">
+   <% } %>
+
+   <% if(user.objetivo !== 'saludsocial' && user.objetivo !== 'saludmental') { %>
+    <div class="datos-perfil" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1658341637/Por%20Ti/banner_fisica_atbfiw.png);">
+    <% } %>
+
+    <% if(user.objetivo !== 'saludmental' && user.objetivo !== 'saludfisica') { %>
+        <div class="datos-perfil" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1658341642/Por%20Ti/banner_social_yssu00.png);
+        ">
+        <% } %>
+
 <h3>¡Hola!</h3>
-<h1> <%= user.name %> <%= user.last_name %></h1>
+<h1> <%= user.first_name %> <%= user.last_name %></h1>
 </div>
 <main style="padding-top: 25px;">
 <div class="espacio" style="padding: 25px"></div>
+
+
+    <% if(user.objetivo !== 'saludsocial' && user.objetivo !== 'saludfisica') { %>
 <div class="ejercicios-top-contenedor-hijo" style="margin: 0 auto; display:flex; text-align: center; justify-content:baseline; align-content:center;">
     <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1650503349/Por%20Ti/ejercicios-card2_kmad1t.svg" style="width: 100%">
 </div>
+    <% } %>
+
+    <% if(user.objetivo !== 'saludmental' && user.objetivo !== 'saludsocial') { %>
+        <div class="ejercicios-top-contenedor-hijo" style="margin: 0 auto; display:flex; text-align: center; justify-content:baseline; align-content:center;">
+            <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1658298871/Por%20Ti/fisica_card_wl4cl7.svg" style="width: 100%">
+        </div>
+    <% } %>
+
+    <% if(user.objetivo !== 'saludmental' && user.objetivo !== 'saludfisica') { %>
+        <div class="ejercicios-top-contenedor-hijo" style="margin: 0 auto; display:flex; text-align: center; justify-content:baseline; align-content:center;">
+            <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1658298871/Por%20Ti/social_card_omtr4q.svg" style="width: 100%">
+        </div>
+    <% } %>
+
 <div class="espacio" style="padding: 25px"></div>
 
  <!--Top containers-->
@@ -110,4 +139,5 @@
       <div class="espacio" style="padding: 50px"></div>
 </body>
 </main>
+<%- include('./partials/footer') %>
 </html>

@@ -1,14 +1,16 @@
 const { raw } = require("express");
-const bcryptjs = require('bcryptjs');
+const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');
 
 const User = require('../models/User');
 
 const fs = require("fs");
 const path = require("path");
-const usersFilePath = path.join(__dirname, "../database/users.json");
-const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
+// Variable para requerir modelos
+//const db = require("../database/models");
+const userModel = require('../database/models').User;
+const { userInfo } = require("os");
 
 const usersController = {
 
@@ -16,70 +18,82 @@ register: (req, res) => {
     return res.render('registro');
 },
 
-processRegister: (req, res) => {
-    const userInfo = req.body;
+processRegister: async (req, res) => {
 
-    let userInDB = User.findByField('email', userInfo.email);
-
-    if(userInDB){
+   const userInfo = req.body;
+    // User.create(userToCreate);
+    userModel.findOne({
+        where: { email: userInfo.email }
+    }).then( (userEmailValidation) =>{
+        if(userEmailValidation){
         return res.render('registro', {
             errors: {
-            email: {
-                msg: 'Este e-mail ya está registrado'
-            }
-            },
-            oldData: req.body
-        });
-    }
+                 email: { msg: 'El correo ya se encuentra registrado' }
+                }
+            });
+        }
+    });
 
-    else {
+    const pass = userInfo.password;
+    let newPass = pass.toString();
 
-    users.push({
-        id: users.length + 1,
-        ...userInfo,
+    const hashedPassword = await bcrypt.hash(newPass, 10);
+
+        userModel.create( {
+        id: userModel.id += 1,
+        first_name: userInfo.first_name,
+        last_name: userInfo.last_name,
+        email: userInfo.email,
+        password: hashedPassword,
+        objetivo: userInfo.objetivo
     })
-
-
-   // let userToCreate = {
-     //   id: users.length + 1,
-       // ...userInfo,
-       // avatar: req.file.filename
-       //password: bcryptjs.hashSync(userInfo.password, 10)
-   // }
-
-    // User.create(userToCreate);
-
-    fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-    res.redirect("/users/login");
-    console.log(userInfo)
-}
+    .then(() => {
+        res.redirect('/users/login');
+    })
+    .catch(err => {
+        res.status(500).render('error', {
+            status: 500,
+            title: 'ERROR',
+            message: 'Error al crear usuario'
+        });
+        console.log(err);});
 },
-
 login: (req, res) => {
     return res.render('login');
 },
 
 processLogin: (req, res) => {
-    let userToLogin = User.findByField('email', req.body.email);
-    
-    if(userToLogin) {
-        delete userToLogin.password;
-        delete userToLogin.confirm_password;
-        req.session.userLogged = userToLogin;
-        return res.redirect('/users/miperfil');
-        return res.render('login', {
-            errors: {
-                password: {
-                    msg: 'Contraseña incorrecta'
-                }
+    userModel.findOne({where:{
+        email: req.body.email
+        }
+    })
+    .then((userToLogin) => {
+        if (userToLogin) {
+            let isOkThePassword = bcrypt.compare(req.body.password, userToLogin.password);
+            if (isOkThePassword) {
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+                console.log("USER LOGGEAD0")
+                console.log(req.session.userLogged)
+                console.log("///////////////////")
+                return res.redirect('/users/misejercicios');
             }
-        }) 
+            return res.render('login', {
+                errors: {
+                    email: {
+                        msg: 'El e-mail no coincide con la contraseña'
+                    }
+                },oldData : req.body
+            })
     }
-    return res.render('login', {
-        errors: {
-            email: {
-                msg: 'E-mail no encontrado'
-            }
+        else {
+            return res.render('login', {
+                errors: {
+                    email: {
+                        msg: 'E-mail no encontrado'
+                    }
+                },oldData: req.body
+            })
         }
     })
 },

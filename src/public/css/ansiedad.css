@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 * { box-sizing: border-box; 
 }
 
@@ -41,9 +42,9 @@ margin-right: 250px;
 text-align: center;
 }
 
-h1 {margin-bottom: 50px;}
-h2 { font-size: 2.5rem; color: white}
-h3 { font-size: 2rem; color: white}
+h1 {margin-bottom: 25px; font-size: 36px; font-family: 'Poppins,', sans-serif;}
+h2 { font-size: 36px; color: white; font-family: 'Poppins,', sans-serif;}
+h3 { font-size: 36px; color: white}
 .article { max-width: 45rem; padding: 0 1rem; margin: 0 auto; color: white}
 img { max-width: 100%; }
 p{ font-size: 1.2em; font-family: 'Nunito', sans-serif; }

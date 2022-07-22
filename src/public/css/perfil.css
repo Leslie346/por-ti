@@ -1,5 +1,6 @@
 /* Cronología */
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body{font: 14px "Open Sans", serif; float: left; height: 100%; position: relative; width: 100%;
     background: linear-gradient(rgba(40, 37, 89), #111425);}
@@ -21,13 +22,15 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
     height: 400px;
     background: rgb(20,0,36);
-    background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651189738/Por%20Ti/Banner-saludmental_f3y8wr.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
     text-align: center;
+    padding: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position-y: -5px;
+    background-size: cover;
 }
 
 .datos-perfil h3 h1{

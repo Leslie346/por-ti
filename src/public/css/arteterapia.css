@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 :root{
     background: rgba(40, 37, 89);
     --text-light: rgba(255,255,255,0.6);
@@ -44,6 +45,8 @@
     max-width: var(--width-container);
     width: 100%;
   }
+
+  p{ font-size: 1.2em; font-family: 'Nunito', sans-serif; }
   
   @media(min-width: 540px){
     .card-grid{
@@ -133,6 +136,7 @@
 
 .titles h1{
     margin-top: 120px;
+    font-size: 36px;
     }
     
 p

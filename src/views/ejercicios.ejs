@@ -33,7 +33,7 @@
 
     <%- include('./partials/nav') %>
 
-<body>
+<body style="overflow-x: hidden;">
 
   <!--Corazón-->
   <script>
@@ -82,10 +82,24 @@
                 <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1650503255/Por%20Ti/ejercicios-card1_bqpyfa.svg" style="width: 100%">
             </div></a>
 
+            <% if(userLogged.objetivo !== 'saludsocial' && userLogged.objetivo != 'saludfisica') { %>
            <a href="/users/miperfil"><div class="ejercicios-top-contenedor-hijo" style="display:flex; justify-content:baseline; color: white;">
                 <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1650503349/Por%20Ti/ejercicios-card2_kmad1t.svg" style="width: 100%">
             </div></a> 
-            
+            <% } %>
+
+            <% if(userLogged.objetivo !== 'saludmental' && userLogged.objetivo != 'saludsocial') { %>
+              <a href="/users/miperfil"><div class="ejercicios-top-contenedor-hijo" style="display:flex; justify-content:baseline; color: white;">
+                <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1658298871/Por%20Ti/fisica_card_wl4cl7.svg" style="width: 100%">
+              </div></a> 
+               <% } %>
+
+               <% if(userLogged.objetivo !== 'saludmental' && userLogged.objetivo != 'saludfisica') { %>
+                <a href="/users/miperfil"><div class="ejercicios-top-contenedor-hijo" style="display:flex; justify-content:baseline; color: white;">
+                  <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1658298871/Por%20Ti/social_card_omtr4q.svg" style="width: 100%">
+                </div></a> 
+                 <% } %>
+
             <a href="/ejercicios/organizador-de-tareas"><div class="ejercicios-top-contenedor-hijo" style="display:flex; justify-content:baseline; color: white;">
                 <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1650503354/Por%20Ti/ejercicios-card3_e1yx4t.svg" style="width: 100%">
             </div></a> 
@@ -100,6 +114,10 @@
       <h3 style="margin-top: 25px;">Desliza la pantalla a la izquierda para ver más ejercicios.</h2>
 
       <div class="ejercicios-box-cont" style="margin-top: 50px; padding-left: 75px;">
+
+        <% if(userLogged.objetivo !== 'saludsocial' && userLogged.objetivo != 'saludfisica') { %>
+
+       <!-- SALUD MENTAL -->
 
         <a href="/ejercicios/registro-de-ansiedad"> <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651189737/Por%20Ti/registro-ansiedad-card_bpsazv.svg);"><div class="card-ejercicio-text">
           <h2>Hoja de registro de ansiedad</h2><h6>12 min</h6>
@@ -121,29 +139,57 @@
           <h4>Visualiza para redirigir tus pensamientos.</h4></div></div>
         </a>
 
+        <a href="/ejercicios/relajacion-muscular">
+          <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651019619/Por%20Ti/Relajacio%CC%81n_musculaejercicios_gvsvcs.png);"><div class="card-ejercicio-text">
+            <h2>Relajación muscular</h2><h6>12 min</h6>
+            <h4>Reduce la tensión corporal. </h4></div></div>
+          </a>
+
+          <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651189737/Por%20Ti/actividades-del-dia-card_jk8qu2.svg);"><div class="card-ejercicio-text">
+            <h2>Listado de actividades del día</h2><h6>12 min</h6>
+            <h4>Organiza tus actividades y reduce el estrés.</h4></div></div>  
+
+
+            <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651189737/Por%20Ti/diario-emocional-card_ilqhnt.svg);"><div class="card-ejercicio-text">
+              <h2>Diario emocional</h2><h6>12 min</h6>
+              <h4>Lleva un registro de tus emociones.</h4></div></div>
+            </div>
+
+              <h2 style="margin-top: 100px;">Actividades cortas</h2>
+
+  <div class="ejercicios-box-cont2" style="margin-top: 50px; padding-left: 75px; overflow: hidden;">
+    
+    <a href="/ejercicios/5sentidos"><div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651189737/Por%20Ti/sentidos-card_fjbkx6.svg); width:373px;"><div class="card-ejercicio-text">
+      <h2>Técnica de los 5 sentidos</h2><h6>12 min</h6>
+  <h4>Técnica auto-calmante para aliviar la ansiedad.</h4></div></div></a>
+   
+  <a href="/ejercicios/arteterapia">
+  <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1650503368/Por%20Ti/ejercicios-card6_tslgtr.svg); width: 30%;"><div class="card-ejercicio-text"><h2>Arteterapia</h2><h6>12 min</h6>
+        <h4>Expresa tus emociones con arte.</h4></div></div></a>
+        
+    <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1650503371/Por%20Ti/ejercicios-card7_qguw8x.svg);"><div class="card-ejercicio-text">
+      <h2>Jin Shin Jyutsu</h2><h6>12 min</h6>
+        <h4>Técnica auto-calmante para armonizar emociones.</h4></div>
+    </div>
+    
+</div>
+
+              <% } %>
+
+          <!-- SALUD FÍSICA -->
+
+          <% if(userLogged.objetivo !== 'saludmental' && userLogged.objetivo != 'saludsocial') { %>
+
         <a href="/ejercicios/plato-del-buen-comer">
           <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651019619/Por%20Ti/Plato_del_buen_comerejercicios_bkege6.png);"><div class="card-ejercicio-text">
             <h2>Plato del buen comer</h2><h6>12 min</h6>
             <h4>Guía tu alimentación para obtener salud.</h4></div></div>
           </a>
 
-          <a href="/ejercicios/relajacion-muscular">
-            <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651019619/Por%20Ti/Relajacio%CC%81n_musculaejercicios_gvsvcs.png);"><div class="card-ejercicio-text">
-              <h2>Relajación muscular</h2><h6>12 min</h6>
-              <h4>Reduce la tensión corporal. </h4></div></div>
-            </a>
-
       <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651189738/Por%20Ti/sueno-card_hpgpud.svg);"><div class="card-ejercicio-text">
         <h2>Registro de sueño</h2><h6>12 min</h6>
         <h4>Monitorea tus horas de sueño.</h4></div></div>
         
-        <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651189737/Por%20Ti/actividades-del-dia-card_jk8qu2.svg);"><div class="card-ejercicio-text">
-          <h2>Listado de actividades del día</h2><h6>12 min</h6>
-          <h4>Organiza tus actividades y reduce el estrés.</h4></div></div>
-  
-          <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651189737/Por%20Ti/diario-emocional-card_ilqhnt.svg);"><div class="card-ejercicio-text">
-            <h2>Diario emocional</h2><h6>12 min</h6>
-            <h4>Lleva un registro de tus emociones.</h4></div></div>
 
             <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651866646/Por%20Ti/card-actividad-fi%CC%81sica-ejercicio_tzsxxx.png);"><div class="card-ejercicio-text">
               <h2>Registro de actividad física</h2><h6>12 min</h6>
@@ -160,6 +206,11 @@
               <h2>Clases de yoga</h2><h6>12 min</h6>
               <h4>Libera hormonas del bienestar.</h4></div></div>
            
+              <% } %>
+
+          <!-- SALUD SOCIAL -->
+
+          <% if(userLogged.objetivo !== 'saludfisica' && userLogged.objetivo != 'saludmental') { %>
 
             <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651866646/Por%20Ti/card-company-ejercicio_qipewp.png);"><div class="card-ejercicio-text">
               <h2>Actividades en compañia</h2><h6>12 min</h6>
@@ -171,31 +222,12 @@
 </div>
 </div>
 
-  <h2 style="margin-top: 100px;">Actividades cortas</h2>
+<% } %>
 
-  <div class="ejercicios-box-cont" style="margin-top: 50px; padding-left: 75px;">
-    
-    <a href="/ejercicios/5sentidos"><div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651189737/Por%20Ti/sentidos-card_fjbkx6.svg); width:373px;"><div class="card-ejercicio-text">
-      <h2>Técnica de los 5 sentidos</h2><h6>12 min</h6>
-  <h4>Técnica auto-calmante para aliviar la ansiedad.</h4></div></div></a>
-   
-  <a href="/ejercicios/arteterapia">
-  <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1650503368/Por%20Ti/ejercicios-card6_tslgtr.svg); width: 30%;"><div class="card-ejercicio-text"><h2>Arteterapia</h2><h6>12 min</h6>
-        <h4>Expresa tus emociones con arte.</h4></div></div></a>
-        
-    <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1650503371/Por%20Ti/ejercicios-card7_qguw8x.svg);"><div class="card-ejercicio-text">
-      <h2>Jin Shin Jyutsu</h2><h6>12 min</h6>
-        <h4>Técnica auto-calmante para armonizar emociones.</h4></div>
-    </div>
-    
-</div>
-</div>
-</div>
-
-
+<div style="overflow-x: hidden;">
 <div class="chips">
 
-<div class="chip-hija" style="margin-right: 51px;">
+<div class="chip-hija" style="margin-right: 51px; ">
   <a href="/ejerciciosfavoritos404"><button><span class="fa-solid fa-heart"></span>Favoritos</button></a>
 </div>
 <div class="chip-hija">
@@ -204,15 +236,13 @@
 
 </div>
 
-  <h2 style="margin-top: 50px;  margin-bottom: 50px;">Contacta a un especialista</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi facere dolorum autem aliquam atque praesentium vitae, consequatur quam ipsam possimus!</p>
+  <h2 style="margin-top: 50px;  margin-bottom: 50px;">¿Necesitas ayuda?</h2>
+  <p>Si te encuentras en una situación de emergencia o necesitas ayuda profesional, te compartimos contactos a los que podrás acudir.</p>
 
   <div class="contenedor-especialista">
     <a href="/listado"><button style="margin-top: 50px; margin-bottom: 50px;">Ver listado</button></a>
 </div>
 </div>
-  </div>
-</div>
-        </div>
     </main>
+    <%- include('./partials/footer') %>
 </html>
