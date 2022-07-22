@@ -13,6 +13,7 @@ const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware.js');
 const objetivoMiddleware = require('./middlewares/objetivoMiddleware.js');
+const mysql = require('mysql2');
 
 app.use(cookieParser());
 
@@ -44,12 +45,18 @@ app.use(express.static(publicFolderPath));
 let port = process.env.PORT || 3000;
 
 //MySQL
-const connection = mysql.createConnection({
-    host: 'us-cdbr-east-06.cleardb.net',
-    user: 'b979717129b0b4',
-    password: 'ff0d14cb',
-    database: 'heroku_4bf108387003295'
-});
+//const connection = mysql.createConnection({
+  //  host: 'us-cdbr-east-06.cleardb.net',
+    //user: 'b979717129b0b4',
+    //password: 'ff0d14cb',
+   // database: 'heroku_4bf108387003295'
+//});
+
+//connection.connect(function(err){
+  //  if(err) throw err;
+   // console.log("connected");
+//});
+
 
 app.listen(port, ()=>{
     console.log(`App is running at the port ${port}`);
