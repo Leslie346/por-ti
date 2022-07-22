@@ -10,7 +10,7 @@ let rutasUsuarios = require('./routes/usuarios.js');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware.js');
 const objetivoMiddleware = require('./middlewares/objetivoMiddleware.js');
 
