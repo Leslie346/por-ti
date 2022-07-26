@@ -39,4 +39,8 @@ router.get('/tapping', function (req, res) {
     res.render('tapping');
 });
 
+router.get('/alimentos', function (req, res) {
+    res.render('alimentos');
+});
+
 module.exports = router;
