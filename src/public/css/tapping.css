@@ -30,12 +30,18 @@ h2{
     font-family: 'Nunito', sans-serif;
     font-weight: 500px;
     text-align: left;
+    font-size: 14pt;
 }
 
 p {
     font-family: 'Nunito', sans-serif;
     color: white;
     text-align: left;
+    font-size: 12pt;
+}
+
+li{
+    font-size: 12pt;
 }
 
 ul{
@@ -54,10 +60,6 @@ ul{
 
 .cont-1{
 width: 40%;
-height: 700px;
-display: block;
-overflow-y: scroll;
-scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {

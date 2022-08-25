@@ -43,9 +43,15 @@
 
         <!--Frase--> 
     <div class="frase-fondo">
-        <div class="frase-fondo-texto"> 
+      <div class="frase-fondo-img" style="position: absolute; top: 3px; left: 0px; height: 0%; z-index: 0;" >
+        <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1661447881/Por%20Ti/Hojas1_frase_cskv3j.png" style="height: 385px; padding-top: 40px;"> 
+      </div>
+      <div class="frase-fondo-img" style="position: absolute; right: 0px; height: 0%; z-index: 0;" >
+        <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1661447881/Por%20Ti/Hojas2_frase_y6xkc8.png" style="height: 385px; padding-top: 40px;"> 
+      </div>
+        <div class="frase-fondo-texto" style="position: relative; z-index: 1;"> 
           <script>
-            var frases = new Array ("La vida es como montar en bicicleta. Para mantener el equilibrio tienes que avanzar", "Las dudas no se superan, convives siempre con ellas. Lo que sí que puede hacer uno es dar lo máximo cada día", "Importa mucho más lo que tú piensas de ti mismo que lo que los otros opinen de ti");
+            var frases = new Array ("La vida es como montar en bicicleta. Para mantener el equilibrio tienes que avanzar.", "Las dudas no se superan, convives siempre con ellas. Lo que sí que puede hacer uno es dar lo máximo cada día.", "Importa mucho más lo que tú piensas de ti mismo que lo que los otros opinen de ti.");
             var x = 0;
             function frase()
             {
@@ -56,7 +62,7 @@
               document.getElementById("frase").textContent = frases[x];
               x++;
             }
-            temporizador = setInterval("frase()", 5000);
+            temporizador = setInterval("frase()", 864000);
             if(res.locals.isLogged == false){
               temporizador = clearInterval("frase()");
             }
@@ -168,7 +174,7 @@
     <h2>Arteterapia</h2><h6>12 min</h6>
         <h4>Expresa tus emociones con arte.</h4></div></div></a>
         
-    <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1650503371/Por%20Ti/ejercicios-card7_qguw8x.svg);"><div class="card-ejercicio-text">
+    <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1661449020/Por%20Ti/jin_shin_cgpbgt.png);"><div class="card-ejercicio-text">
       <h2>Jin Shin Jyutsu</h2><h6>12 min</h6>
         <h4>Técnica auto-calmante para armonizar emociones.</h4></div>
     </div>

@@ -11,7 +11,7 @@ main{
     width: 100%;
     background: linear-gradient(rgba(40, 37, 89), #111425);
     box-shadow: inset 1px 1px 40px 0 rgba(0, 0, 0, 0.45);
-    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .ejercicios-top-contenedor-texto{
@@ -76,7 +76,7 @@ p{
 
 
 .frase-fondo{
-    background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1650501547/Por%20Ti/frase-ejercicios_ow8ynv.png);
+    background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1661446328/Por%20Ti/Fondo_ejercicios_fahate.png);
     width: 102%;
     height: 385px;
     margin: 0;
@@ -145,8 +145,25 @@ p{
 }
 
 ::-webkit-scrollbar {
-    display: none;
+    background-color: hwb(231 7% 85% / 0.285);
+    width: 0;
     }
+
+    /* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb:horizontal {
+    background: #665FC8; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:horizontal:hover {
+    background: #3E2C8E; 
+  }
 
 .ejercicios-box-cont .box{
     display: inline-block;
