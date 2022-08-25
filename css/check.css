@@ -1,0 +1,149 @@
+/* Variables */
+:root {
+  --blue-70: #2a3b89;
+  --navy-70: #0d1042;
+  --navy-90: #0e0f34;
+  --blue-50: #5775bc;
+  --blue-70: #2a3b89;
+  --green-50: #73cc75;
+  --green-70: #00990e;
+  --grayscale-05: #f3f3f3;
+}
+
+.checkmark pvz {
+  border-radius: 40px;
+}
+
+label {
+  border-radius: 40px;
+}
+
+* {
+  border-radius: 100%;
+}
+
+body {
+  background-color: var(--navy-70);
+  padding: 40px;
+  color: var(--grayscale-05);
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  border-radius: 40px;
+}
+
+/* The container */
+.check-container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 40px;
+  /* Hide the browser's default checkbox */
+}
+.check-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  border-radius: 40px;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 40px;
+  height: 230px;
+  width: 230px;
+  border: 4px solid var(--blue-70);
+  border-radius: 40px;
+  background-color: var(--navy-90);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-box-shadow: 0px 0px 60px rgba(42, 59, 137, 0.8);
+          box-shadow: 0px 0px 60px rgba(42, 59, 137, 0.8);
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.checkmark.fisica {
+  background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1658344697/Por%20Ti/fisica_t75jjc.svg);
+}
+.checkmark.mental {
+  background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1658344692/Por%20Ti/mental_kbj7zw.svg);
+}
+.checkmark.social {
+  background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1658344686/Por%20Ti/social_myuji4.svg);
+}
+.checkmark svg {
+  float: right;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  right: 14px;
+  top: 12px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--green-70);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* On mouse-over, scale and adjust border and glow */
+.check-container:hover input ~ .checkmark {
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
+  border: 4px solid var(--grayscale-05);
+  -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+          box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+
+/* When the checkbox is checked, add a green border and change SVG overlay colour */
+.check-container input:checked ~ .checkmark {
+  border: 5px solid var(--green-50);
+}
+.check-container input:checked ~ .checkmark path {
+  -webkit-transition: fill 0.2s ease-in-out;
+  transition: fill 0.2s ease-in-out;
+  fill: var(--green-50);
+  border-radius: 40px;
+}
+
+/* Show the checkmark when checked */
+/* Title */
+.title {
+  text-align: center;
+  margin-top: 255px;
+  display: block;
+  position: absolute;
+  width: 230px;
+}
+
+/* Temp Layout Scaffolding */
+body {
+  width: 1080px;
+  margin: auto;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.col {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 25%;
+}
