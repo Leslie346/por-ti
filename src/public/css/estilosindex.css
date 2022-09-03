@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    
+html,html *{box-sizing: border-box !important;}
+
+header{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(180deg, rgb(9, 8, 35) -52%, rgb(19, 22, 45) 0%, rgba(68,137,196,0.05228028711484589) 49%, #4489c400 100%), url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1650499717/Por%20Ti/fondo-login_kfumtl.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header::before{
+    content: '';
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.navg{
+    justify-content: end;
+}
+
+.navcont{
+    background-color: transparent!important;
+}
+
+.container{
+    padding-top: 24px;
+    z-index: 20;
+}
+
+.navcont{
+    position: fixed;
+    width: 100%;
+}
+
+#logo-menu{
+    visibility: none;
+    display: hidden;
+    opacity: 0;
+    width: 10px;
+}
+
+.nav-item{
+    margin-left: 1.2em;
+}
+
+#logo-menu2{
+    visibility:visible;
+    display: initial;
+}
+
+.navbar-nav{
+    justify-content: start;
+}
+
+@media (min-width: 576px){
+*.container {
+    max-width: none!important;
+}
+}
+
+@media (min-width: 768px){
+    .bg-dark{
+        background-color: transparent!important;
+    }
+
+    .navg a{
+        margin-right: 8%;
+    }
+}
+@media (max-width: 1100px){
+.nav-item{
+    margin-left: 0;
+}
+.card-deck{
+    padding: 0px 2em!important;
+}
+}
+
+@media (max-width: 991px){
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+
+    .navbar-toggler{
+        justify-content: center!important;
+    }
+
+    .container{
+    width: 100vw;
+    }
+
+    header{
+        padding-left: 0;
+        }
+
+    .navbar-toggler{
+        width: 80px;
+        height: 50px;
+    }
+
+    #logo-menu{
+        visibility: visible;
+        display: initial;
+        opacity: 1;
+        margin-bottom: 10px;
+        position: relative;
+        right: 12px;
+        width: inherit;
+    }
+    
+    #logo-menu2{
+        visibility:hidden;
+        display: none;
+    }
+
+    .navcont{
+        background-color: rgb(19,33,45)!important;
+        top: 0;
+        padding-bottom: 25px;
+        padding-top: 25px;
+        position: absolute;
+        z-index: 100;
+        width: 100vw;
+    }
+
+    .navbar-nav{
+        margin-bottom: 20px;
+    }
+    
+    .navg {
+        text-align: center;
+        margin: auto;
+        justify-content: left;
+    }
+
+    .navg a{
+        margin-right: 0;
+        padding: 0;
+    }
+
+    .navg a{
+        font-size: 21px!important;
+        margin-bottom: 10px;
+        font-weight: 500!important;;
+    }
+}
+
+.container{
+    padding-left: 5%!important;
+}
+
+.navg a{
+    color: white!important;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 10px 25px;
+    text-align: center;
+}
+
+.navg a:hover{
+    text-decoration-line: underline;
+    text-decoration-color: rgb(254, 223, 200);
+    text-decoration-thickness: 3px;
+}
+
+.text-header{
+    min-height: 100vh;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 2%!important;
+}
+
+.text-header h2{
+font-family: 'Poppins', sans-serif;
+font-weight: 800;
+font-size: 4em;
+}
+
+.text-header span{
+    font-family: 'Poppins', sans-serif;
+    }
+
+.text-header p{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.btn-yo{
+    padding: 16px 96px!important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600!important;
+    font-size: medium;
+    border-radius: 50px!important;
+    text-decoration: none;
+    border: none;
+    margin-top: 50px;
+    width:  21em;
+    background-color: rgb(254, 223, 200);
+    color: rgb(65, 64, 105);
+    }
+    
+    .btn-yo:hover{
+        background-color: rgba(254, 223, 200, 0.8);
+        color: rgba(65, 64, 105, 0.891);
+        transition:background-color 0.3s ease-in-out;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+.content{
+    padding-top: 50px;
+    text-align: center;
+}
+
+.content h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: white;
+}
+
+
+.content h3{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    color: white;
+}
+
+.content h4{
+    font-family: 'Nunito', sans-serif;
+    font-size: 26;
+    font-weight: 400;
+    color: white;
+}
+
+.content h6{
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: rgb(203, 203, 243);
+}
+
+.content p{
+    font-family: 'Nunito', sans-serif;
+    font-size: 32;
+    font-weight: 400;
+    color: white;
+    padding-bottom: 25px;
+}
+
+.row{
+    margin: auto;
+    padding: 0 20px;
+}
+
+
+.benefits{
+    text-align: center!important;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.28)!important;
+    backdrop-filter: blur(2px)!important;
+    border-radius: 40px!important;
+    margin-bottom: 10px;
+    margin-right: 25px;
+      }
+
+      .ben-img{
+      height: 13rem!important;
+      padding: 10px 15px 10px 10px;
+      text-align: center!important;
+      margin: 0 auto!important;
+      }
+
+      .benefits:hover,
+      .benefits:focus
+{
+    background-color: rgba(0, 0, 0, 0.154);
+    cursor: pointer;
+    transition:background-color 0.3s ease-in-out;
+}
+
+.ben-body{
+    margin-top: -20px;
+}
+
+.ben-title{
+    font-family: 'Nunito', sans-serif;
+    color: lavender;
+    font-size: 1.6em;
+}
+
+.ben-text{
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 0px;
+    font-size: 1em;
+}
+
+#review{
+    text-align: left;
+    padding-left:  40px;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    font-size: 0.9em;
+    padding-top: 25px;
+}
+
+.ben-body{
+padding-top: 25px;
+}
+
+.ben-body h6{
+    color:rgb(123, 122, 186);
+    position: relative;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.ben-title{
+    padding-bottom: 25px;
+}
+    
+#review:hover,
+#review:focus{
+    background-color: rgba(63, 63, 63, 0.28);
+    cursor: pointer;
+    transition:background-color 0.3s ease-in-out;
+}
+
+.checked{
+    margin-top: 35px;
+    margin-right: 5px;
+    color: orange;
+    width: 25px;
+    align-self: left;
+}
+
+.quienes-somos-cont{
+    text-align: center;
+}
+
+.quienes-somos-cont p{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    color: white;
+    text-align: center; 
+    margin-top: 25px;
+}
+
+@media (max-width: 627px){ 
+    .card{
+       margin-top: 1em;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 835px){
+.card img{
+width: 12rem!important;
+}
+}
+
+@media (min-width: 580px) and (max-width: 646px){
+    .card img{
+    width: 10rem!important;
+    }
+    }
+    

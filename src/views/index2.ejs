@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Inicio</title>
+
+       <!-- FAVICON --> 
+       <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+      
+       <!--CSS-->
+       <link rel="stylesheet" href="/css/navbar.css" type="text/css">
+       <link rel="stylesheet" href="/css/index2.css" type="text/css">
+       <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@800&display=swap');
+        </style>
+</head>
+<body>
+    <!-- NAV -->
+
+    <nav class="navbar navbar-expand-lg bg-light navbar-dark" id="nav-gradient">
+        <div class="container">
+          <a class="navbar-brand" href="/"><img src="/img/Logo_Horizontal.png" id="logo-menu" alt="logo" height="50px"></img></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+               <!-- <% if(locals.isLogged) { %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/listado">Contactos</a>
+                      </li>
+                
+                      <li class="nav-item">
+                        <a href="/users/misejercicios">Mis ejercicios</a></li>
+                    
+                        <li class="nav-item"><a href="/users/miperfil">¡Hola <b><%= locals.userLogged.first_name %></b>!</a></li>
+                  </ul>
+
+                    <% } else { %>-->
+              <li class="nav-item">
+                <a class="nav-link" href="/listado">Contactos</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/users/login">Iniciar sesión</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/users/registro">Registrate</a>
+              </li>
+
+            </ul>
+            <% } %>
+          </div>
+        </div>
+    </nav>
+
+    <div class="banner-text">
+        <div class="bigTitle">
+      <h1>Mejora tu salud, siéntete mejor</h1>
+      </div>
+      <div class="smallTitle">
+          <h2 style="font-weight: 300; font-size: 28px;">Contenido personalizado para tu bienestar y mejorar el área de salud que desees.</h2>
+        </div>
+    </div>
+
+      <!-- BANNER -->
+
+      <div class="card text-bg-dark">
+      <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1650499717/Por%20Ti/fondo-login_kfumtl.png" class="card-img" alt="banner">
+        <div class="card-img-overlay">
+          <h5 class="ben-title">Mejora tu salud</h5>
+          <p class="ben-text">Contenido personalizado para tu bienestar y mejorar el área de salud que desees.</p>
+        </div>
+      </div>
+    <!-- / BANNER -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,71 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700:800;900;1,200;1,300;1,400;&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.nav-gradient{
-	background: linear-gradient(rgb(17, 20, 37), rgba(17, 20, 37, 0));
-	top: 0;
-	z-index: 15;
-	height: 150px;
-	position: fixed;
-	width: 100%;
+.bs-navbar-brand-color{ 
+	color:white;
+};
+
+.bs-navbar-toggler-border-color{
+	color:white;
 }
 
-#logo-menu{
-   height: 50px;
-   position: absolute;
-   top: 25px;
-   left: 60px;
-   z-index: 40;
-}
-
-#primary_nav_wrap
-{
-z-index: 40;
-position: fixed;
-height: 30px;
-display: flex;
-flex-direction: row;
-align-content: flex-end;
-text-align: center;
-top: 35px;
-left: 60%;
-margin-bottom: 20px;
-font-size: 16px;
-margin-right: 20px;
-}
-
-nav *{
-	flex-direction: row;
-}
-
-#primary_nav_wrap ul
-{
-	display: flex;
-	align-items: center;
-	text-align: center;
-	list-style:none;
-	justify-content: space-between;
-	float:center;
-	gap: 60px;
-	margin:0;
-	padding:0;
-}
-
-#primary_nav_wrap ul a
-{
-	display:block;
+.bs-navbar-brand-hover-color{
 	color: white;
-	text-decoration:none;
-	font-weight:100;
-	line-height:32px;
-	padding:0 15px;
-	font-family: 'Poppins', sans-serif;
 }
 
-#primary_nav_wrap ul li
-{
-	margin:0;
-	padding:0
+.bs-navbar-hover-color {
+	color: white;
+}
+
+.bs-navbar-disabled-color {
+	color: white;
+}
+
+.bs-navbar-active-color {
+	color: white;
+}
+
+.nav{
+	overflow-x: hidden;
+}
+
+
+.navbar-nav{
+	font-weight: 200;
+}
+
+#nav-gradient{
+	background: linear-gradient(#111425, rgba(17, 20, 37, 0));
+	color: white;
+	position: fixed;
+}
+
+*.navbar{
+	color: white;
+}
+
+.navbar-nav{
+	position: relative;
+	top: -450px;
+}
+
+.navbar-brand{
+	position: relative;
+	top: -450px;
+}
+
+.collapse{
+	position: relative;
+}
+
+.navbar-toggler{
+	position: relative;
+	top: -420px;
+	color: white;
+}
+
+.navbar-toggler:hover{
+	color: lavender;
+}
+
+.navbar-toggler-icon{
+	color: white;
+}
+
+#navbarNavDropdown{
+	color: white;
+}
+
+
+#nav-gradient{
+	background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1650499717/Por%20Ti/fondo-login_kfumtl.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 1080px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+} 
+
+.nav-item{
+	margin-right: 50px;
+	font-weight: 200;
+	font-style: normal;
 }
 
 li:hover{
@@ -74,55 +100,127 @@ li:hover{
    text-decoration-thickness: 3px;
 }
 
-
-#primary_nav_wrap ul ul
-{
-	top:100%;
-	left:0;
-	background:#fff;
-	padding:0
+*.navbar{
+	background-color: #111425;
+	border-radius: 0;
 }
 
-#primary_nav_wrap ul ul li
-{
-	float:none;
-	width:200px
+a.nav-link{
+	font-family: 'Poppins', 'Nunito', 'Fredoka', 'sans-serif';
+	color: white;
+	font-weight: 200;
 }
 
-#primary_nav_wrap ul ul a
-{
-	line-height:120%;
-	padding:10px 15px
+.banner-text{
+	color: white;
 }
 
-#primary_nav_wrap ul ul ul
-{
-	top:0;
+.bigTitle{
+	z-index: 2;
+    position: absolute;
+    top:40vh;
+    width: 100%;
+	font-family: 'Poppins', 'sans-serif';
+	font-weight: 800;
+	font-size: 15vw;
+	padding-left: 100px;
 }
 
-#primary_nav_wrap ul li:hover > ul
-{
-	display:block
+.smallTitle{
+    z-index: 3;
+    position: absolute;
+    top: 50vh;
+    width: 50%;
+	font-family: 'Nunito', sans-serif;
+    font-size: 28px;
+	padding-left: 100px;
+   }
+
+   *.nav-link{
+	font-weight: 300;
+   }
+
+@media (max-width: 991px) {
+*{
+	box-sizing: border-box;
 }
 
-#play-icono{
-	width: 150px;
-  }
-
-.far{
-color: white;
+.navbar-brand{
+	top: -420px;
 }
 
-
-.fas{
-	color:white;
+.navbar-nav{
+	top: -420px;
 }
 
-.far:hover{
-   color: lavender;
+.nav-item{
+	margin-right: 0;
+}
+
+}
+
+@media (min-width: 992px) and (max-width: 1058px) {
+	.bigTitle{
+	    top: 35vh;
+		margin-left: -2em;
 	}
-
-.fas:hover{
-   color: lavender;
+	.smallTitle{
+		margin-left: -2em;
+	}
 }
 
+@media (min-width: 768px) and (max-width: 992px) {
+.bigTitle{
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 30%;
+	bottom: 0;
+	margin: auto;
+	text-align: center;
+	font-size: 10vw;
+}
+
+.smallTitle{
+	position: absolute;
+	right: 0;
+	left: 0;
+	margin-top: 30%;
+	top: 40%;
+	bottom: 0;
+	margin: auto;
+	text-align: center;
+	font-size: 8vw;
+}
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+	.bigTitle{
+		position: absolute;
+		right: 0;
+		left: 40%;
+		top: 25%;
+		bottom: 0;
+		margin: auto;
+		margin-right: 100px;
+		text-align: right;
+	}
+	
+	.smallTitle{
+		position: absolute;
+		right: 0;
+		left: 40%;
+		top: 35%;
+		bottom: 0;
+		margin-right: 1em;
+		text-align: right;
+		font-size: 21px;
+	}
+}
+
+Bootstrap
+Modificar banner con % o em 
+Convertir en css grid, a cada caja ponerle un nombre.
+flex-grow
+inline-content
+960 gris system
