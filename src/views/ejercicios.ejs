@@ -11,7 +11,6 @@
       <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
       
       <!--CSS--> 
-      <link rel="stylesheet" href="/css/navbar.css" type="text/css">
       <link rel="stylesheet" href="/css/ejercicios.css" type="text/css">
       <link rel="stylesheet" href="/css/ejercicios-cont.css" type="text/css">
 
@@ -30,8 +29,6 @@
       <!--Kit FontAwesome--> 
      <script src="https://kit.fontawesome.com/60756a3678.js" crossorigin="anonymous"></script>
     </head>
-
-    <%- include('./partials/nav') %>
 
 <body style="overflow-x: hidden;">
 
@@ -122,9 +119,7 @@
       <div class="ejercicios-box-cont" style="margin-top: 50px; padding-left: 75px;">
 
         <% if(userLogged.objetivo !== 'saludsocial' && userLogged.objetivo != 'saludfisica') { %>
-
        <!-- SALUD MENTAL -->
-
         <a href="/ejercicios/registro-de-ansiedad"> <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651189737/Por%20Ti/registro-ansiedad-card_bpsazv.svg);"><div class="card-ejercicio-text">
           <h2>Hoja de registro de ansiedad</h2><h6>12 min</h6>
           <h4>Visualiza los momentos en que sientes ansiedad.</h4></div></div></a>
@@ -133,36 +128,28 @@
             <h2>Técnicas de respiración</h2><h6>12 min</h6>
             <div class="h4-ben-text"><h4>Reduce el estrés y ansiedad usando la respiración.</h4></div></div></div>
           </a>
-
           <a href="/ejercicios/tapping"><div class="box"><div class="card-ejercicio-text">
       <h2>Tapping</h2><h6>12 min</h6>
         <h4>Técnica auto-calmante para armonizar emociones.</h4></div></div>
       </a>
-
       <a href="/ejercicios/imaginacion-guiada">
         <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651019618/Por%20Ti/Imaginacio%CC%81n_guiadaejercicios_oe6tbo.png); width:373px;"><div class="card-ejercicio-text">
           <h2>Imaginación guiada</h2><h6>12 min</h6>
           <h4>Visualiza para redirigir tus pensamientos.</h4></div></div>
         </a>
-
         <a href="/ejercicios/relajacion-muscular">
           <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651019619/Por%20Ti/Relajacio%CC%81n_musculaejercicios_gvsvcs.png);"><div class="card-ejercicio-text">
             <h2>Relajación muscular</h2><h6>12 min</h6>
             <h4>Reduce la tensión corporal. </h4></div></div>
           </a>
-
           <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651189737/Por%20Ti/actividades-del-dia-card_jk8qu2.svg);"><div class="card-ejercicio-text">
             <h2>Listado de actividades del día</h2><h6>12 min</h6>
             <h4>Organiza tus actividades y reduce el estrés.</h4></div></div>  
-
-
             <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651189737/Por%20Ti/diario-emocional-card_ilqhnt.svg);"><div class="card-ejercicio-text">
               <h2>Diario emocional</h2><h6>12 min</h6>
               <h4>Lleva un registro de tus emociones.</h4></div></div>
             </div>
-
               <h2 style="margin-top: 100px;">Actividades cortas</h2>
-
   <div class="ejercicios-box-cont2" style="margin-top: 50px; padding-left: 75px; overflow: hidden;">
     
     <a href="/ejercicios/5sentidos"><div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651189737/Por%20Ti/sentidos-card_fjbkx6.svg); width:373px;"><div class="card-ejercicio-text">
@@ -180,35 +167,29 @@
     </div>
     
 </div>
-
               <% } %>
 
           <!-- SALUD FÍSICA -->
 
           <% if(userLogged.objetivo !== 'saludmental' && userLogged.objetivo != 'saludsocial') { %>
-
         <a href="/ejercicios/plato-del-buen-comer">
           <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651019619/Por%20Ti/Plato_del_buen_comerejercicios_bkege6.png);"><div class="card-ejercicio-text">
             <h2>Plato del buen comer</h2><h6>12 min</h6>
             <h4>Guía tu alimentación para obtener salud.</h4></div></div>
           </a>
-
       <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651189738/Por%20Ti/sueno-card_hpgpud.svg);"><div class="card-ejercicio-text">
         <h2>Registro de sueño</h2><h6>12 min</h6>
         <h4>Monitorea tus horas de sueño.</h4></div></div>
         
-
             <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651866646/Por%20Ti/card-actividad-fi%CC%81sica-ejercicio_tzsxxx.png);"><div class="card-ejercicio-text">
               <h2>Registro de actividad física</h2><h6>12 min</h6>
               <h4>Dale un seguimiento a tu entrenamiento.</h4></div></div>
             
-
             <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651866647/Por%20Ti/card-agua-ejercicio_pyiz9v.png);"><div class="card-ejercicio-text">
               <h2>Registro de agua del día</h2><h6>12 min</h6>
               <h4>Recupera el hábito saludable de beber agua.</h4>
               </div></div>
          
-
             <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651866646/Por%20Ti/card-yoga-ejercicio_aiuzqz.png);"><div class="card-ejercicio-text">
               <h2>Clases de yoga</h2><h6>12 min</h6>
               <h4>Libera hormonas del bienestar.</h4></div></div>
@@ -218,7 +199,6 @@
           <!-- SALUD SOCIAL -->
 
           <% if(userLogged.objetivo !== 'saludfisica' && userLogged.objetivo != 'saludmental') { %>
-
             <div class="box" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1651866646/Por%20Ti/card-company-ejercicio_qipewp.png);"><div class="card-ejercicio-text">
               <h2>Actividades en compañia</h2><h6>12 min</h6>
               <div class="h4-ben-text"><h4>Mantén buenos hábitos sociales.</h4>
@@ -228,7 +208,6 @@
   </div>
 </div>
 </div>
-
 <% } %>
 
 <div style="overflow-x: hidden;">

@@ -59,7 +59,6 @@ height: 100vh;
 position: absolute;
 top: 50%;
 left: 50%;
-float: left;
 width: 480px;
 padding: 20px 40px;
 height: fit-content;
@@ -200,6 +199,26 @@ input[type=checkbox]:checked:after {
   color:black;
 }
 
+.button-register{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: medium;
+  border-radius: 50px;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  padding: 15px;
+  width:  16em;
+  background-color: rgb(254, 223, 200);
+  color: rgb(65, 64, 105);
+  }
+  
+  .button-register:hover{
+      background-color: rgba(254, 223, 200, 0.8);
+      transition:background-color 0.3s ease-in-out;
+      cursor: pointer;
+  }
+
 @media (min-width: 768px){
   .login-box {
     width: 560px;
@@ -207,8 +226,8 @@ input[type=checkbox]:checked:after {
 }
 
 @media (max-width: 991px){
-  form {
-    margin-top: 220px;
+  .login-box {
+    margin-top:  4em;
     }  
 }
 
@@ -219,3 +238,42 @@ input[type=checkbox]:checked:after {
     }  
 }
 
+@media (max-width: 380px){
+  .login-box {
+    margin-top:120px;
+    }  
+}
+
+
+@media (min-width: 380) and (max-width: 819px){
+  form {
+    margin-top: 400px;
+    }  
+}
+
+@media (max-width: 820){
+  form {
+    margin-top: 100px;
+    }  
+}
+
+
+@media (min-width: 576px) and (max-width: 767px){
+ 
+.login-box {
+  left: 130%!important;
+  }
+}
+
+
+@media(max-width: 378px){
+  .login-box{
+    padding-bottom:120px
+  }
+}
+
+@media(max-width: 990px){
+.login-box{
+  top: 55%;
+  }
+}
