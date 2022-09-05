@@ -67,6 +67,10 @@ app.get('/', function(req, res){
     res.render('index'); 
 });
 
+app.get('/registro2', function(req, res){
+    res.render('registro2'); 
+});
+
 app.get('/misobjetivos', function(req, res){
     res.render('objetivos');
 });
@@ -77,6 +81,10 @@ app.get('/misejercicios', function(req, res){
 
 app.get('/listado', function(req, res){
     res.render('listado');
+});
+
+app.get('/listado2', function(req, res){
+    res.render('listado2');
 });
 
 app.get('/ejerciciosfavoritos404', function(req, res){

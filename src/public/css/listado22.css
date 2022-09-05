@@ -1,0 +1,163 @@
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+  }
+  
+  $primary-color: #f0932b;
+  $secondary-color: #141414;
+  $decor-color: #3498DB;
+  $font: "proxima-nova", sans-serif;
+  
+  .wrapper{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font;
+    font-size: 1em;
+    font-weight: 300;
+    color: $secondary-color;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body{
+    background-color: #fff1e3;
+  }
+  
+  #wrapper{
+     left: 0;
+     width: 100%;
+  }
+  
+  #container{
+    width: 400px;
+    height: fit-content;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+    background: -moz-linear-gradient(45deg, rgba(245,246,250,1) 0%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(245,246,250,1) 0%,rgba(255,255,255,1) 100%);
+    background: linear-gradient(45deg, rgba(245,246,250,1) 0%,rgba(255,255,255,1) 100%);
+  }
+  
+  #back {
+    width: 100%;
+    height: 220px;
+    background-image: url('http://enwaara.se/codepen/profile-back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  img {
+    width: 200px;
+    border-radius: 200px;
+    border: 4px solid #f5f6fa;
+    box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2);
+    position: absolute;
+    top: 60px;
+    left: calc(50% - 100px);
+  }
+  
+  #info {
+    width: 100%;
+    height: calc(100% - 220px);
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    h1 {
+      width: 100%;
+      text-align: center;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 1.4em;
+      padding-bottom: 38px;
+      padding-top: 12px;
+      color: $primary-color;
+      position: relative;
+      &:after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 2px;
+        background-color: $primary-color;
+        opacity: 0.2;
+        position: absolute;
+        bottom: 24px;
+        left: calc(50% - 20px);
+      }
+    }
+  }
+  
+  #about {
+    width: 100%;
+    padding-bottom: 32px;
+    li {
+      list-style: none;
+      width: 100%;
+      overflow: hidden;
+      padding-bottom: 24px;
+      line-height: 20px;
+      letter-spacing: 0.5px;
+      font-size: 1.1em;
+      i {
+        font-size: 1.2em;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        margin-right: 12px;
+      }
+      &:nth-child(2) {
+        i {
+          color: $primary-color;
+        }
+      }
+      a {
+        text-decoration: none;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  
+  #social {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    li {
+      list-style: none;
+      width: 33.33%;
+      font-size: 1.8em;
+      &:nth-child(2) {
+        text-align: center;
+      }
+      &:nth-last-child(1) {
+        text-align: right;
+      }
+      &:hover {
+        i{
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 1440px){
+    #wrapper{
+      transform: scale(0.8);
+    }
+  }

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/css/estilosindex.css" type="text/css">
     <link rel="stylesheet" href="/css/fondo.css" type="text/css">
     <link rel="stylesheet" href="/css/footer2.css" type="text/css">
+    <link rel="stylesheet" href="/css/listado2.css" type="text/css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -25,7 +26,7 @@
       <!--Kit FontAwesome--> 
       <script src="https://kit.fontawesome.com/60756a3678.js" crossorigin="anonymous"></script>
  
-    <title>Inicio</title>
+    <title>Contactos</title>
   </head>
   <body>
 
@@ -61,31 +62,14 @@
               </nav>
         </div>
        </div>
-
-       <div class="text-header d-flex align-items-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8">
-                    <h2>Mejora<span> tu salud</span> </h2>
-                    <p>Contenido personalizado para tu bienestar y mejorar el área de salud que desees.</p>
-                    <% if(locals.isLogged) { %>
-                    <a href="/users/misejercicios" class="btn-yo">Comenzar</a>
-                    <% } else { %>
-                      <a href="/users/registro" class="btn-yo">Comenzar</a>
-                      <% } %>
-                </div>
-            </div>
-        </div>
-       </div>
-
     </header>
 
     <!--Estrellas-->   
 
-            <div class="scene" style="height: 100%; margin-bottom: -15px; padding-left: 20px;">
+            <div class="scene" style="height: 100%; padding-bottom: 0!important; margin-bottom: 0!important;">
                 <script type="text/javascript">
                     function stars(){
-                        let count = 200;
+                        let count = 100;
                         let scene = document.querySelector('.scene');
                         let i = 0;
                         while(i < count){
@@ -112,111 +96,87 @@
                 </script>
 
  <!--Beneficios prueba 2--> 
-
- <div class="content" style="margin-bottom: 50px;">
-  <main>
-      <h2 style="margin-top: 50px;">Beneficios</h2>
-      <h3 class="h3-Index">Una forma accesible de mejorar tu salud</h3>
+ <main>
+ <div class="content" style="margin-top: 150px; margin-bottom: 100px; padding: 0 10px;">
+      <h2 style="margin-top: 100px;">¿Necesitas ayuda más personalizada?</h2>
+      <h3 class="h3-Index">Te compartimos los siguientes números a los que podrás acudir si necesitas atención urgente.</h3>
   </div>
 
-  <div class="container">
-<div class="row justify-content-center align-items-center">
-  <div class="benefits col-xs-10 col-sm-10 col-md-5 col-lg-3">
-    <img class="ben-img img-responsive"src="/img/ventaja1.png" alt="Card image cap">
-          <div class="ben-body">
-            <p class="ben-text">Elige el área de salud</p>
-            <h5 class="ben-title">que desees</h5>
+  <div class="row justify-content-center">
+    <div class="col-10 col-xs-10 col-md-4 col-lg-3 mb-3" id="contact">
+  
+      <div class="card text-center" style="margin-top: 0!important" id="first-card">
+        <img class="card-img-avatar rounded-circle" src="/img/contacto1.png" />
+        <div class="card-body">
+          <h5 class="card-title">La línea de la vida</h5>
+          <p>Especialistas en atención a la salud mental, ofrecen atención a problemas como ansiedad, depresión o riesgo suicida.
+        </p>
+        <div class="icon-flex">
+            <span class="fa-solid fa-phone"></span><h6 style="padding-top: 11px;">800 911 2000</h4>
           </div>
-  </div>
-
-  <div class="benefits col-xs-10 col-sm-10 col-md-5 col-lg-3">
-    <img class="ben-img img-responsive" src="/img/ventaja2.png" alt="Card image cap">
-          <div class="ben-body">
-            <p class="ben-text">Contenido para</p>
-            <h5 class="ben-title">sentirte mejor</h5>
+        </div>
+      </div>
+  
+    </div>
+    <div class="col-10 col-xs-10 col-md-4 col-lg-3 mb-3">
+  
+      <div class="card text-center">
+        <img class="card-img-avatar rounded-circle" src="/img/contacto2.png"/>
+        <div class="card-body">
+          <h5 class="card-title">Fundación Origen</h5>
+          <p>Organización social experta en el tema de salud emocional. Ofrecen orientación psicológica, médica y nutricional gratuita.
+        </p>
+        <div class="icon-flex">
+            <span class="fa-solid fa-phone"></span><h6 style="padding-top: 11px;">800 015 1617</h4>
           </div>
-  </div>
-
-  <div class="benefits col-xs-10 col-sm-10 col-md-5 align-self-md-center col-lg-3">
-    <img class="ben-img img-responsive" src="/img/ventaja3.png" alt="Card image cap">
-    <div class="ben-body">
-      <p class="ben-text">Lleva un registro de</p>
-      <h5 class="ben-title">tus avances</h5>
+        </div>
+      </div>
+  
     </div>
-  </div>
-
-</div>
-  </div>
-
-  <!--RESEÑAS-->
-
-  <div class="content" style="margin-bottom: 50px;">
-        <h2 style="margin-top: 50px;">Reseñas</h2>
-        <h3 class="h3-Index">¿Qué opinan los usuarios de Por Ti?</h3>
-    </div>
-
-  <div class="container">
-<div class="row justify-content-center align-items-center">
-  <div class="benefits col-xs-10 col-sm-10 col-md-5 col-lg-3">
-    <div class="ben-body" id="review">
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <h4 style="font-size: 18px; font-weight: 400; text-align: left; margin-top: 25px; margin-bottom: 35px; padding-right: 25px;">
-        "Me gustó demasiado, al usarla sentí paz y relajación. La página es muy práctica y fácil de entender."</h4>
-      <h6>- Alan García</h6>
-    </div>
+    <div class="col-10 col-xs-10 col-md-4 col-lg-3 mb-3">
+  
+      <div class="card text-center">
+        <img class="card-img-avatar rounded-circle" src="/img/contacto3.png"/>
+        <div class="card-body">
+          <h5 class="card-title">Línea UAM</h5>
+          <p>Servicio gratuito de la UAM Azcapotzalco para atender la salud mental.
+            Horario: Lunes a viernes
+            9:00 a 17:00 hrs</p>
+            <div class="icon-flex">
+                <span class="fa-solid fa-phone"></span><h6 style="padding-top: 11px;">55 2555 8092</h4>
+              </div>
           </div>
-
-  <div class="benefits col-xs-10 col-sm-10 col-md-5 col-lg-3">
-    <div class="ben-body" id="review">
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <h4 style="font-size: 18px; font-weight: 400; text-align: left; margin-top: 25px; margin-bottom: 35px; padding-right: 25px;">
-        "Me inspira tranquilidad y relajación. Las actividades son fáciles de usar. Me parece muy completo."</h4>
-      <h6>- Giovana Tomasini</h6>
-    </div>
+        </div>
+      </div>
+  
+    <div class="col-10 col-xs-10 col-md-4 col-lg-3 mb-3">
+  
+      <div class="card text-center" id="last-card">
+        <img class="card-img-avatar rounded-circle" src="/img/contacto4_1.png" />
+        <div class="card-body">
+          <h5 class="card-title">N.U.B.E.</h5>
+          <p>
+            Centros especializados en salud mental y emocional. Su finalidad es otorgar apoyo a bajo costo y de alto impacto.
+          </p>
+          <div class="icon-flex">
+            <span class="fa-solid fa-phone"></span><h6 style="padding-top: 11px;">5795 2054 Ext. 5789</h4>
           </div>
-
-  <div class="benefits col-xs-10 col-sm-10 col-md-5 align-self-md-center col-lg-3">
-    <div class="ben-body" id="review">
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <h4 style="font-size: 18px; font-weight: 400; text-align: left; margin-top: 25px; margin-bottom: 35px; padding-right: 25px;">
-        "Los ejercicios, actividades y contenidos me transmiten calma. Me han ayudado a relajarme y sentime mejor."</h4>
-      <h6>- Daniel Márquez</h6>
+        </div>
+      </div>
+  
     </div>
   </div>
-</div>
-  </div>
-
-  <!--¿Quiénes somos?--> 
-
-<div class="content" style="margin-bottom: 50px;">
-      <h2 style="margin-top: 50px;">¿Quiénes somos?</h2>
-      <h3 class="h3-Index">Cónoce nuestro proyecto.</h3>
-  </div>
-
-  <div class="quienes-somos-cont">
-    <img src="/img/img-quienes-somos.png" class="quienes-somos">
-    <img src="/img/img-quienes-somos.png" class="quienes-somos">
-<p style="padding: 0 25px;; margin-bottom: 100px;">Buscamos ayudar a mejorar tu calidad de vida, promoviendo el autocuidado y bienestar de tu salud integral.</p>
-</div>
+  <div style="background-color: linear-gradient(rgba(33, 31, 72, 0.149) 20%, rgb(33, 31, 72) 100%); position: relative; bottom: 0;;">
+  <div style="height: 100px;">
 </div>
 <%- include('./partials/footer2') %>
+</div>
+</div>
 </main>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>

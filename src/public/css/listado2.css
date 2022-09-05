@@ -1,0 +1,123 @@
+*{
+  box-sizing: border-box!important;
+}
+
+.mr-n2 {
+    margin-right: -.75em !important;
+  }
+
+  .card-title{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+  }
+
+  .card-img-avatar {
+    height: 80px;
+    margin: -40px auto 0 auto;
+    border: 6px solid #4D4DA0;
+    border-radius: 200px;
+  }
+
+.card-text{
+  color: rgb(203, 203, 243);
+}
+
+  .card-text{
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: white!important;
+  }
+
+  .card{
+background-color: rgba(0, 0, 0, 0.28)!important;
+backdrop-filter: blur(2px)!important;
+border-radius: 40px!important;
+padding-bottom: 10px;
+  }
+
+  .card p{
+    font-size: 16px;
+    line-height: 18px;
+    color: lavender; 
+    opacity: 0.8; 
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .card-img-top{
+    border-radius: 40px!important;
+    width: 200px;
+  }
+
+  .icon-flex{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+  }
+
+  .fa-solid{
+    margin-right: 10px;
+    color: #4D4DA0;
+  }
+
+  @media(min-width: 576px) and (max-width: 836px){
+    .card-img-avatar {
+      height: 12em;
+      width: 12em;
+      margin: -40px auto 0 auto;
+    }
+  }
+
+  @media(min-width: 768px) and (max-width: 836px){
+  .card{
+    margin-top: 80px;
+    height: 400px;
+  }
+}
+
+@media(min-width: 837px){
+  .card{
+    height: fit-content;
+  }
+}
+
+@media(min-width: 993px) and (max-width: 1102px){
+  *html{
+    width: 100vw!important;
+  }
+}
+
+@media(min-width: 837px) and (max-width: 991px){
+  #last-card{
+    margin-top: 60px;
+  }
+  }
+
+  @media(min-width: 768px) and (max-width: 837px){
+    .row{
+      align-items: baseline;
+      margin-top: -30px;
+    }
+    }
+
+
+  @media(max-width: 768px){
+    .card{
+      margin-top: 60px;
+    }
+    }
+
+    @media(min-width: 580px) and (max-width: 645px){
+      .card-img-avatar {
+        height: 10em;
+        width: 10em;
+      }
+      }
+  
+  
