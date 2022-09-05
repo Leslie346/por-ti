@@ -67,7 +67,7 @@ left: 50%;
 width: 480px;
 padding: 20px 40px;
 height: fit-content;
-padding-bottom: 70px;
+padding-bottom: 15px;
 transform: translate(-50%, -50%);
 background: rgba(0,0,0,.3);
 box-sizing: border-box;
@@ -131,11 +131,8 @@ padding: 15px;
 width:  16em;
 background-color: rgb(254, 223, 200);
 color: rgb(65, 64, 105);
-text-align: center;
-margin: 15px 0 0 0 0;
-display: flex;
-  justify-content: center;
-  align-items: center;
+text-align: center!important;
+margin: 15px 0 0 0 0!important;
 }
 
 button:hover{
@@ -186,6 +183,18 @@ input[type=checkbox]{
   height: 15px;
 }
 
+.padre{
+  position: relative;
+  margin: 0px 0;
+}
+
+.hijo{
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 input[type=checkbox]:checked:after {
   background-color: white;
@@ -201,5 +210,12 @@ input[type=checkbox]:checked:after {
 @media (max-width: 768px){
   form {
     margin-top: 220px;
+    }  
+}
+
+@media (max-width: 559px){
+  .login-box {
+    width: 90vw;
+    margin-left: -5px;
     }  
 }
