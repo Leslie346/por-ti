@@ -11,15 +11,14 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-      <link rel="stylesheet" href="/css/check.css">
-
 
       <!--SCSS--> 
     <link rel="stylesheet" href="/css/objetivos.css">
+    <link rel="stylesheet" href="/css/check.css">
 
     <!--CSS--> 
     <link rel="stylesheet" type="text/css" href="/css/login.css">
-    <link rel="stylesheet" href="/css/navbar.css" type="text/css">
+    <link rel="stylesheet" href="/css/estilosindex.css" type="text/css">
 
     <!--Tipografías--> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,17 +27,47 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+ <!--FAVICON--> 
+ <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
 </head>
-<header>
-    <!--FAVICON--> 
-    <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
-</header>
 <body>
+
+  <header>
+    <div class="bg-dark">
+     <div class="container navcont w-100" id="nav-gradient">
+         <nav class="navbar navbar-expand-lg navbar-dark">
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+             </button>
+
+             
+             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                 <div class="navbar-nav w-100">
+                     <a class="navbar-brand" href="/"><img src="/img/Logo_Horizontal.png" id="logo-menu2" alt="logo" height="50px"></img></a>
+                 </div>
+               </div>
+
+             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+               <div class="navg navbar-nav w-100">
+                  <a class="navbar-brand" href="/"><img src="/img/Logo_Horizontal.png" id="logo-menu" alt="logo" height="50px"></img></a>
+                  <% if(locals.isLogged) { %>
+                  <a class="nav-item nav-link" href="/listado">Contactos</a>
+                 <a class="nav-item nav-link" href="/users/misejercicios">Mis ejercicios</a>
+                 <a class="nav-item nav-link" href="/users/miperfil">¡Hola <b><%= locals.userLogged.first_name %></b>!</a>
+                 <% } else { %>
+                   <a class="nav-item nav-link" href="/listado">Contactos</a>
+                   <a class="nav-item nav-link" href="/users/login">Iniciar sesión</a>
+                   <a class="nav-item nav-link" href="/users/registro">Registrate</a>
+                   <% } %>
+               </div>
+             </div>
+           </nav>
+     </div>
+    </div>
+
     <div class="fondo">
   <div class="main">
       
-    <%- include('./partials/nav') %>
 
                 <!--PARTE 1-->
 
@@ -106,6 +135,8 @@
                 </div>
                 </div>
 
+
+                      <!--PARTE 2 OBJETIVOS-->
                 <div id="objetivos" style="height:100vh">
                   <br>
                   <br>
@@ -113,7 +144,7 @@
                   <br>
                 <div class="titles" style="margin-top:40px">
                   <h4>Elije un objetivo</h1>
-                      <h1>¿Qué deseas mejorar?</h1>
+                      <h3>¿Qué deseas mejorar?</h3>
                   </div>
           
                   <br>
@@ -148,7 +179,7 @@
                 </div>
 
                  <div style= "margin-top: -30px">
-                  <a href="/users/misejercicios"><button type="submit">Continuar</button></a>
+                  <a href="/users/misejercicios"><button class="button-register" type="submit">Continuar</button></a>
                 </div>
                   <br>
                   <br>

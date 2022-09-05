@@ -1,20 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-html, body{
+*html, body{
   margin: 0; 
   padding: 0;
-  box-sizing: border-box;
-}
-
-.container{
-  padding-right: 20px;
+  box-sizing: border-box!important;
 }
 
 .log-sec{
-background: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1655491397/Por%20Ti/fondo_login_gk172y.png) no-repeat center center;
+background: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1662390194/Por%20Ti/fondo_login_gk172y.png) no-repeat center center;
 background-size: cover;
-padding-bottom: 100px;
 }
 
 .h2{
@@ -64,10 +59,12 @@ height: 100vh;
 position: absolute;
 top: 50%;
 left: 50%;
+float: left;
 width: 480px;
 padding: 20px 40px;
 height: fit-content;
 padding-bottom: 15px;
+margin-bottom: 50px;
 transform: translate(-50%, -50%);
 background: rgba(0,0,0,.3);
 box-sizing: border-box;
@@ -105,6 +102,7 @@ background: transparent;
 position: absolute;
 top:0;
 left: 0;
+float: left;
 padding: 10px 0;
 font-size: 16px;
 color: #fff;
@@ -192,6 +190,7 @@ input[type=checkbox]{
   position: absolute;
   top: -15px;
   left: 50%;
+  float: left;
   transform: translate(-50%, -50%);
 }
 
@@ -207,7 +206,7 @@ input[type=checkbox]:checked:after {
     }  
 }
 
-@media (max-width: 768px){
+@media (max-width: 991px){
   form {
     margin-top: 220px;
     }  
@@ -219,3 +218,4 @@ input[type=checkbox]:checked:after {
     margin-left: -5px;
     }  
 }
+

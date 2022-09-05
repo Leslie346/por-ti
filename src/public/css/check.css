@@ -49,3 +49,10 @@ h3{
   font-family: 'Nunito', sans-serif;
   font-style: normal;
 }
+
+@media (max-width: 768px){
+  .radio-image{
+    width: 80%;
+    height: 80%;
+  }   
+}
