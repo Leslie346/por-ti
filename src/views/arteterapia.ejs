@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -6,11 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arteterapia</title>
 
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@800&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@800&display=swap" rel="stylesheet">
+ <style>
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+     @import url('https://fonts.googleapis.com/css2?family=Fredoka:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ </style>
+
       <!--FAVICON--> 
       <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
       
       <!--CSS--> 
-      <link rel="stylesheet" href="/css/navbar.css" type="text/css">
+      <link rel="stylesheet" href="/css/estilosindex.css" type="text/css">
+      <link rel="stylesheet" href="/css/estilostext.css" type="text/css">
+      <link rel="stylesheet" href="/css/ejercicios.css" type="text/css">
       <link rel="stylesheet" href="/css/footer.css" type="text/css">     
       <link rel="stylesheet" href="/css/arteterapia.css" type="text/css">
       <!--Tipografías--> 
@@ -23,27 +34,66 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
      <!--Nunito--> 
      <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
       <!--Kit FontAwesome--> 
      <script src="https://kit.fontawesome.com/60756a3678.js" crossorigin="anonymous"></script>
+
     </head>
 
-    <%- include('./partials/nav') %>
+    <header>
+      <div class="bg-dark">
+       <div class="container navcont w-100" >
+           <nav class="navbar navbar-expand-lg navbar-dark">
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+               </button>
+  
+               
+               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                   <div class="navbar-nav w-100">
+                       <a class="navbar-brand" href="/"><img src="/img/Logo_Horizontal.png" id="logo-menu2" alt="logo" height="50px"></img></a>
+                   </div>
+                 </div>
+  
+               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                 <div class="navg navbar-nav w-100">
+                    <a class="navbar-brand" href="/"><img src="/img/Logo_Horizontal.png" id="logo-menu" alt="logo" height="50px"></img></a>
+                    <% if(locals.isLogged) { %>
+                    <a class="nav-item nav-link" href="/listado">Contactos</a>
+                   <a class="nav-item nav-link" href="/users/misejercicios">Mis ejercicios</a>
+                   <a class="nav-item nav-link" href="/users/miperfil">¡Hola <b><%= locals.userLogged.first_name %></b>!</a>
+                   <% } else { %>
+                     <a class="nav-item nav-link" href="/listado">Contactos</a>
+                     <a class="nav-item nav-link" href="/users/login">Iniciar sesión</a>
+                     <a class="nav-item nav-link" href="/users/registro">Registrate</a>
+                     <% } %>
+                 </div>
+               </div>
+             </nav>
+       </div>
+      </div>
+   </header>
 
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-
-<div class="titles">
-    <h1>Arteterapia</h1>
-    <br>
-    <br>
-    <p>Todos podemos llegar a sentir emociones que nos abruman y no sabemos como expresarlas o manejarlas. 
-    La arteterapia es una herramienta que puedes utilizar para calmar la mente y tener una mayor claridad en diferentes situaciones. 
-    Lo mejor es que solo necesitas un lápiz y una hoja de papel para realizarlos. </p>
-    <br>
-    <br>
-    <p>Identifica la emoción que estás sintiendo y práctica los siguientes ejercicios que te ayudarán a sentirte mejor. </p>
-
+   <body>
+    <main>
+<div class="container ejercicios-text" style="margin-top: 120px;">
+  <div class="row align-items-center justify-content-center">
+    <div class="col">
+    </div>
+    <div class="col-8 col-xs-12 col-sm-11 col-md-10">
+      <h2 class="h2-ansiedad" style="font-weight: 700;">Arteterapia</h2>
+      <br>
+      <p>Todos podemos llegar a sentir emociones que nos abruman y no sabemos como expresarlas o manejarlas. 
+        La arteterapia es una herramienta que puedes utilizar para calmar la mente y tener una mayor claridad en diferentes situaciones. 
+        Lo mejor es que solo necesitas un lápiz y una hoja de papel para realizarlos. </p>
+       <br>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+  <br>
 </div>
 
 <section class="hero-section">
@@ -115,6 +165,13 @@
     <a href="/misejercicios"><button>Volver</button></a>
 </div>
 <br>
+</main>
 </body>
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>  
+  
 <%- include('./partials/footer') %>
 </html>

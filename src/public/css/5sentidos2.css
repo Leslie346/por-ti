@@ -32,7 +32,7 @@ body {
     color: #fff;
     background: var(--primary);
 }
-.container {
+.container-sen {
     width: var(--containerWidth);
     background: rgba(240, 236, 255, 0.841);
     text-align: center;
@@ -41,16 +41,16 @@ body {
     margin-top: 50px;
     padding: 25px 35px 10px 35px;
 }
-.container header {
+.container-sen header {
     font-size: 35px;
     font-weight: 600;
     margin: 0 0 35px 0;
 }
-.container .form-outer {
+.container-sen .form-outer {
     width: 100%;
     overflow: hidden;
 }
-.container .form-outer form {
+.container-sen .form-outer form {
     display: flex;
     width: calc(100% * var(--stepNumber));
 }
@@ -125,17 +125,17 @@ form .page .btns button.prev {
 form .page .btns button.next {
     margin-left: 3px;
 }
-.container .progress-bar {
+.container-sen .progress-bar {
     display: flex;
     margin: 40px 0;
     user-select: none;
 }
-.container .progress-bar .step {
+.container-sen .progress-bar .step {
     text-align: center;
     width: 100%;
     position: relative;
 }
-.container .progress-bar .step p {
+.container-sen .progress-bar .step p {
     font-weight: 500;
     font-size: 18px;
     color: rgb(65, 64, 105);
@@ -268,7 +268,7 @@ margin-top: 40px;
     :root {
         --containerWidth: 100%;
     }
-    .container {
+    .container-sen {
         box-sizing: border-box;
         border-radius: 0;
     }

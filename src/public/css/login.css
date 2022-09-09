@@ -244,16 +244,9 @@ input[type=checkbox]:checked:after {
     }  
 }
 
-
-@media (min-width: 380) and (max-width: 819px){
-  form {
-    margin-top: 400px;
-    }  
-}
-
 @media (max-width: 820){
   form {
-    margin-top: 100px;
+    margin-top: 80px!important;
     }  
 }
 
@@ -274,6 +267,6 @@ input[type=checkbox]:checked:after {
 
 @media(max-width: 990px){
 .login-box{
-  top: 55%;
+  top: 45%;
   }
 }

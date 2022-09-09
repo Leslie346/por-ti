@@ -1,0 +1,48 @@
+.ejercicios-text h2{
+font-family: 'Poppins', sans-serif;
+font-weight: 700;
+text-align: center;
+font-size: 32px;
+color: white;
+}
+
+.ejercicios-text p{
+font-family: 'Nunito', sans-serif;
+font-weight: 300;
+font-size: 14pt;
+text-align: center;
+}
+
+.ejercicios-text{
+    margin-top: 150px!important;
+}
+
+.h2-ansiedad{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.ejercicios-btn{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: medium;
+    border-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    padding: 15px;
+    margin: 0 auto;
+    width:  20em;
+    background-color: rgb(254, 223, 200);
+    color: rgb(65, 64, 105);
+    }
+    
+    .ejercicios-btn:hover{
+    background-color: rgba(254, 223, 200, 0.8);
+    transition:background-color 0.3s ease-in-out;
+    cursor: pointer;
+    }
+
+    .contenedor-especialista{
+        text-align: center;
+    }

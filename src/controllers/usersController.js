@@ -107,7 +107,7 @@ create: function(req, res, next){
 },
 
 profile: function(req, res){
-    return res.render('perfil', {
+    return res.render('perfilcopy', {
         user: req.session.userLogged
     });
 },

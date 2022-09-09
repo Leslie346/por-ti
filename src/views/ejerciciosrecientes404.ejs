@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicios favoritos</title>
+    <title>Mis ejercicios
+    </title>
 
       <!--FAVICON--> 
       <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
       
       <!--CSS--> 
-      <link rel="stylesheet" href="/css/navbar.css" type="text/css">
+      <link rel="stylesheet" href="/css/estilosindex.css" type="text/css">
       <link rel="stylesheet" href="/css/ejercicios.css" type="text/css">
-      <link rel="stylesheet" href="/css/listado.css" type="text/css">
+      <link rel="stylesheet" href="/css/ejercicios-cont.css" type="text/css">
+      <link rel="stylesheet" href="/css/header.css" type="text/css">
+
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@800&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@800&display=swap" rel="stylesheet">
+ <style>
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+     @import url('https://fonts.googleapis.com/css2?family=Fredoka:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ </style>
+
       <!--Tipografías--> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,23 +39,111 @@
      <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
       <!--Kit FontAwesome--> 
      <script src="https://kit.fontawesome.com/60756a3678.js" crossorigin="anonymous"></script>
+  
     </head>
-    
-    <%- include('./partials/nav') %>
 
-<body>
 
-        <!--Frase--> 
+    <header>
+      <div class="bg-dark">
+       <div class="container navcont w-100" id="nav-gradient">
+           <nav class="navbar navbar-expand-lg navbar-dark">
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                 <span style="margin-left: 10px" class="navbar-toggler-icon"></span>
+               </button>
+
+               
+               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                   <div class="navbar-nav w-100">
+                       <a class="navbar-brand" href="/"><img src="/img/Logo_Horizontal.png" id="logo-menu2" alt="logo" height="50px"></img></a>
+                   </div>
+                 </div>
+
+               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                 <div class="navg navbar-nav w-100">
+                    <a class="navbar-brand" href="/"><img src="/img/Logo_Horizontal.png" id="logo-menu" alt="logo" height="50px"></img></a>
+                    <% if(locals.isLogged) { %>
+                    <a class="nav-item nav-link" href="/listado">Contactos</a>
+                   <a class="nav-item nav-link" href="/users/misejercicios">Mis ejercicios</a>
+                   <a class="nav-item nav-link" href="/users/miperfil">¡Hola <b><%= locals.userLogged.first_name %></b>!</a>
+                   <% } else { %>
+                     <a class="nav-item nav-link" href="/listado">Contactos</a>
+                     <a class="nav-item nav-link" href="/users/login">Iniciar sesión</a>
+                     <a class="nav-item nav-link" href="/users/registro">Registrate</a>
+                     <% } %>
+                 </div>
+               </div>
+             </nav>
+       </div>
+      </div>
+   </header>
+
+
+
+<body style="overflow-x: hidden;">
+
+  <!--Corazón-->
+
+      
     <div class="frase-fondo">
-        <div class="frase-fondo-texto">
-            <h2>La vida es como montar en bicicleta. Para mantener el equilibrio tienes que avanzar</h2>
+      <div class="frase-fondo-img" id="frase-fondo-img1" style="position: absolute; top: 3px; left: 0px; height: 0%; z-index: 0;" >
+        <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1661447881/Por%20Ti/Hojas1_frase_cskv3j.png" style="height: 385px; padding-top: 40px;"> 
+      </div>
+      <div class="frase-fondo-img" id="frase-fondo-img1-1" style="position: absolute; top: 30px; left: 0px; height: 0%; z-index: 0;" >
+        <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1662665840/Por%20Ti/hoja1-frase-i_zkm8cv.svg" style="height: 385px; padding-top: 40px;"> 
+      </div>
+      <div class="frase-fondo-img" id="frase-fondo-img2" style="position: absolute; top: 3px; right: 0px; height: 0%; z-index: 0;">
+        <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1661447881/Por%20Ti/Hojas2_frase_y6xkc8.png" style="height: 385px; padding-top: 40px;"> 
+      </div>
+      <div class="frase-fondo-img" id="frase-fondo-img2-2" style="position: absolute; top: 30px; right: 0px; height: 0%; z-index: 0;" >
+        <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1662665840/Por%20Ti/hoja1-frase-d_ag3y3k.svg" style="height: 385px; padding-top: 40px;"> 
+      </div>
+        <div class="frase-fondo-texto" style="position: relative; z-index: 1;"> 
+          <script>
+            var frases = new Array ("La vida es como montar en bicicleta. Para mantener el equilibrio tienes que avanzar.", "Las dudas no se superan, convives siempre con ellas. Lo que sí que puede hacer uno es dar lo máximo cada día.", "Importa mucho más lo que tú piensas de ti mismo que lo que los otros opinen de ti.");
+            var x = 0;
+            function frase()
+            {
+              if(x > 2)
+              {
+                x = 0;
+              }
+              document.getElementById("frase").textContent = frases[x];
+              x++;
+            }
+            temporizador = setInterval("frase()", 864000);
+            if(res.locals.isLogged == false){
+              temporizador = clearInterval("frase()");
+            }
+          </script>
+          <h2 id="frase">
+            La vida es como montar en bicicleta. Para mantener el equilibrio tienes que avanzar
+</h2>
           <div class="smallTitle">
-              <h2 style="text-align:center; font-weight: 800; margin-top: 25px;">14 de Marzo</h2>
+              <h2 style="text-align:center; font-weight: 800; margin-top: 25px;"><script>
+                var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+                var f=new Date();
+                document.write(f.getDate() + " de " + meses[f.getMonth()]);
+                </script></h2>
               </div>
             </div>
         </div>
-<main style="position: absolute; height: 100%; width: 100%; text-align: center;">
-        <h2 style="margin-top: 100px;">Aún no has realizado ejercicios</h2>
-       <a href="/misejercicios"><button style="margin-top: 50px; margin-bottom: 50px; text-align: center; align-self: center; position: relative;">Comenzar</button></a> 
+
+        <!--Top containers-->
+        <main>
+          <h4 style="margin-top: 100px;">Aún no has realizado ejercicios.</h4>
+          <div class="contenedor-especialista">
+            <a href="/misejercicios"><button class="ejercicios-btn" style="margin-top: 25px; margin-bottom: 100px;">Volver</button></a>
+        </div>
+        </main>
+  </div>
+  <%- include('./partials/footer2') %>
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+       
+      
 </main>
 </html>

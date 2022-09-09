@@ -2,15 +2,21 @@
 * { box-sizing: border-box; 
 }
 
+
 body {
-  margin-top: 150px;
+  background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1662390027/Por%20Ti/fondo-login_bsc4hp.png)!important;
+  background-size: cover;
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
   line-height: 1.6;
   color: white;
-  background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1655491397/Por%20Ti/fondo_login_gk172y.png);
-  background-size: cover;
 }
+
+.col-9{
+  text-align: center!important;
+  margin: 0 auto!important;
+}
+
 .category {
   text-transform: uppercase;
   font-weight: 900;
@@ -76,4 +82,18 @@ embed{
         color: rgb(65, 64, 105);
         text-align: center;
         cursor: pointer;
+     }
+
+     .divider{
+      height: 20px;
+     }
+
+     @media(max-width: 991px){
+      main{
+        margin-top: 150px;
+      }
+      .divider{
+        height: 0px;
+        display: none;
+       }
      }

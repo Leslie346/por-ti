@@ -63,6 +63,7 @@
   .card{
     list-style: none;
     position: relative;
+    background-color: #11142500!important;
   }
   
   .card:before{
@@ -73,6 +74,7 @@
   }
   
   .card__background{
+    background-color: #11142500!important;
     background-size: cover;
     background-position: center;
     border-radius: var(--spacing-l);

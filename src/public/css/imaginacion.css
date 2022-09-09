@@ -12,8 +12,17 @@ text-align: center;
 }
 
 html{
-    background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1657751868/Por%20Ti/fondo-imaginaciob_n_k0srll.svg);
     box-shadow: inset 1px 1px 40px 0 rgba(0, 0, 0, 0.45); 
+}
+
+body{
+    background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1657751868/Por%20Ti/fondo-imaginaciob_n_k0srll.svg)!important;
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+main{
+    margin-top: 250px!important;
 }
 
 .titles{
@@ -54,3 +63,25 @@ margin-top: 40px;
     text-align: center;
     cursor: pointer;
  }
+
+
+ @media(max-width: 991px){
+    main{
+      margin-top: 100px!important;
+    }
+    .divider{
+      height: 0px;
+      display: none;
+     }
+   }
+
+   @media(min-width: 992px){
+   .bg-dark{
+    margin-top: -250px!important;
+ }
+ .divider{
+    height: 5px;
+    display: block;
+   }
+
+}

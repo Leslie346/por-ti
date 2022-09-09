@@ -1,18 +1,26 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alimentos</title>
+    <title>Arteterapia</title>
+
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@800&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@800&display=swap" rel="stylesheet">
+ <style>
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+     @import url('https://fonts.googleapis.com/css2?family=Fredoka:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ </style>
 
       <!--FAVICON--> 
       <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
       
       <!--CSS--> 
-      <link rel="stylesheet" href="/css/navbar.css" type="text/css">
-      <link rel="stylesheet" href="/css/footer.css" type="text/css">     
-      <link rel="stylesheet" href="/css/alimentos.css" type="text/css">
+      <link rel="stylesheet" href="/css/estilosindex.css" type="text/css">
+      <link rel="stylesheet" href="/css/alimentos.css" type="text/css">   
 
       <!--Tipografías--> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,319 +32,343 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
      <!--Nunito--> 
      <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
       <!--Kit FontAwesome--> 
      <script src="https://kit.fontawesome.com/60756a3678.js" crossorigin="anonymous"></script>
+
     </head>
 
-    <%- include('./partials/nav') %>
-<body>
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-
-
-<div class="titles" style="margin-bottom: -50px; color: blanchedalmond ">
-    <h1>Alimentos del día</h1>
-    </div>
-
-    <div class="App">
-        <div class="Section-list">
-
-    <div class="Title-flex">
-        <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1653071659/Por%20Ti/alimentos-icono_s4ddiu.png"/>
-      <h2>¿Qué quieres comer hoy?</h2>
+    <header>
+      <div class="bg-dark">
+       <div class="container navcont w-100" >
+           <nav class="navbar navbar-expand-lg navbar-dark">
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+               </button>
+  
+               
+               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                   <div class="navbar-nav w-100">
+                       <a class="navbar-brand" href="/"><img src="/img/Logo_Horizontal.png" id="logo-menu2" alt="logo" height="50px"></img></a>
+                   </div>
+                 </div>
+  
+               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                 <div class="navg navbar-nav w-100">
+                    <a class="navbar-brand" href="/"><img src="/img/Logo_Horizontal.png" id="logo-menu" alt="logo" height="50px"></img></a>
+                    <% if(locals.isLogged) { %>
+                    <a class="nav-item nav-link" href="/listado">Contactos</a>
+                   <a class="nav-item nav-link" href="/users/misejercicios">Mis ejercicios</a>
+                   <a class="nav-item nav-link" href="/users/miperfil">¡Hola <b><%= locals.userLogged.first_name %></b>!</a>
+                   <% } else { %>
+                     <a class="nav-item nav-link" href="/listado">Contactos</a>
+                     <a class="nav-item nav-link" href="/users/login">Iniciar sesión</a>
+                     <a class="nav-item nav-link" href="/users/registro">Registrate</a>
+                     <% } %>
+                 </div>
+               </div>
+             </nav>
+       </div>
       </div>
+   </header>
 
-      <p class="App-p">Te compartimos algunas recetas que pueden ayudarte a mejorar tu salud.</p>
+   <body>
+    <main>
 
 
-<div class="Recetas-cont">
 
-    <div class="receta1">
-    <div class="receta">
-          <img class="img-recetas" src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1653073202/Por%20Ti/micheile-dot-com-t05q7TZObzc-unsplash_szqils.jpg"></img>      
-          <p>Salmón al horno con miel y limón</p>
-          <div class="Receta-fav-icon">
-          <span class="fa-solid fa-star"></span>
-          </div>
-          </div>
-        </div>
-    
-        <div class="receta2">
-          <div class="receta">
-          <img class="img-recetas" src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1658800788/Por%20Ti/Captura_de_Pantalla_2022-07-25_a_la_s_20.58.31_a9uvot.png"></img>      
-          <p>Ensalada de remolacha y aguacate</p>
-         <div class="Receta-fav-icon">
-          <span class="fa-solid fa-star"></span>
-          </div>
-          </div>
-        </div>
-    
-        <div class="receta3">
-          <div class="Receta">
-          <img class="img-recetas" src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1658800845/Por%20Ti/Captura_de_Pantalla_2022-07-25_a_la_s_21.00.21_qywly5.png"></img>      
-          <p>Pollo cubierto con salsa de piña </p>
-          <div class="Receta-fav-icon">
-          <span class="fa-solid fa-star"></span>
-          </div>
-          </div>
-          </div>
-    
-          <div class="receta4">
-          <div class="Receta">
-          <img class="img-recetas" src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1658800944/Por%20Ti/Captura_de_Pantalla_2022-07-25_a_la_s_21.01.55_fx4bps.png"></img>      
-          <p>Ensalada de coliflor rostizada y lentejas</p>
-        <div class="Receta-fav-icon">
-          <span class="fa-solid fa-star"></span>
-          </div>  
-          </div>
-        </div>
-    
-          
-          </div>
-        </div>
+ <div class="spacing" style="height: 100px"></div>
 
-        <div style="height: 25px;"></div>
+ <body>
+   <div class="container ejercicios-text">
+       <div class="row align-items-center justify-content-center">
+         <div class="col">
+         </div>
+         <div class="col-12 col-xs-12 col-sm-11 col-md-10">
+           <h2 class="h2-ansiedad" style="font-weight: 700; color:blanchedalmond;">Alimentos del día</h2>
+           <br>
+         </div>
+         <div class="col">
+         </div>
+       </div>
+       <br>
+     </div>
+   
+   <div class="row no-gutters justify-content-center">
+       <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5" id="col-cen">
+           <div class="titles" style="margin-bottom: -50px; color: blanchedalmond ">
+               </div>
 
-    <div class='Section-detail-1' style="display: block">
-        
-            <h2 class='Detalle-title'>Salmón al horno con miel y limón</h2>
-            <div class="Detalle-flex">
-                <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1653073202/Por%20Ti/micheile-dot-com-t05q7TZObzc-unsplash_szqils.jpg"></img>
-                
-    
-    <div class="Detalle-flex-li">
-    <ul>
-    <h3>Ingredientes</h3>
-    <li>2 Lomos de salmón</li>
-    <li>2 Cucharadas de miel</li>
-    <li>2 Dientes de ajo</li>
-    <li>1 Limón</li>
-    <li>Aceite de oliva extra virgen</li>
-    <li>Romero</li>
-    </ul>
-    </div>
-            </div>
-    
-     <h3 class="h3">Elaboración</h3>
-     <ul>
-    <li>Comenzaremos nuestra receta poniendo el horno a precalentar a 200ºC. Mientras tanto, iremos preparando el salmón.</li>
-    <li>Ralla y exprime el limón. En un bol, mezclamos la miel, una cucharada de aceite de oliva virgen extra, el jugo y la ralladura del limón y los ajos bien picados, mezcla bien.</li>
-    <li>Coloca el salmón en una fuente apta para el horno, salpimenta al gusto y, con un pincel de cocina, píntalo bien con la mezcla que hemos preparado de miel y limón.</li>
-    <li>Hornea los lomos de salmón durante unos 10 minutos.</li>
-    <li>Pasado ese tiempo, sácalo del horno y espolvorea un poco de romero.</li>    
-</ul>
-          </div>
+               <div class="App">
+                   <div class="Section-list">
+           
+               <div class="Title-flex">
+                   <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1653071659/Por%20Ti/alimentos-icono_s4ddiu.png"/>
+                 <h2>¿Qué quieres comer hoy?</h2>
+                 </div>
+           
+                 <p class="App-p" style="margin-top: 10px">Te compartimos algunas recetas que pueden ayudarte a mejorar tu salud.</p>
+           
+           
+           <div class="Recetas-cont">
+           
+               <div class="receta1">
+               <div class="receta">
+                     <img class="img-recetas" src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1653073202/Por%20Ti/micheile-dot-com-t05q7TZObzc-unsplash_szqils.jpg"></img>      
+                     <p class="titles-p">Salmón al horno con miel y limón</p>
+                     <div class="Receta-fav-icon">
+                     <span class="fa-solid fa-star"></span>
+                     </div>
+                     </div>
+                   </div>
+               
+                   <div class="receta2">
+                     <div class="receta">
+                     <img class="img-recetas" src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1658800788/Por%20Ti/Captura_de_Pantalla_2022-07-25_a_la_s_20.58.31_a9uvot.png"></img>      
+                     <p class="titles-p">Ensalada de remolacha y aguacate</p>
+                    <div class="Receta-fav-icon">
+                     <span class="fa-solid fa-star"></span>
+                     </div>
+                     </div>
+                   </div>
+               
+                   <div class="receta3">
+                     <div class="receta">
+                     <img class="img-recetas" src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1658800845/Por%20Ti/Captura_de_Pantalla_2022-07-25_a_la_s_21.00.21_qywly5.png"></img>      
+                     <p class="titles-p">Pollo cubierto con salsa de piña </p>
+                     <div class="Receta-fav-icon">
+                     <span class="fa-solid fa-star"></span>
+                     </div>
+                     </div>
+                     </div>
+               
+                     <div class="receta4">
+                     <div class="receta">
+                     <img class="img-recetas" src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1658800944/Por%20Ti/Captura_de_Pantalla_2022-07-25_a_la_s_21.01.55_fx4bps.png"></img>      
+                     <p class="titles-p">Ensalada de coliflor rostizada y lentejas</p>
+                   <div class="Receta-fav-icon">
+                     <span class="fa-solid fa-star"></span>
+                     </div>  
+                     </div>
+                   </div>
+               
+                     
+                     </div>
+                   </div>
+       </div>
+   </div>
 
-          <!--RECETA 2 -->
-          <div class='Section-detail-2' style="display: none">
-        
-            <h2 class='Detalle-title'>Ensalada de remolacha y aguacate</h2>
-            <div class="Detalle-flex">
-                <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1658800788/Por%20Ti/Captura_de_Pantalla_2022-07-25_a_la_s_20.58.31_a9uvot.png"></img>
-                
-    
-    <div class="Detalle-flex-li">
-    <ul>
-    <h3>Ingredientes</h3>
-    <li>1 Remolacha</li>
-    <li>2 Aguacates</li>
-    <li>80 gramos de Cebolla blanca</li>
-    <li>1 rama de Cilantro</li>
-    <li>2 Limones</li>
-    <li>1 chorro de Aceite de oliva</li>
-    <li>1 pizca de Sal</li>
-    <li>1 pizca de pimienta</li>
-    </ul>
-    </div>
-            </div>
-    
-     <h3 class="h3">Elaboración</h3>
-     <ul>
-    <li>En una olla con agua hirviendo, cocina la remolacha cortada por la mitad, durante 45 minutos o hasta que esté blanda. <br>Cuando esté lista, retírala del fuego, espera a que enfríe, pélala y córtala en cubos medianos.</li>
-    <li>Aparte, pela y corta el aguacate en cubos pequeños, adereza con limón, aceite de oliva, sal y pimienta.</li>
-    <li>Es momento de agregar la cebolla cortada en plumas, el cilantro cortado finamente y aderezar con zumo de limón, aceite de oliva, sal y pimienta. <br>Mezcla todo muy bien.</li>
-    <li>Sirve la ensalada de remolacha y sobre ella agrega el aguacate. </li>
-    </ul>
-          </div>
+       <!--Sección 2-->
+       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+           <div class='Section-detail-1' style="display: block; padding-top: -40px!important;">
+       
+           <h2 class='Detalle-title'>Salmón al horno con miel y limón</h2>
+           <div class="Detalle-flex">
+           <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1653073202/Por%20Ti/micheile-dot-com-t05q7TZObzc-unsplash_szqils.jpg"></img>
+                   
+       
+       <div class="Detalle-flex-li">
+       <ul>
+       <h3 class="Detalle-title-h3">Ingredientes</h3>
+       <li>2 Lomos de salmón</li>
+       <li>2 Cucharadas de miel</li>
+       <li>2 Dientes de ajo</li>
+       <li>1 Limón</li>
+       <li>Aceite de oliva extra virgen</li>
+       <li>Romero</li>
+       </ul>
+       </div>
+               </div>
+       
+        <h3 class="Detalle-title-h3">Elaboración</h3>
+        <ul>
+       <li>Comenzaremos nuestra receta poniendo el horno a precalentar a 200ºC. Mientras tanto, iremos preparando el salmón.</li>
+       <li>Ralla y exprime el limón. En un bol, mezclamos la miel, una cucharada de aceite de oliva virgen extra, el jugo y la ralladura del limón y los ajos bien picados, mezcla bien.</li>
+       <li>Coloca el salmón en una fuente apta para el horno, salpimenta al gusto y, con un pincel de cocina, píntalo bien con la mezcla que hemos preparado de miel y limón.</li>
+       <li>Hornea los lomos de salmón durante unos 10 minutos.</li>
+       <li>Pasado ese tiempo, sácalo del horno y espolvorea un poco de romero.</li>    
+   </ul>
+             </div>
+   
+             <!--RECETA 2 -->
+             <div class='Section-detail-2' style="display: none">
+           
+               <h2 class='Detalle-title'>Ensalada de remolacha y aguacate</h2>
+               <div class="Detalle-flex">
+                   <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1658800788/Por%20Ti/Captura_de_Pantalla_2022-07-25_a_la_s_20.58.31_a9uvot.png"></img>
+                   
+       
+       <div class="Detalle-flex-li">
+       <ul>
+       <h3 class="Detalle-title-h3">Ingredientes</h3>
+       <li>1 Remolacha</li>
+       <li>2 Aguacates</li>
+       <li>80 gramos de Cebolla blanca</li>
+       <li>1 rama de Cilantro</li>
+       <li>2 Limones</li>
+       <li>1 chorro de Aceite de oliva</li>
+       <li>1 pizca de Sal</li>
+       <li>1 pizca de pimienta</li>
+       </ul>
+       </div>
+               </div>
+       
+        <h3 class="Detalle-title-h3">Elaboración</h3>
+        <ul>
+       <li>En una olla con agua hirviendo, cocina la remolacha cortada por la mitad, durante 45 minutos o hasta que esté blanda. <br>Cuando esté lista, retírala del fuego, espera a que enfríe, pélala y córtala en cubos medianos.</li>
+       <li>Aparte, pela y corta el aguacate en cubos pequeños, adereza con limón, aceite de oliva, sal y pimienta.</li>
+       <li>Es momento de agregar la cebolla cortada en plumas, el cilantro cortado finamente y aderezar con zumo de limón, aceite de oliva, sal y pimienta. <br>Mezcla todo muy bien.</li>
+       <li>Sirve la ensalada de remolacha y sobre ella agrega el aguacate. </li>
+       </ul>
+             </div>
+   
+             <!--RECETA 3 -->
+   
+             <div class='Section-detail-3' style="display: none">
+               <div style="height: 25px;"></div>
+               <h2 class='Detalle-title'>Pollo cubierto con salsa de piña</h2>
+               <div class="Detalle-flex">
+                   <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1658800845/Por%20Ti/Captura_de_Pantalla_2022-07-25_a_la_s_21.00.21_qywly5.png"></img>
+                   
+       
+       <div class="Detalle-flex-li">
+       <ul>
+       <h3 class="Detalle-title-h3">Ingredientes</h3>
+       <li>500 gramos de pechuga de pollo en pedazos pequeños</li>
+       <li>1/29 taza de harina de trigo integral</li>
+       <li>1/2 taza de piña en cuadritos</li>
+       <li>1 cucharada de aceite de oliva para la vinagreta</li>
+       <li>1 cucharadita mejorana seca para la compota</li>
+       <li>1/8 cucharadita de sal marina o sal común</li>
+       <li>1/8 cucharadita pimienta negra al gusto</li>
+       </ul>
+       </div>
+               </div>
+       
+        <h3 class="Detalle-title-h3">Elaboración</h3>
+        <ul>
+       <li>Colocar en una bolsa de plástico con cierre hermético la harina, la sal y la pimienta negra. </li>
+       <li>Añadir el pollo. Cerrar la bolsa y sacudir hasta que el pollo esté cubierto.</li>
+       <li>Colocar en una sartén grande a fuego medio la mitad del aceite de oliva.</li>
+       <li>Añadir el pollo y saltear por 2 minutos a cada lado.</li>
+       <li>Retirar el pollo de la sartén y mantener tibio.</li>
+       <li>En una sartén, calentar el resto del aceite.</li>
+       <li>Saltear la cebolla por 5 minutos o hasta que esté un poco dorada.</li>
+       <li>Añadir la piña y la mejorana y saltearla por 5 minutos.</li>
+       <li>Añadir el pollo y el jugo de piña, calentar hasta que hierva y después a fuego lento durante 10 minutos.</li>
+       </ul>
+             </div>
+   
+              <!--RECETA 4 -->
+   
+              <div class='Section-detail-4' style="display: none">
+               <div style="height: 25px;"></div>
+               <h2 class='Detalle-title'>Ensalada de coliflor rostizada y lentejas</h2>
+               <div class="Detalle-flex">
+               <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1658800944/Por%20Ti/Captura_de_Pantalla_2022-07-25_a_la_s_21.01.55_fx4bps.png"></img>
+                   
+       
+       <div class="Detalle-flex-li">
+       <ul>
+       <h3 class="Detalle-title-h3">Ingredientes</h3>
+       <li>1 taza de col morada cruda picada</li>
+       <li>1 cucharadita de aceite de oliva</li>
+       <li>1/2 taza de lenteja cocida</li>
+       <li>1/2 taza de  Zanahoria cruda picada/rallada</li>
+       <li>1 cucharadita mejorana seca para la compota</li>
+       <li>1 coliflor cocida</li>
+       </ul>
+       </div>
+               </div>
+       
+        <h3 class="Detalle-title-h3">Elaboración</h3>
+        <ul>
+       <li>Cocer las lentejas o usar de lata.</li>
+       <li>Asar el coliflor y la cebolla.</li>
+       <li>Picar la col morada en crudo.</li>
+       <li>Mezclar todos los ingredientes.</li>
+       </ul>
+             </div>
+   
+   </div>
+       </div>
 
-          <!--RECETA 3 -->
-
-          <div class='Section-detail-3' style="display: none">
-            <div style="height: 25px;"></div>
-            <h2 class='Detalle-title'>Pollo cubierto con salsa de piña</h2>
-            <div class="Detalle-flex">
-                <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1658800845/Por%20Ti/Captura_de_Pantalla_2022-07-25_a_la_s_21.00.21_qywly5.png"></img>
-                
-    
-    <div class="Detalle-flex-li">
-    <ul>
-    <h3>Ingredientes</h3>
-    <li>500 gramos de pechuga de pollo en pedazos pequeños</li>
-    <li>1/29 taza de harina de trigo integral</li>
-    <li>1/2 taza de piña en cuadritos</li>
-    <li>1 cucharada de aceite de oliva para la vinagreta</li>
-    <li>1 cucharadita mejorana seca para la compota</li>
-    <li>1/8 cucharadita de sal marina o sal común</li>
-    <li>1/8 cucharadita pimienta negra al gusto</li>
-    </ul>
-    </div>
-            </div>
-    
-     <h3 class="h3">Elaboración</h3>
-     <ul>
-    <li>Colocar en una bolsa de plástico con cierre hermético la harina, la sal y la pimienta negra. </li>
-    <li>Añadir el pollo. Cerrar la bolsa y sacudir hasta que el pollo esté cubierto.</li>
-    <li>Colocar en una sartén grande a fuego medio la mitad del aceite de oliva.</li>
-    <li>Añadir el pollo y saltear por 2 minutos a cada lado.</li>
-    <li>Retirar el pollo de la sartén y mantener tibio.</li>
-    <li>En una sartén, calentar el resto del aceite.</li>
-    <li>Saltear la cebolla por 5 minutos o hasta que esté un poco dorada.</li>
-    <li>Añadir la piña y la mejorana y saltearla por 5 minutos.</li>
-    <li>Añadir el pollo y el jugo de piña, calentar hasta que hierva y después a fuego lento durante 10 minutos.</li>
-    </ul>
-          </div>
-
-           <!--RECETA 4 -->
-
-           <div class='Section-detail-4' style="display: none">
-            <div style="height: 25px;"></div>
-            <h2 class='Detalle-title'>Ensalada de coliflor rostizada y lentejas</h2>
-            <div class="Detalle-flex">
-            <img src="https://res.cloudinary.com/dc7uyfv94/image/upload/v1658800944/Por%20Ti/Captura_de_Pantalla_2022-07-25_a_la_s_21.01.55_fx4bps.png"></img>
-                
-    
-    <div class="Detalle-flex-li">
-    <ul>
-    <h3>Ingredientes</h3>
-    <li>1 taza de col morada cruda picada</li>
-    <li>1 cucharadita de aceite de oliva</li>
-    <li>1/2 taza de lenteja cocida</li>
-    <li>1/2 taza de  Zanahoria cruda picada/rallada</li>
-    <li>1 cucharadita mejorana seca para la compota</li>
-    <li>1 coliflor cocida</li>
-    </ul>
-    </div>
-            </div>
-    
-     <h3 class="h3">Elaboración</h3>
-     <ul>
-    <li>Cocer las lentejas o usar de lata.</li>
-    <li>Asar el coliflor y la cebolla.</li>
-    <li>Picar la col morada en crudo.</li>
-    <li>Mezclar todos los ingredientes.</li>
-    </ul>
-          </div>
-
-</div>
-</div>
-
-<div class="back" style="margin-top: -20px">
-    <a href="/misejercicios"><button>Volver</button></a>
-</div>
-<br>
+       <div class="back" style="padding-bottom: 150px">
+           <a href="/misejercicios"><button>Volver</button></a>
+       </div>
 </body>
-<script>
-    const btn1 = document.querySelector(".receta1");
-    const btn2 = document.querySelector(".receta2");
-    const btn3 = document.querySelector(".receta3");
-    const btn4 = document.querySelector(".receta4");
 
-    const section1 = document.querySelector(".Section-detail-1");
-    const section2 = document.querySelector(".Section-detail-2");
-    const section3 = document.querySelector(".Section-detail-3");
-    const section4 = document.querySelector(".Section-detail-4");
+ <script>
+   const btn1 = document.querySelector(".receta1");
+   const btn2 = document.querySelector(".receta2");
+   const btn3 = document.querySelector(".receta3");
+   const btn4 = document.querySelector(".receta4");
 
-    btn1.addEventListener("click", appear1);
-    btn2.addEventListener("click", appear2);
-    btn3.addEventListener("click", appear3);
-    btn4.addEventListener("click", appear4);
-    
-    function appear1() {
-    section1.style.display = "block";
-    section2.style.display = "none";
-    section3.style.display = "none";
-    section4.style.display = "none";
-    }
+   const section1 = document.querySelector(".Section-detail-1");
+   const section2 = document.querySelector(".Section-detail-2");
+   const section3 = document.querySelector(".Section-detail-3");
+   const section4 = document.querySelector(".Section-detail-4");
 
-    function appear2() {
-    section2.style.display = "block";
-    section1.style.display = "none";
-    section3.style.display = "none";
-    section4.style.display = "none";
-    }
+   btn1.addEventListener("click", appear1);
+   btn2.addEventListener("click", appear2);
+   btn3.addEventListener("click", appear3);
+   btn4.addEventListener("click", appear4);
+   
+   function appear1() {
+   section1.style.display = "block";
+   section2.style.display = "none";
+   section3.style.display = "none";
+   section4.style.display = "none";
+   }
 
-    function appear3() {
-    section3.style.display = "block";
-    section1.style.display = "none";
-    section2.style.display = "none";
-    section4.style.display = "none";
-    }
+   function appear2() {
+   section2.style.display = "block";
+   section1.style.display = "none";
+   section3.style.display = "none";
+   section4.style.display = "none";
+   }
 
-    function appear4() {
-    section4.style.display = "block";
-    section2.style.display = "none";
-    section3.style.display = "none";
-    section1.style.display = "none";
-    }
+   function appear3() {
+   section3.style.display = "block";
+   section1.style.display = "none";
+   section2.style.display = "none";
+   section4.style.display = "none";
+   }
 
-
-    function disappear1() {
-    section1.style.display = "none";
-    }
-
-    function disappear2() {
-    section2.style.display = "none";
-    }
-
-    function disappear3() {
-    section3.style.display = "none";
-    }
-
-    function disappear4() {
-    section4.style.display = "none";
-    }
+   function appear4() {
+   section4.style.display = "block";
+   section2.style.display = "none";
+   section3.style.display = "none";
+   section1.style.display = "none";
+   }
 
 
+   function disappear1() {
+   section1.style.display = "none";
+   }
+
+   function disappear2() {
+   section2.style.display = "none";
+   }
+
+   function disappear3() {
+   section3.style.display = "none";
+   }
+
+   function disappear4() {
+   section4.style.display = "none";
+   }
 </script>
 
-<footer style="padding:40px 40px">
-  <!--Logo Fun N Skate-->
-           <div style="display:flex; flex-direction:column; text-align: left; padding-left: 30px">
-              <img class="logo-footer" style="margin:20px 0 30px 0" src = '/img/Logo_Horizontal.png' alt='Logo'>
-             <!-- <p style="padding-left: 40px; font-size: 13px; opacity: 0.6">En Por Ti buscamos fomentar el autocuidado de la salud integral.</p>-->
-          </div>
-          
-          <!--Logotipos de redes sociales-->
-          <div class="caja-redes">
-              <h3 class="titulo-redes" style="padding-top: 30px; margin: -10px; margin-bottom: 10px;">¡Síguenos!</h3>
-              <a href="facebook">
-                  <img class="redes" src = '/img/facebook.png' alt='facebook'>
-              </a>
-              <a href="instagram">
-                  <img class="redes" src = '/img/insta.png' alt='instagram'>
-              </a> 
-      
-          </div>
-          <!--Area de suscripción -->
-        
+</main>
+</body>
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>  
   
-          <div class="cont-list">
-      
-              <ul>
-                  <li>
-                      <a href="#sucursal1">Podcast</a>
-                  </li>
-                  <li>
-                      <a href="#sucursal2">Blog</a>
-                  </li>
-                  <li>
-                      <a href="#sucursal3">YouTube</a>
-                  </li>
-              </ul>
-          </div>
-        
-      
-</footer>
-
+<%- include('./partials/footer') %>
 </html>

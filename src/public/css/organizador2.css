@@ -8,22 +8,55 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
+  overflow-y: scroll!important;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1655491397/Por%20Ti/fondo_login_gk172y.png);
+  background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1655491397/Por%20Ti/fondo_login_gk172y.png)!important;
   background-size: cover;
 }
 
+.checked {
+  margin-top: 0px!important;
+  margin-right: 5px;
+  color:#693cff!important;
+  width: auto!important;
+  }
+
+  .divider{
+    height: 20px;
+   }
+
+h2{
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  color: white!important;;
+  text-align: center!important;;
+}
+
+p{ 
+    font-family: 'Nunito', sans-serif;
+    font-size: 14pt!important;
+    padding-bottom: -10px!important;
+  }
+
+.task-input{
+  color:rgb(65, 64, 105)!important;
+}
+
+.task-box{
+  color:rgb(65, 64, 105)!important;
+}
+
 ::selection{
-  color: #fff;
+  color:rgb(65, 64, 105);
   background: rgb(105, 60, 255);
 }
 .wrapper{
   font-family: 'Nunito', sans-serif;
   max-width: 600px;
   padding: 28px 0 30px;
-  margin: 100px auto;
+  margin: 50px auto;
   background: rgba(240, 236, 255, 0.841);
   border-radius: 7px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -267,3 +300,21 @@ body{
     .pdf{
       text-align: center;
     }
+
+   .divider{
+      height: 20px;
+     }
+
+     .ejercicios-text{
+      margin-top: 120px;
+     }
+
+     @media(max-width: 991px){
+
+      .divider{
+        height: 20px;
+       }
+       .container{
+        padding-top: 0!important;
+       }
+     }
