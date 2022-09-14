@@ -83,10 +83,6 @@ app.get('/listado', function(req, res){
     res.render('listado');
 });
 
-app.get('/listado2', function(req, res){
-    res.render('listado2');
-});
-
 app.get('/ejerciciosfavoritos404', function(req, res){
     res.render('ejerciciosfavoritos404');
 });

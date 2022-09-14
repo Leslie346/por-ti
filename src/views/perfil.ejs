@@ -72,17 +72,16 @@
     <main>
         <% if(user.objetivo !== 'saludsocial' && user.objetivo !== 'saludfisica') { %>
             <div class="gradient-profile">
-<div class="datos-perfil" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1658509260/Por%20Ti/salud_banner_lbbqj9.png);">
+<div class="datos-perfil" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1658509260/Por%20Ti/salud_banner_lbbqj9.png); background-repeat: no-repeat; background-size: 100%!important;">
 </div>
     <% } %>
 
    <% if(user.objetivo !== 'saludsocial' && user.objetivo !== 'saludmental') { %>
-    <div class="datos-perfil" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1658341637/Por%20Ti/banner_fisica_atbfiw.png);">
+    <div class="datos-perfil" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1658341637/Por%20Ti/banner_fisica_atbfiw.png); background-repeat: no-repeat!important; background-size: 100%!important;">
     <% } %>
 
     <% if(user.objetivo !== 'saludmental' && user.objetivo !== 'saludfisica') { %>
-        <div class="datos-perfil" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1658341642/Por%20Ti/banner_social_yssu00.png);
-        ">
+        <div class="datos-perfil" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1658341642/Por%20Ti/banner_social_yssu00.png); background-repeat: no-repeat!important; background-size: 100%!important;">
         <% } %></div>
 
  <!--Datos del perfil-->

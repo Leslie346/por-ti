@@ -64,6 +64,10 @@ margin-top: 40px;
     cursor: pointer;
  }
 
+ audio{
+    color: lavender;
+ }
+
 
  @media(max-width: 991px){
     main{

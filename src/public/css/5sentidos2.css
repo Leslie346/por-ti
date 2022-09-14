@@ -65,7 +65,7 @@ body {
     color:rgb(51, 24, 95);
 }
 .form-outer form .page .field {
-    width: var(--containerWidth);
+    width: auto;
     height: 45px;
     margin: 45px 0;
     display: flex;
@@ -76,17 +76,19 @@ form .page .field .label {
     top: -30px;
     font-weight: 500;
 }
+
 form .page .field input {
     box-sizing: border-box;
     height: 100%;
-    width: 100%;
-    border: 1px solid var(--inputBorderColor);
-    border-radius: 15px;
+    width: 88%;
+    border: 1px solid #eee;
+    border-radius: 18px;
     padding-left: 15px;
     margin: 0 1px;
     font-size: 18px;
     transition: border-color 150ms ease;
 }
+
 form .page .field input.invalid-input {
     border-color: var(--errorColor);
 }
@@ -308,4 +310,9 @@ align-self: center;
 #btn-vacio{
     opacity: 0;
     width: 20px;
+}
+
+#btns-flex{
+    display: flex;
+    justify-content: center;
 }
