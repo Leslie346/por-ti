@@ -49,6 +49,7 @@ processRegister: async (req, res) => {
     })
     .then(() => {
         res.redirect('/users/login');
+        console.log('Usuario registrado satisfacotiamente');
     })
     .catch(err => {
         res.status(500).render('error', {
