@@ -119,3 +119,10 @@
     font-weight:600
   }
 }
+
+@media(max-width: 991px){
+  .row{
+      justify-content: center;
+      text-align: center;
+  }
+}

@@ -24,13 +24,13 @@ main{
     flex-direction: column;
     justify-content: center;
     position: relative;
-    height: 400px;
+    height: 50vh;
     text-align: center;
     padding: 0;
     box-sizing: border-box;
-    background-repeat: no-repeat!important;
+    background-repeat: repeat-y;
     background-position-y: -5px;
-    background-size: cover;
+    background-size: 100%;
     background: rgba(20, 0, 36, 0);
 }
 
@@ -92,16 +92,49 @@ h2{font-family: 'Poppins', sans-serif;
     flex-direction: row;
 }
 
+#salud-mental-banner{
+    background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1658509260/Por%20Ti/salud_banner_lbbqj9.png);
+}
+
+.text-header{
+    min-height: 60vh!important;
+}
+
+#datos-perfil{
+    float: center!important;
+}
+
+.text-header h2{
+    font-size: 36pt!important;
+}
+
 @media(max-width: 800px){
     .ejercicios-h2{
         margin-top: 50px!important;
     }
 }
-@media(max-width: 994px){
+@media(max-width: 991px){
     body{
         margin-top: 0px!important;
       }
-      .gradient-profile{
+      .banner-profile{
         margin-top: 100px;
+    }
+    .text-header{
+        min-height: 30vh!important;
+    }
+      .gradient-profile{
+        height: 30vh;
       }
+      .datos-perfil{
+        margin-top: 100px;
+        align-items: baseline;
+      }
+      .datos-perfil h2 h3{
+        margin-top: -50px;
+      }
+      #salud-mental-banner{
+        background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1663914963/Por%20Ti/banner_mobile_mental_xbwtep.png)!important;
+      }
+      
     }

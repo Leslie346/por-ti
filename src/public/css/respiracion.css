@@ -11,13 +11,13 @@
 
 body {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     display: grid;
     justify-content: center;
     align-content: center;
-    background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1663188949/Por%20Ti/fondo-nuevo_roden6.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1663911115/Por%20Ti/fondo_nuevo_w3dusj.png);
+    background-repeat: repeat-y;
+    background-size: cover;
 }
 
 body h1{

@@ -70,9 +70,10 @@
 
 <body>
     <main>
+
         <% if(user.objetivo !== 'saludsocial' && user.objetivo !== 'saludfisica') { %>
             <div class="gradient-profile">
-<div class="datos-perfil" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1658509260/Por%20Ti/salud_banner_lbbqj9.png); background-repeat: no-repeat; background-size: 100%!important;">
+<div class="datos-perfil" id="salud-mental-banner" style="background-repeat: no-repeat; background-size: 100%!important;">
 </div>
     <% } %>
 
@@ -91,6 +92,7 @@
 </div>
 </div>
 </div>
+
 
 <main style="padding-top: 25px;">
 <div class="espacio" style="padding: 25px"></div>
@@ -140,6 +142,7 @@
 <div class="buttonBanner"><a href="/users/logout"><button class="ejercicios-btn">Cerrar sesión</button></a></div>
 <div class="espacio" style="padding: 50px"></div>
 <div class="espacio" style="padding: 50px"></div>
+<%- include('./partials/footer2') %>
                 </main>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

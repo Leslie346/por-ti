@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesión</title>
 
+     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+     <link rel="stylesheet" href="/css/footer2.css" type="text/css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
       <!--FAVICON--> 
       <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
       
     <!--CSS--> 
     <link rel="stylesheet" type="text/css" href="/css/login.css">
+    <link rel="stylesheet" type="text/css" href="/css/footer2.css">
 
  <!-- Bootstrap CSS -->
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -76,7 +81,7 @@
               </div>
                <!-- <div style="display: flex; flex-direction: row; align-items: baseline;"><input type="checkbox"></input><p class="p" style="margin-left: 15px; padding-left: 0;">Recordar mi usuario</></div>-->
                 <div>
-                  <p class="p">¿Aún no tienes una cuenta? <br> <a href="/users/login"> <span style="text-decoration:underline; color: lavender;">Registrate</span></p></a>
+                  <p class="p">¿Aún no tienes una cuenta? <br> <a href="/users/registro"> <span style="text-decoration:underline; color: lavender;">Registrate</span></p></a>
               </div>  <!--[if mso]>&nbsp;<![endif]-->
             </div>
             </td>
@@ -97,7 +102,9 @@
   </div>
     </div>
   </section>
-  <%- include('./partials/footer2') %>  
+  <div style="color: white!important;">
+  <%- include('./partials/footer2') %>
+</div>
   <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
