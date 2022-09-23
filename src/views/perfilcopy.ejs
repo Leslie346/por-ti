@@ -70,29 +70,48 @@
 
 <body>
     <main>
-      <div class="banner-profile">
       <% if(user.objetivo !== 'saludsocial' && user.objetivo !== 'saludfisica') { %>
+        <div class="banner-profile">
       <div class="text-header d-flex align-items-center" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1658509260/Por%20Ti/salud_banner_lbbqj9.png); background-repeat: no-repeat; background-size: cover!important;">
-        <% } %>
-
-        <% if(user.objetivo !== 'saludsocial' && user.objetivo !== 'saludmental') { %>
-          <div class="text-header d-flex align-items-center" style="background-image: url(hhttps://res.cloudinary.com/dc7uyfv94/image/upload/v1658341637/Por%20Ti/banner_fisica_atbfiw.png); background-repeat: no-repeat; background-size: cover!important;">
-          <% } %>
-
-          <% if(user.objetivo !== 'saludmental' && user.objetivo !== 'saludfisica') { %>
-            <div class="text-header d-flex align-items-center" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1658341642/Por%20Ti/banner_social_yssu00.png); background-repeat: no-repeat; background-size: cover!important;">
-            <% } %>
-
         <div class="container">
-            <div class="row" id="datos-perfil">
-                <div class="col-sm-12">
-                  <p>¡Hola!</p>
-                    <h2 style="margin-top: -45px;"> <%= user.first_name %> <%= user.last_name %></h2>
+          <div class="row" id="datos-perfil">
+              <div class="col-sm-12">
+                <p>¡Hola!</p>
+                  <h2 style="margin-top: -45px;"> <%= user.first_name %> <%= user.last_name %></h2>
+              </div>
+          </div>
+      </div>
+      </div>
+        </div>
+        <% } else if(user.objetivo !== 'saludsocial' && user.objetivo !== 'saludmental') { %>
+
+          <div class="banner-profile">
+          <div class="text-header d-flex align-items-center" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1658341637/Por%20Ti/banner_fisica_atbfiw.png); background-repeat: no-repeat; background-size: cover!important;">
+            <div class="container">
+              <div class="row" id="datos-perfil">
+                  <div class="col-sm-12">
+                    <p>¡Hola!</p>
+                      <h2 style="margin-top: -45px;"> <%= user.first_name %> <%= user.last_name %></h2>
+                  </div>
+              </div>
+          </div>
+          </div>
+          </div>
+            <% } else {  %>
+
+            <div class="banner-profile">
+            <div class="text-header d-flex align-items-center" style="background-image: url(https://res.cloudinary.com/dc7uyfv94/image/upload/v1658341642/Por%20Ti/banner_social_yssu00.png); background-repeat: no-repeat; background-size: cover!important;">
+              <div class="container">
+                <div class="row" id="datos-perfil">
+                    <div class="col-sm-12">
+                      <p>¡Hola!</p>
+                        <h2 style="margin-top: -45px;"> <%= user.first_name %> <%= user.last_name %></h2>
+                    </div>
                 </div>
             </div>
-        </div>
-       </div>
-      </div>
+            </div>
+            </div>
+              <% } %>
 
 <main style="padding-top: 25px;">
 <div class="espacio" style="padding: 25px"></div>
